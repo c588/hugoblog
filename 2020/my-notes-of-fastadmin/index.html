@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Cola.Chen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" />
+  <link rel="next" href="https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/" />
+  <link rel="canonical" href="https://hdwyz.com/2020/my-notes-of-fastadmin/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           FastAdmin 框架二次开发笔记 | 可乐橙
+       
+  </title>
+  <meta name="title" content="FastAdmin 框架二次开发笔记 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "FastAdmin 框架二次开发笔记",
+    "headline" : "FastAdmin 框架二次开发笔记",
+    "description" : "前端篇： 动态下拉列表： data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法） data-fie",
+    "inLanguage" : "zh-CN",
+    "author" : "Cola.Chen",
+    "creator" : "Cola.Chen",
+    "publisher": "Cola.Chen",
+    "accountablePerson" : "Cola.Chen",
+    "copyrightHolder" : "Cola.Chen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-12 00:49:28 \x2b0800 CST",
+    "dateModified" : "2020-02-12 00:49:28 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/my-notes-of-fastadmin\/",
+    "wordCount" : "640",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">FastAdmin 框架二次开发笔记</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-02-12 itemprop="datePublished">
+                    2020-02-12
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                640 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                2 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="前端篇">前端篇：</h3>
+<p>动态下拉列表：</p>
+<ul>
+<li>data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法）</li>
+<li>data-field：显示的数据对应数据表中的字段</li>
+</ul>
+<hr>
+<h3 id="视图篇">视图篇：</h3>
+<hr>
+<h3 id="控制器篇">控制器篇：</h3>
+<hr>
+<h3 id="模型篇">模型篇：</h3>
+<hr>
+<h3 id="命令行篇">命令行篇：</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//生成fa_test表的CRUD
+php think crud -t test
+//生成fa_test表的CRUD且一键生成菜单
+php think crud -t test -u <span style="color:#ae81ff">1</span>
+//删除fa_test表生成的CRUD
+php think crud -t test -d <span style="color:#ae81ff">1</span>
+//生成fa_test表的CRUD且控制器生成在二级目录下
+php think crud -t test -c mydir/test
+//生成fa_test_log表的CRUD且生成对应的控制器为testlog
+php think crud -t test_log -c testlog
+//生成fa_test表的CRUD且对应的模型名为testmodel
+php think crud -t test -m testmodel
+//生成fa_test表的CRUD且生成关联模型category，外链为category_id，关联表主键为id
+php think crud -t test -r category -k category_id -p id
+//生成fa_test表的CRUD且所有以list或data结尾的字段都生成复选框
+php think crud -t test --setcheckboxsuffix<span style="color:#f92672">=</span>list --setcheckboxsuffix<span style="color:#f92672">=</span>data
+//生成fa_test表的CRUD且所有以image和img结尾的字段都生成图片上传组件
+php think crud -t test --imagefield<span style="color:#f92672">=</span>image --imagefield<span style="color:#f92672">=</span>img
+//关联多个表,参数传递时请按顺序依次传递，支持以下几个参数relation/relationmodel/relationforeignkey/relationprimarykey/relationfields/relationmode
+php think crud -t test --relation<span style="color:#f92672">=</span>category --relation<span style="color:#f92672">=</span>admin --relationforeignkey<span style="color:#f92672">=</span>category_id --relationforeignkey<span style="color:#f92672">=</span>admin_id
+//生成v_phealth_db2数据库下的fa_test表的CRUD
+php think crud -t test --db<span style="color:#f92672">=</span>v_phealth_db2
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cola.Chen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/my-notes-of-fastadmin/>https://hdwyz.com/2020/my-notes-of-fastadmin/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" class="prev" rel="prev" title="MacOS 搭建 Php 开发环境"><i class="iconfont icon-left"></i>&nbsp;MacOS 搭建 Php 开发环境</a>
+         
+        
+        <a href="https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/" class="next" rel="next" title="VPS - 酸酸乳基本使用姿势">VPS - 酸酸乳基本使用姿势&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">Cola.Chen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

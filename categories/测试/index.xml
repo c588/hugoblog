@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on 可乐橙</title>
+    <link>https://hdwyz.com/categories/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on 可乐橙</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 18 Mar 2020 21:43:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://hdwyz.com/categories/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown 在 Leaveit 主题中的效果</title>
+      <link>https://hdwyz.com/2020/the-markdown-in-this-theme/</link>
+      <pubDate>Wed, 18 Mar 2020 21:43:41 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/the-markdown-in-this-theme/</guid>
+      <description>这是一级标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 这是普通段落文字 这是一个 4x2 的表格 # 这是一个代码块 echo &amp;#34;Hello, World!&amp;#34; $$ E=mc^2 $$ 这是一句</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Cola.Chen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" />
+  <link rel="next" href="https://hdwyz.com/2020/the-markdown-in-this-theme/" />
+  <link rel="canonical" href="https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           服务器上安装 TP6.0 和 Swoole 扩展 | 可乐橙
+       
+  </title>
+  <meta name="title" content="服务器上安装 TP6.0 和 Swoole 扩展 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "服务器上安装 TP6.0 和 Swoole 扩展",
+    "headline" : "服务器上安装 TP6.0 和 Swoole 扩展",
+    "description" : "1 linux源码编译安装php wget下载php源码： wget https:\/\/www.php.net\/distributions\/php-7.2.27.tar.gz linux安装php依赖： sudo yum install -y gcc gcc-c\x2b\x2b make zlib zlib-devel pcre pcre-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl",
+    "inLanguage" : "zh-CN",
+    "author" : "Cola.Chen",
+    "creator" : "Cola.Chen",
+    "publisher": "Cola.Chen",
+    "accountablePerson" : "Cola.Chen",
+    "copyrightHolder" : "Cola.Chen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-13 22:41:11 \x2b0800 CST",
+    "dateModified" : "2020-03-13 22:41:11 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/install-swoole-for-thinkphp6.0\/",
+    "wordCount" : "1371",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">服务器上安装 TP6.0 和 Swoole 扩展</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-03-13 itemprop="datePublished">
+                    2020-03-13
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                1371 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                3 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="1-linux源码编译安装php">1 linux源码编译安装php</h3>
+<p>wget下载php源码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://www.php.net/distributions/php-7.2.27.tar.gz
+</code></pre></div><p>linux安装php依赖：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum install -y gcc gcc-c++  make zlib zlib-devel pcre pcre-devel  libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel openssl openssl-devel openldap openldap-devel nss_ldap openldap-clients openldap-servers
+</code></pre></div><p>解压php源码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf php-7.2.27.tar.gz
+</code></pre></div><p>进入文件夹：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd php-7.2.27
+</code></pre></div><p>新建php安装目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /usr/local/php
+</code></pre></div><p>php源码文件夹中有一个可执行文件config，使用这个文件进行环境检测，生成 Makefile，为编译做准备：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure
+--prefix<span style="color:#f92672">=</span>/usr/local/php
+--with-config-file-path<span style="color:#f92672">=</span>/usr/local/php/etc
+--enable-inline-optimization
+--disable-debug
+--disable-rpath
+--enable-shared
+--enable-soap
+--with-xmlrpc
+--with-openssl
+--with-pcre-regex
+--with-sqlite3
+--with-zlib
+--enable-bcmath
+--with-iconv
+--with-bz2
+--enable-calendar
+--with-curl
+--with-cdb
+--enable-dom
+--enable-exif
+--enable-fileinfo
+--enable-filter
+--with-pcre-dir
+--enable-ftp
+--with-gd
+--with-openssl-dir
+--with-jpeg-dir
+--with-png-dir
+--with-freetype-dir
+--enable-gd-jis-conv
+--with-gettext
+--with-mhash
+--enable-json
+--enable-mbstring
+--enable-mbregex
+--enable-mbregex-backtrack
+--with-libmbfl--with-onig
+--with-mysqli<span style="color:#f92672">=</span>shared,mysqlnd
+--with-pdo-mysql<span style="color:#f92672">=</span>shared,mysqlnd
+--with-zlib-dir
+--with-pdo-sqlite--enable-session
+--enable-shmop--enable-simplexml
+--enable-pcntl
+--enable-sockets
+--enable-sysvmsg
+--enable-sysvsem
+--enable-sysvshm
+--enable-wddx
+--with-libxml-dir
+--enable-zip
+--enable-mysqlnd-compression-support
+--with-pear
+--enable-opcache
+</code></pre></div><p>WARNING：</p>
+<p>1 先切到root用户，否则编译安装后无法创建相关文件夹</p>
+<p>2 最好先进行环境清理 make clean</p>
+<p>make是用来编译的，它从Makefile中读取指令，然后编译：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make
+</code></pre></div><p>make install是用来安装的，它也从Makefile中读取指令，安装到指定的位置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make install
+</code></pre></div><p>报错：virtual memory exhausted: 无法分配内存  make: *** [ext/fileinfo/libmagic/apprentice.lo] 错误 1</p>
+<p>原因：内存不足，无法完成编译（vps买不起贵的）</p>
+<p>解决：设置虚拟内存</p>
+<p><a href="https://huaien.co/technology/no-enough-memory-to-make-php/">编译安装PHP组件出现错误提示内存不足：virtual memory exhausted Cannot allocate memory</a></p>
+<p>查看内存使用情况：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">free -m
+</code></pre></div><p>创建目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /opt/images/
+</code></pre></div><p>创建一个2GB大小的文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>/opt/images/swap bs<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">2048000</span>
+</code></pre></div><p>把创建的文件变成SWAP分区：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkswap /opt/images/swap
+</code></pre></div><p>启用这个SWAP文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapon /opt/images/swap
+</code></pre></div><p>查看SWAP是否生效：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">free -m
+</code></pre></div><p>已经生效，继续编译安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make <span style="color:#f92672">&amp;&amp;</span> make install
+</code></pre></div><p>完成后释放虚拟内存：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapoff swap
+</code></pre></div><p>或者：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapoff -a
+</code></pre></div><p>删除：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rm -f /opt/images/swap
+</code></pre></div><p>将php添加到环境变量中方便使用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/profile.d/php.sh
+export PATH<span style="color:#f92672">=</span>$PATH:/usr/local/php/bin
+</code></pre></div><p>重新载入以生效：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">source /etc/profile.d/php.sh
+</code></pre></div><p>查看php配置文件应该放在哪个目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php --ini
+</code></pre></div><p>把配置文件复制到该目录中：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp php.ini-production /etc/php.ini
+</code></pre></div><hr>
+<h3 id="2-安装swoole模块">2 安装swoole模块</h3>
+<p>下载并解压：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#下载</span>
+wget http://pecl.php.net/get/swoole-4.4.15.tgz
+<span style="color:#75715e">#解压</span>
+tar -zxvf swoole-4.4.15.tgz 
+<span style="color:#75715e">#进目录</span>
+cd swoole-4.4.15/
+</code></pre></div><p>发现没有config文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">phpize
+</code></pre></div><p>生成了config文件，继续构建编译安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#构建</span>
+./configure --enable-openssl  --enable-http2
+<span style="color:#75715e">#如果有多个PHP版本，需要指定php-config</span>
+./configure  --with-php-config<span style="color:#f92672">=</span>/usr/local/php/bin/php-config --enable-openssl  --enable-http2
+<span style="color:#75715e">#编译</span>
+make
+<span style="color:#75715e">#安装</span>
+make install
+</code></pre></div><p>安装完成后显示安装地址：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20170718/
+Installing header files:          /usr/local/include/php/
+</code></pre></div><p>将swoole添加到php中：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#打开php.ini文件</span>
+vi /usr/local/lib/php.ini
+<span style="color:#75715e">#写入swoole</span>
+extension<span style="color:#f92672">=</span>swoole.so
+</code></pre></div><p>查看swoole模块是否已经添加：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php -m
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php /swoole-4.4.15/examples/server/echo.php
+</code></pre></div><p>没有报错，说明已经可以使用</p>
+<hr>
+<h3 id="3-php动态添加扩展">3 php动态添加扩展</h3>
+<p>进入到扩展目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /php-7.2.27/ext
+</code></pre></div><p>里面都是php扩展，要安装哪个扩展就进入该扩展的文件夹，例如curl：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd curl/
+</code></pre></div><p>这里是curl的源码，执行phpize（php添加扩展的外挂程序）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">phpize
+</code></pre></div><p>在当前文件夹中生成了config文件，执行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure
+<span style="color:#75715e">#切记一切make之前都要先进行make clean</span>
+make clean
+make
+make install
+</code></pre></div><p>显示扩展文件安装路径：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20170718/
+</code></pre></div><p>最后在php.ini中添加扩展：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /usr/local/lib/php.ini
+extension<span style="color:#f92672">=</span>curl.so
+</code></pre></div><p>查看扩展相关信息：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php --ri curl
+</code></pre></div><hr>
+<h3 id="4-安装composer">4 安装Composer</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+</code></pre></div><p>由于众所周知的原因，国内使用composer速度感人，使用命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer config -g repo.packagist composer https://packagist.phpcomposer.com
+</code></pre></div><p>切换为国内镜像，当然速度比原先快一些但是速度依然感人。如果要恢复官方源，使用命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer config -g --unset repos.packagist
+</code></pre></div><hr>
+<h3 id="5-使用composer安装thinkphp60">5 使用Composer安装ThinkPHP6.0</h3>
+<p>创建项目目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir swoole
+</code></pre></div><p>设置权限777：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod -R <span style="color:#ae81ff">777</span> swoole
+</code></pre></div><p>进入目录并安装开发版：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd swoole
+composer create-project topthink/think<span style="color:#f92672">=</span>6.0.x-dev tp
+</code></pre></div><p>复制.env文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp .example.env .env
+</code></pre></div><p>测试运行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php think run
+</code></pre></div><p>浏览器访问  http://localhost:8000/</p>
+<p>TP6安装完成！</p>
+<hr>
+<h3 id="6-安装tp6的swoole扩展">6 安装TP6的swoole扩展</h3>
+<p>到项目根目录：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer require topthink/think-swoole
+</code></pre></div><p>安装好后在根目录使用命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php think swoole
+</code></pre></div><p>如果显示启动了swoole服务就说明安装成功了 ！</p>
+<hr>
+<p>　　以上就是使用源码安装php、swoole扩展、thinkPHP6.0和think-swoole插件的全过程，强烈推荐小白自己过一遍，对Linux操作能有一个大致的理解。</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cola.Chen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" class="prev" rel="prev" title="趁年轻，多越狱"><i class="iconfont icon-left"></i>&nbsp;趁年轻，多越狱</a>
+         
+        
+        <a href="https://hdwyz.com/2020/the-markdown-in-this-theme/" class="next" rel="next" title="Markdown 在 Leaveit 主题中的效果">Markdown 在 Leaveit 主题中的效果&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">Cola.Chen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

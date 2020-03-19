@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Cola.Chen">
+  
+  
+  
+  
+  <link rel="next" href="https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/" />
+  <link rel="canonical" href="https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           MacOS 使用 Github &#43; Hexo 搭建个人博客 | 可乐橙
+       
+  </title>
+  <meta name="title" content="MacOS 使用 Github &#43; Hexo 搭建个人博客 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "MacOS 使用 Github \x2b Hexo 搭建个人博客",
+    "headline" : "MacOS 使用 Github \x2b Hexo 搭建个人博客",
+    "description" : "关于自建博客的想法，已经有了一年多了。自从18年10月下旬被裁员开始海投简历，我就发现很多公司招聘要求都有一条“加分：有维护个人博客\/Git",
+    "inLanguage" : "zh-CN",
+    "author" : "Cola.Chen",
+    "creator" : "Cola.Chen",
+    "publisher": "Cola.Chen",
+    "accountablePerson" : "Cola.Chen",
+    "copyrightHolder" : "Cola.Chen",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-11-24 16:19:38 \x2b0800 CST",
+    "dateModified" : "2019-11-24 16:19:38 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2019\/how-to-use-github-hexo-with-macos\/",
+    "wordCount" : "2942",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">MacOS 使用 Github &#43; Hexo 搭建个人博客</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2019-11-24 itemprop="datePublished">
+                    2019-11-24
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                2942 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                6 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>　　关于自建博客的想法，已经有了一年多了。自从18年10月下旬被裁员开始海投简历，我就发现很多公司招聘要求都有一条“加分：有维护个人博客/Github项目”。虽然在后来N多次面试中一次也没提过这一条，而且无论是知乎还是简书还是Github，只要可以使用Markdown，写文章的效果基本都一致，但是我还是觉得维护一个博客，偶尔写一些矫情点的文字也是挺好的，而且搭博客的过程也是一段不错的经历。</p>
+<hr>
+<p>本地环境：黑苹果 macOS Catalina 10.15</p>
+<p>需要软件：自带的终端 Terminal，安装 Git, Homebrew, Hexo, nodejs, npm, sass</p>
+<p>站点：免费的 Github Page</p>
+<p>可选项：个人域名</p>
+<p>　　Github Page创建后会有一个 username.github.io 的域名可供访问，当然要提升一下 bigger 个人域名必不可少，我用的是 nameliso 家的域名，之前偶尔看到有个博主推荐了，价格也还行8刀左右就买了一个玩玩。</p>
+<hr>
+<h2 id="1-下载配置-git">1. 下载配置 Git</h2>
+<p>　　首先感谢大佬 <a href="https://www.zhihu.com/people/6adaa6c626266b76394ce55273b94cc0">吴润</a> 的教程：<a href="https://zhuanlan.zhihu.com/p/26625249">吴润：GitHub+Hexo 搭建个人网站详细教程</a></p>
+<p>　　需要注意的是，在</p>
+<blockquote>
+<p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:git@github.com">git@github.com</a> ：</p>
+</blockquote>
+<p>　　这一步，输入 ssh <a href="mailto:git@github.com">git@github.com</a> 之后不要直接敲击回车，按照提示 (yes/no) 输入 &ldquo;yes&rdquo; 不然会失败。</p>
+<hr>
+<h2 id="2-下载-homebrew">2. 下载 Homebrew</h2>
+<p>　　下载 Homebrew 废了老大的劲儿，主要就是因为众所周知的原因导致速度很慢。一开始按照官方给的教程下载：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ /usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>　　发现速度维持在 1024 byte/s。嚯嚯进去洗了个澡出来发现才20%，又出去吃个饭发现报错终止了。这么连续试了三次，又找教程试了一下使用代理都不成，最终在简书的一篇文章中看到的方法是使用中科大的镜像：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">替换brew.git:
+$ cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+$ git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+替换homebrew-core.git:
+$ cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">/Library/Taps/homebrew/homebrew-core</span><span style="color:#e6db74">&#34;</span>
+$ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+</code></pre></div><p>　　<a href="https://www.jianshu.com/p/323a52d9c604">MacOS下将Homebrew源替换成中科大源，提高下载速度</a></p>
+<p>　　其实知乎上已经有这个提问了，脑抽了没有第一时间先在知乎上检索：</p>
+<p>　　<a href="https://www.zhihu.com/question/31360766">Homebrew有比较快的源（mirror）吗？</a></p>
+<p>　　安装好以后运行一下 brew -v 看一下有没有输出版本号，有输出那就说明确实已经安装完成。</p>
+<hr>
+<h2 id="3-使用-homebrew-下载-nodejs--npm">3. 使用 Homebrew 下载 NodeJS &amp; NPM</h2>
+<p>　　安装好 Homebrew 后，再下载 NodeJS，同时也会安装好 NPM。NPM 对于 NodeJS 就好比 Composer 之于 PHP，Homebrew 之于 MacOS，yum 之于 CentOS，apt 之于 Ubuntu，都是包管理工具。曾经这些乱七八糟的把我迷了好一阵子，傻傻分不清楚，一边百度一边用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ brew install node
+$ node -v
+$ npm -v
+</code></pre></div><p>　　输出版本号，安装完成。至于修改 NPM 全局安装，这里没有涉及，跳过。</p>
+<hr>
+<h2 id="4-使用-npm-下载-hexo">4. 使用 NPM 下载 Hexo</h2>
+<p>　　在磁盘上找个位置，比如我是在 macOS/用户/user 文件夹下建了个 Project 文件夹存放各种代码，然后再 Project 里新建 blog 文件夹用来放博客的文件（也可以不用建 blog 文件夹，后边会生成）。</p>
+<p>　　进入 blog 文件夹后下载 Hexo：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ npm install -g hexo-cli 
+</code></pre></div><p>　　接下来基本都是 Hexo 的命令，可以在官方文档查看所有命令及说明：<a href="https://hexo.io/zh-cn/docs/commands">Hexo:指令</a></p>
+<p>　　初始化博客：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo init hexoblog
+</code></pre></div><p>　　这一步会自动生成一个名为 hexoblog 的文件夹，考虑到我还会安装一些别的博客系统例如 PHP 写的博客或者 WordPress 所以我先建立一个 blog 文件夹在这个文件夹下安装各个博客。</p>
+<p>　　新建一篇文章作为测试：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo new test_my_site
+</code></pre></div><p>　　部署网站：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo g
+</code></pre></div><p>　　开启本地测试：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo server
+</code></pre></div><p>　　此时终端会输出网址 localhost:4000，按住 ctrl 点击网址，打开，就能看到本地跑起来的博客页面。</p>
+<hr>
+<h2 id="5-到-github-创建自己的博客站点">5. 到 Github 创建自己的博客站点</h2>
+<p>　　登录 Github，点击左上方绿色的 New 新建一个仓库“repo”</p>
+<p>　　<strong>Repository name （仓库名称）必须填写为自己 Github 的用户名，必须！</strong></p>
+<p>　　仓库设为公开 Public （默认）</p>
+<p>　　创建好以后这个仓库就是你个人的博客站点了，以后 Hexo 文章的更新，主题的更换都会将代码同步到这个仓库中。</p>
+<hr>
+<h2 id="6-将本地项目关联到-github-的仓库中">6. 将本地项目关联到 Github 的仓库中</h2>
+<p>　　进入 hexoblog 文件夹，找到第一个 _config.yml 文件。这个文件是你的 Hexo 配置文件，使用文本编辑器或者 Xcode 打开，拉到最下方，设置好你的仓库：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Deployment</span>
+<span style="color:#75715e">## Docs: https://hexo.io/docs/deployment.html</span>
+deploy:
+  type: git
+  repo: https://github.com/username/username.github.io.git
+  branch: master
+</code></pre></div><p>　　保存退出，安装 Git 部署插件,以后直接使用 Hexo 命令进行代码更新：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install hexo-deployer-git --save
+</code></pre></div><p>　　清除本地缓存,部署网站,提交到 Github：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo clean 
+$ hexo g 
+$ hexo d
+</code></pre></div><p>　　使用你的 Github Page 地址进行访问: username.github.io</p>
+<hr>
+<h2 id="7-更换主题">7. 更换主题</h2>
+<p>　　初始的主题过于单一，可以到 Hexo 主题网站挑选：<a href="https://hexo.io/themes/">Hexo:主题</a></p>
+<p>　　选好主题后，复制下作者的 Github 地址备用，比如：</p>
+<pre><code>https://github.com/Hanlin-Dong/hexo-theme-adagio
+</code></pre><p>　　在 hexoblog 目录下（即你初始化好的博客目录下）运行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre></div><p>　　格式就是 git + clone + Github地址 + themes/主题名</p>
+<p>　　主题安装完成后，进入 hexoblog/themes，会发现多了一个以下载的主题名命名的文件夹。进入后找到 _config.yml 文件，这个文件就是当前主题的配置文件。底部会有一些外部地址可以设置，比如 Github、推特、Facebook 等设置为自己个人的地址。</p>
+<p>　　回到 hexoblog 文件夹，编辑博客站点的 _config.yml 文件，将主题设置为你下载的主题名称：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># Extensions</span>
+<span style="color:#75715e">## Plugins: https://hexo.io/plugins/</span>
+<span style="color:#75715e">## Themes: https://hexo.io/themes/</span>
+theme: your_theme
+</code></pre></div><p>　　保存退出，hexo clean、g、d 常规套餐。</p>
+<hr>
+<h2 id="75-css-报错各种-404-一片红">7.5 css 报错？各种 404 一片红？</h2>
+<p>　　恭喜你碰到了和我一样的情况，我在这一步卡了很久很久。更新到 Github 上之后，发现访问页面排版完全错乱，F12 打开调试，console 报错 main.css 404。打开本地调试，也是一样。打开本地项目文件夹 hexoblog/themes/主题名/sourse/sass 发现里面的文件名为 main.scss，再继续进入 libs 文件夹也都是 .scss 文件，跟要读取的 .css 文件不一致啊。尝试修改本地文件扩展名，上传以后还是发现改回了 scss，无奈继续谷歌，终于在一篇 SCDN 的文章中发现了一样的字眼。</p>
+<p><a href="https://segmentfault.com/a/1190000009622863">陈帅：hexo主题配置</a></p>
+<blockquote>
+<h3 id="安装scss预编译插件">安装scss预编译插件</h3>
+<p>由于我是用的是scss写的css代码，所以先安装sass插件。在主根目录下右键Git bash Here，输入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install hexo-renderer-sass --save
+</code></pre></div></blockquote>
+<p>　　看到文章中说要安装 SCSS 预编译插件，隐约我就猜到找到问题根源了。这个主题应该就是使用 SCSS 写的代码，所以需要用 SASS 这个插件进行转换。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install hexo-renderer-sass --save
+</code></pre></div><p>　　安装好 SASS 插件后重新 hexo clean、g、d 一套流程，滚动的代码串中出现了一排 .css 我就知道，终于成功了！</p>
+<hr>
+<h2 id="8-域名解析">8. 域名解析</h2>
+<p>　　接下来就要提升逼格了，自己的博客，当然要搭配自己的域名。打开域名供应商的网站，进入管理后台，找到买好的域名，找到类似”manager DNS for this domain“类似字眼的按钮点进去，将域名映射到 Github：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-162899b8abf78919fcf7896a2ba2df38_hd.jpg" alt="img"></p>
+<p>　　第一个就填 192.30.252.153 或者 154，表示要链接的地址是 Github Page。第二个可以填剩下的那个 154 或者填 185.199.(109-112).153 四个选一个，表示使用 Github 提供的 CDN 加速服务，提升站点打开速度。第三个 CNAME 填写自己的 Github 站点地址，即 username.github.io，保存，五分钟左右生效。</p>
+<p>　　开始访问你的域名吧！</p>
+<hr>
+<h2 id="85-等等无法访问刚配置好的域名">8.5 等等，无法访问刚配置好的域名？</h2>
+<p>　　这是我碰到的最后一个问题。明明做好了映射，为什么一访问就是找不到 xxxx.xxx 的服务器 IP 地址？</p>
+<p>　　打开 terminal：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ping xxxx.xxx
+ping www.xxx.xxx
+</code></pre></div><p>　　淦，ping 不到？</p>
+<p>　　打开小米笔记本，win+R，CMD，回车：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ping xxxx.xxx
+ping www.xxx.xxx
+</code></pre></div><p>　　淦，这次都有了，什么鬼？</p>
+<p>　　这里又拖了我一个多小时的时间，最后突然想到，是不是本地的 DNS 有问题，就像 HOST 一样把域名指到错误的 IP 上了？</p>
+<p>　　打开谷歌，搜索 MacOS 如何清除 DNS 缓存。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo killall -HUP mDNSResponder <span style="color:#75715e">#OS X v10.10.4 或更高版本</span>
+sudo discoveryutil mdnsflushcache <span style="color:#75715e">#OS X v10.9.5 及更低版本</span>
+sudo killall -HUP mDNSResponder <span style="color:#75715e">#OS X v10.6 至 v10.6.8 中</span>
+</code></pre></div><p>　　问题依旧。</p>
+<p>　　💡💡💡💡💡</p>
+<p>　　修改 DNS 服务器！</p>
+<p>　　<a href="https://support.apple.com/zh-cn/guide/mac-help/mchlp2720/mac">在 Mac 上指定 DNS 服务器</a></p>
+<p>　　加入 8.8.8.8 或者别的正确的 DNS 服务器，返回，输入域名，回车。</p>
+<p><!-- raw HTML omitted --></p>
+<hr>
+<p>　　看着最终渲染出来的页面和泛白的天空，悔不当初。曾经有一本《鸟哥的Linux私房菜》在我左手侧，我没有珍惜，直到装系统、搭网站的时候我才后悔莫及，小白最痛苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对上铺说三个字：借我看。如果非要加上一个期限，我希望是，不还了……</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cola.Chen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/>https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/" class="next" rel="next" title="Php 使用微信支付 Jsapi 进行 h5 支付（半成品）">Php 使用微信支付 Jsapi 进行 h5 支付（半成品）&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">Cola.Chen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Cola.Chen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/" />
+  <link rel="next" href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" />
+  <link rel="canonical" href="https://hdwyz.com/2020/basic-usage-of-git/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           使用Git进行版本控制 | 可乐橙
+       
+  </title>
+  <meta name="title" content="使用Git进行版本控制 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "使用Git进行版本控制",
+    "headline" : "使用Git进行版本控制",
+    "description" : "入职了一家小公司，后端就仨菜鸡还裁了一个，比上不足比下有余的老陈就担负起了管理代码的重担。虽然说一直都在使用 git，但之前也仅仅局限在本地往",
+    "inLanguage" : "zh-CN",
+    "author" : "Cola.Chen",
+    "creator" : "Cola.Chen",
+    "publisher": "Cola.Chen",
+    "accountablePerson" : "Cola.Chen",
+    "copyrightHolder" : "Cola.Chen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-01-06 01:28:07 \x2b0800 CST",
+    "dateModified" : "2020-01-06 01:28:07 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/basic-usage-of-git\/",
+    "wordCount" : "784",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">使用Git进行版本控制</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-01-06 itemprop="datePublished">
+                    2020-01-06
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                784 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                2 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>　　入职了一家小公司，后端就仨菜鸡还裁了一个，比上不足比下有余的老陈就担负起了管理代码的重担。虽然说一直都在使用 git，但之前也仅仅局限在本地往测试服务器提交代码，更新到正式服务器都是由主管/组长负责，经常接触的命令也只有</p>
+<ol>
+<li><code>git status</code></li>
+<li><code>git commit</code></li>
+<li><code>git fetch</code></li>
+<li><code>git pull</code></li>
+<li><code>git push</code></li>
+</ol>
+<p>　　突然从一对一变成一对多让我手足无措了一阵子，百度上找了好几篇文章看的云里雾里。上头催得紧实在是没有时间去细品更希望有一篇简洁明了的文章告诉我怎么去做。所以在此做一个记录，希望某一天可以帮助到另外一个迷茫的小菜鸡。</p>
+<hr>
+<p>　　代码一般托管在 github 或者码云上，即远程仓库 remote，仓库里有两个分支，主分支master 和开发分支 dev。你的手上有两台服务器，一台测试，一台正式。</p>
+<p>首先，你在本地进行开发，确认你在 dev 分支上：</p>
+<p><code>git branch</code></p>
+<p>如果不在 dev 分支则切换到 dev 分支：</p>
+<p><code>git checkout dev</code></p>
+<p>接下来愉快地写 bug，本地测试完成后进行提交：</p>
+<p><code>git status</code>  <code>git add .</code>  <code>git commit -m 'update msg'</code></p>
+<p><code>git fetch</code>  <code>git pull</code>  <code>git push</code></p>
+<p>此时你的代码以及更新到远程仓库 remote 的 dev 分支中</p>
+<p>然后在测试服务器上拉取 remote 的 dev 分支代码：</p>
+<p>使用 xshell 连接，确认当前在 dev 分支，执行<code>git pull</code></p>
+<p>代码就更新到了测试服务器，进行测试。测试通过后进行合并，本地执行：</p>
+<p><code>git checkout master</code> ：切换到 master 分支</p>
+<p><code>git merge dev</code> ：将 dev 上的改动合并到 master 分支</p>
+<p><code>git pull</code> ：将合并后的代码推送到 remote 的 master 分支</p>
+<p>然后在正式服务器上拉取 remote 的 master 分支代码：</p>
+<p>使用 xshell 连接，确认当前在 master 分支，执行<code>git pull</code></p>
+<p>期间如果出现问题，按照 git 给出的提示进行操作。</p>
+<p>要点：</p>
+<ul>
+<li>如非必要，测试及生产只执行  <code>git pull</code>  命令</li>
+<li>干活前，先确认当前使用的分支 <code>git branch</code></li>
+<li>如果遇到本地通过，测试/正式报错，某某文件权限问题，不要直接  <code>chmod 777 filename</code>  因为 git 会把文件权限也列入了版本管理，下次更新代码执行  <code>git pull</code>  会报错，让你先提交。正确姿势是先用命令  <code>git config core.filemode false</code>  取消 git 对文件权限的管理再修改文件权限</li>
+</ul>
+<hr>
+<p>　　简单的一点点问题这两天把老吴折腾得够呛。如果在杭州的正常规模的公司，问一下旁边的老哥，五分钟解决，所以来义乌真是近两年最错误的决定 : (</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Cola.Chen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/basic-usage-of-git/>https://hdwyz.com/2020/basic-usage-of-git/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/" class="prev" rel="prev" title="在 MacOS 上连接 vps 服务器"><i class="iconfont icon-left"></i>&nbsp;在 MacOS 上连接 vps 服务器</a>
+         
+        
+        <a href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" class="next" rel="next" title="MacOS 搭建 Php 开发环境">MacOS 搭建 Php 开发环境&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">Cola.Chen</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
