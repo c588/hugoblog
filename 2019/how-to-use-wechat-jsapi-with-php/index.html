@@ -9,9 +9,9 @@
   
   
   
-  <link rel="prev" href="https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/" />
-  <link rel="next" href="https://hdwyz.com/2019/update-b450-motherboards-flash/" />
-  <link rel="canonical" href="https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/" />
+  <link rel="prev" href="/2019/how-to-use-github-hexo-with-macos/" />
+  <link rel="next" href="/2019/update-b450-motherboards-flash/" />
+  <link rel="canonical" href="/2019/how-to-use-wechat-jsapi-with-php/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,7 +42,7 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https:\/\/hdwyz.com"
+         "@id": ""
     },
     "articleSection" : "posts",
     "name" : "Php 使用微信支付 Jsapi 进行 h5 支付（半成品）",
@@ -57,8 +57,8 @@
     "copyrightYear" : "2019",
     "datePublished": "2019-11-25 23:16:02 \x2b0800 CST",
     "dateModified" : "2019-11-25 23:16:02 \x2b0800 CST",
-    "url" : "https:\/\/hdwyz.com\/2019\/how-to-use-wechat-jsapi-with-php\/",
-    "wordCount" : "1793",
+    "url" : "\/2019\/how-to-use-wechat-jsapi-with-php\/",
+    "wordCount" : "1792",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -73,7 +73,7 @@
         <nav class="navbar">
     <div class="container">
         <div class="navbar-header header-logo">
-        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">可乐橙</a>
         </div>
         <div class="menu navbar-right">
                 
@@ -92,7 +92,7 @@
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
      <div class="container">
         <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="">可乐橙</a></div>
             <div class="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -122,7 +122,7 @@
                 
             <i class="far fa-folder-open"></i>
             <span class="post-category">
-                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                <a href="/categories/%E5%85%A5%E9%97%A8/">
                     入门
                 </a>
                 
@@ -135,7 +135,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                1793 字
+                1792 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -168,28 +168,28 @@
 <p>第一步 申请微信公众号并提交商家认证，应该不用赘述。分别获取到 APPID、Mer_id、APPSECRET、APISECRET（key）。具体见 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=3_1">微信支付开发文档——支付账户</a></p>
 <hr>
 <p>第二步 配置好官方平台 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_3">微信支付开发文档——开发步骤</a></p>
-<p>　　这里的配置大致意思是，有一些参数需要由你的服务器主动向微信服务器请求获取，只有在这里配置了域名的服务器才能获取到返回的参数。</p>
-<p>　　比如我的代码最终是跑在某台绑定了 example.com 这个域名的服务器上，那么我就需要将 example.com 添加到这里。</p>
+<p>这里的配置大致意思是，有一些参数需要由你的服务器主动向微信服务器请求获取，只有在这里配置了域名的服务器才能获取到返回的参数。</p>
+<p>比如我的代码最终是跑在某台绑定了 example.com 这个域名的服务器上，那么我就需要将 example.com 添加到这里。</p>
 <hr>
 <p>第三步 获取 code</p>
-<p>　　在项目中，我在一个控制器下新建了一个方法 getCode()，只有两行代码</p>
+<p>在项目中，我在一个控制器下新建了一个方法 getCode()，只有两行代码</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$redirect_uri = “domian/controller/getOpenid”
 header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect&#34;);
-</code></pre></div><p>　　第一行定义的 uri 为第四部的访问地址</p>
-<p>　　使用 header 方法直接跳转到这个地址。这个地址是微信官方的用于获取用户信息的地址。scope 有 snsapi_base 和 snsapi_userinfo 可选</p>
-<p>　　参数说明：<a href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html">微信官方文档·公众号——网页授权</a></p>
+</code></pre></div><p>第一行定义的 uri 为第四部的访问地址</p>
+<p>使用 header 方法直接跳转到这个地址。这个地址是微信官方的用于获取用户信息的地址。scope 有 snsapi_base 和 snsapi_userinfo 可选</p>
+<p>参数说明：<a href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html">微信官方文档·公众号——网页授权</a></p>
 <hr>
 <p>第四步 获取 openid</p>
-<p>　　新定义一个方法 getOpenid，上一步根据填写的 redirect_uri 会跳转到这里，并且自动带上 code 参数，code 参数只能使用一次且期限为5分钟。state 参数为用户自己定义。</p>
+<p>定义一个方法 getOpenid，上一步根据填写的 redirect_uri 会跳转到这里，并且自动带上 code 参数，code 参数只能使用一次且期限为5分钟。state 参数为用户自己定义。</p>
 <pre><code>$data = curl(https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code);
-</code></pre><p>　　百度一下 curl 方法，然后用 curl 请求这个地址，带上 code，返回的 data 中就包含了 appid。</p>
-<p>　　这个请求更多的是去获取 access_token，不过目前不涉及，只需要 openid。</p>
-<p>　　接下来再跳转去下单页面：</p>
+</code></pre><p>百度一下 curl 方法，然后用 curl 请求这个地址，带上 code，返回的 data 中就包含了 appid。</p>
+<p>这个请求更多的是去获取 access_token，不过目前不涉及，只需要 openid。</p>
+<p>接下来再跳转去下单页面：</p>
 <pre><code>header(&quot;domain/controller/unifiedorder&quot;);
 </code></pre><p>第五步 获取 prepay_id</p>
-<p>　　写一个 unifiedorder() 方法，构造参数 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1">微信支付开发文档——统一下单</a></p>
-<p>　　根据文档中的请求参数，把必填的都写上。由于是使用 JSAPI 支付，所以 openid 也是必须的。然后将所有参数按照字典序拼接好，末尾再加上 API 密钥 “&amp;key=你的key”，将这一整个字符串进行 MD5 加密（或者 HMAC-SHA256，和请求参数统一），并且转为全大写，得到了签名 sign。</p>
-<p>　　将所有的请求参数加上这个 sign，组合成 XML：</p>
+<p>写一个 unifiedorder() 方法，构造参数 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1">微信支付开发文档——统一下单</a></p>
+<p>根据文档中的请求参数，把必填的都写上。由于是使用 JSAPI 支付，所以 openid 也是必须的。然后将所有参数按照字典序拼接好，末尾再加上 API 密钥 “&amp;key=你的key”，将这一整个字符串进行 MD5 加密（或者 HMAC-SHA256，和请求参数统一），并且转为全大写，得到了签名 sign。</p>
+<p>将所有的请求参数加上这个 sign，组合成 XML：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$params = &#34;&lt;<span style="color:#f92672">xml</span>&gt;
    &lt;<span style="color:#f92672">appid</span>&gt;wx2421b1c4370ec43b&lt;/<span style="color:#f92672">appid</span>&gt;
    &lt;<span style="color:#f92672">attach</span>&gt;支付测试&lt;/<span style="color:#f92672">attach</span>&gt;
@@ -204,14 +204,14 @@ header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;
    &lt;<span style="color:#f92672">trade_type</span>&gt;JSAPI&lt;/<span style="color:#f92672">trade_type</span>&gt;
    &lt;<span style="color:#f92672">sign</span>&gt;0CB01533B8C1EF103065174F50BCA001&lt;/<span style="color:#f92672">sign</span>&gt;
 &lt;/<span style="color:#f92672">xml</span>&gt;&#34;
-</code></pre></div><p>　　然后用 curl 进行 POST 请求（百度一个就成）</p>
+</code></pre></div><p>然后用 curl 进行 POST 请求（百度一个就成）</p>
 <pre><code>$params = postCurl(https://api.mch.weixin.qq.com/pay/unifiedorder);
-</code></pre><p>　　得到一众返回值，挑出 prepay_id。</p>
-<p>　　<em>PS：注意这个 notify_url，在第八步将会用到。</em></p>
+</code></pre><p>得到一众返回值，挑出 prepay_id。</p>
+<p><em>PS：注意这个 notify_url，在第八步将会用到。</em></p>
 <hr>
 <p>第六步 整理数据传给前端页面</p>
-<p>　　根据 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6">微信支付开发文档——微信内H5调起支付</a> 整理参数，用相同的方法字典序加密大写得到 sign，然后将这六个数据传给前端页面。</p>
-<p>　　页面中使用 hidden input 元素接收后端传来的参数，然后 jQuery 获取后调用微信自带的方法：</p>
+<p>根据 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&amp;index=6">微信支付开发文档——微信内H5调起支付</a> 整理参数，用相同的方法字典序加密大写得到 sign，然后将这六个数据传给前端页面。</p>
+<p>页面中使用 hidden input 元素接收后端传来的参数，然后 jQuery 获取后调用微信自带的方法：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onBridgeReady</span>(){
    <span style="color:#a6e22e">WeixinJSBridge</span>.<span style="color:#a6e22e">invoke</span>(
       <span style="color:#e6db74">&#39;getBrandWCPayRequest&#39;</span>, {
@@ -239,29 +239,29 @@ header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;
 }<span style="color:#66d9ef">else</span>{
    <span style="color:#a6e22e">onBridgeReady</span>();
 }
-</code></pre></div><p>　　接收参数要使用</p>
+</code></pre></div><p>接收参数要使用</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;id&#39;</span>).<span style="color:#a6e22e">value</span>
-</code></pre></div><p>　　第一次我用了另外一个短一些的方法就死活获取不到，还是得看一些前端了解一下基本使用。</p>
+</code></pre></div><p>第一次我用了另外一个短一些的方法就死活获取不到，还是得看一些前端了解一下基本使用。</p>
 <hr>
 <p>第七步 手机下单</p>
-<p>　　只需要在微信访问第三步的 getCode() 方法就可以在微信调起支付。获取订单需要传入的订单号可以在 getCode() 中传入 order_id，第一次使用 state 接收，第二次直接传入 unifiedorder() 方法然后在内部进行订单获取。</p>
+<p>只需要在微信访问第三步的 getCode() 方法就可以在微信调起支付。获取订单需要传入的订单号可以在 getCode() 中传入 order_id，第一次使用 state 接收，第二次直接传入 unifiedorder() 方法然后在内部进行订单获取。</p>
 <hr>
 <p>第八步 回调通知</p>
-<p>　　定义一个可以访问到的方法（不能带任何参数），作为回调通知接收地址。</p>
-<p>　　支付成功后，微信服务器24小时内会持续向这个地址发送数据，直到超时或者得到答复。</p>
-<p>　　比如我在第五步的 notify_url 参数填写了 mydomain/wechat/notify，那么我就在 wechatController 中定义一个 notify 方法，接收数据，核对数据，返回数据：</p>
+<p>定义一个可以访问到的方法（不能带任何参数），作为回调通知接收地址。</p>
+<p>支付成功后，微信服务器24小时内会持续向这个地址发送数据，直到超时或者得到答复。</p>
+<p>比如我在第五步的 notify_url 参数填写了 mydomain/wechat/notify，那么我就在 wechatController 中定义一个 notify 方法，接收数据，核对数据，返回数据：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">use crmeb\services\WechatService;
 
 public function notify()
 {
 	WechatService::handleNotify();
 }
-</code></pre></div><p>　　偷懒了，因为用的 CRMEB 这个项目，里边自带了处理微信支付回调信息的方法，大致的意思就是拿到支付金额和订单号，根据订单号查询用户应该支付的金额，和实际金额对比，相等就对订单的 paid、paid_time 这些字段进行修改，最后返回 XML 格式的数据：</p>
+</code></pre></div><p>偷懒了，因为用的 CRMEB 这个项目，里边自带了处理微信支付回调信息的方法，大致的意思就是拿到支付金额和订单号，根据订单号查询用户应该支付的金额，和实际金额对比，相等就对订单的 paid、paid_time 这些字段进行修改，最后返回 XML 格式的数据：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XMl" data-lang="XMl"><span style="color:#f92672">&lt;xml</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;return_code</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[SUCCESS]]&gt;</span><span style="color:#f92672">&lt;/return_code&gt;</span>
   <span style="color:#f92672">&lt;return_msg</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
 <span style="color:#f92672">&lt;/xml&gt;</span>
-</code></pre></div><p>　　微信服务器接收到这串 XML 之后就知道商户对这笔订单进行了确认，这笔订单在H5付款的流程就完成了！</p>
+</code></pre></div><p>微信服务器接收到这串 XML 之后就知道商户对这笔订单进行了确认，这笔订单在H5付款的流程就完成了！</p>
 <hr>
 <p>这么点字码了这么久，累。</p>
 <p>2019-11-26 00:52:51 老吴于窝前。</p>
@@ -279,7 +279,7 @@ public function notify()
              
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</span>
+                    <a href=/2019/how-to-use-wechat-jsapi-with-php/>/2019/how-to-use-wechat-jsapi-with-php/</span>
             </p>
             
              
@@ -294,16 +294,16 @@ public function notify()
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> · 
-                <span><a href="https://hdwyz.com">home</a></span>
+                <span><a href="">home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/" class="prev" rel="prev" title="MacOS 使用 Github &#43; Hexo 搭建个人博客"><i class="iconfont icon-left"></i>&nbsp;MacOS 使用 Github &#43; Hexo 搭建个人博客</a>
+        <a href="/2019/how-to-use-github-hexo-with-macos/" class="prev" rel="prev" title="MacOS 使用 Github &#43; Hexo 搭建个人博客"><i class="iconfont icon-left"></i>&nbsp;MacOS 使用 Github &#43; Hexo 搭建个人博客</a>
          
         
-        <a href="https://hdwyz.com/2019/update-b450-motherboards-flash/" class="next" rel="next" title="B450 主板自检时间过长">B450 主板自检时间过长&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="/2019/update-b450-motherboards-flash/" class="next" rel="next" title="B450 主板自检时间过长">B450 主板自检时间过长&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -322,14 +322,18 @@ public function notify()
         <span itemprop="copyrightYear">2020 - 2020</span>
         
         <span class="with-love">
-    	 <i class="iconfont icon-love"></i> 
-         </span>
-         
-            <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">Cola.Chen</a> | </span> 
-         
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="">Cola.Chen</a> | </span> 
+        
 
-         
-		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+        <span class="with-love">
+            <i class="iconfont icon-love"></i> 
+        </span>
+        <span><a href="http://www.beian.miit.gov.cn" target="_blank">浙ICP备20008126号-1</a></span>
     </div>
 </footer>
 
