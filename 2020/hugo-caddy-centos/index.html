@@ -47,7 +47,7 @@
     "articleSection" : "posts",
     "name" : "Hugo 使用 Caddy 自动部署到阿里云",
     "headline" : "Hugo 使用 Caddy 自动部署到阿里云",
-    "description" : "引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane\x26rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用",
+    "description" : "引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane\x26rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户",
     "inLanguage" : "zh-CN",
     "author" : "Cola.Chen",
     "creator" : "Cola.Chen",
@@ -58,7 +58,7 @@
     "datePublished": "2020-03-21 00:22:52 \x2b0800 CST",
     "dateModified" : "2020-03-21 00:22:52 \x2b0800 CST",
     "url" : "\/2020\/hugo-caddy-centos\/",
-    "wordCount" : "2733",
+    "wordCount" : "2732",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -135,7 +135,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                2733 字
+                2732 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -159,8 +159,9 @@
           
           
 
-          <h2 id="引子">引子</h2>
+          <h2 id="引子">引子</h2>
 <p>　　前几天在网上冲浪的时候恰好点进了一个博客 <a href="https://huaien.co/posts/">Wyane&rsquo;s Blog</a> ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户优惠）的云服务器和一个最便宜的域名，开始了博客迁移之路。原先的博客使用的是 Hexo，搭建在 Github Page 上边，访问速度不理想也是一个很重要的原因。</p>
+<hr>
 <hr>
 <h2 id="历程">历程</h2>
 <h3 id="1-安装-hugo">1 安装 Hugo</h3>
@@ -250,7 +251,7 @@ hasCJKLanguage <span style="color:#f92672">=</span> true 	 <span style="color:#7
 hugo sever --buildDrafts -w
 </code></pre></div><p>浏览器访问 localhost:1313</p>
 <p>执行命令后同时会在 yoursite 目录下创建 public 文件夹，里面是当前网站静态内容。</p>
-<h2 id="2-同步到-github">2 同步到 Github</h2>
+<h3 id="2-同步到-github">2 同步到 Github</h3>
 <p>首先到 github 创建一个 public 类型的仓库， 私有仓库无法自动同步到服务器。接下来需要把 yoursite/public 目录推送到这个仓库中。只需要 public 文件夹内的内容。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd yoursite
 <span style="color:#75715e"># 创建 README 文件</span>
@@ -361,6 +362,7 @@ sudo systemctl restart caddy
 sudo systemctl stop caddy
 </code></pre></div><p>至此就可以使用域名访问博客了。</p>
 <hr>
+<hr>
 <h2 id="避坑">避坑</h2>
 <ul>
 <li>切记邮箱要能够访问。国内的服务器就用国内的邮箱。</li>
@@ -369,8 +371,10 @@ sudo systemctl stop caddy
 <li>服务器记得开放 80 和 443 端口。http 请求走 80 端口，https 请求走 443 端口</li>
 </ul>
 <hr>
+<hr>
 <h2 id="总结">总结</h2>
 <p>　　非常有意义的一次博客迁移。不同于托管在 GitHub Page，将博客部署到服务器能够学习很多运维基础知识，也能对网站的部署运行有一个大致的了解，同时还可以熟悉简单的 Linux 命令。如果是对互联网技术岗位有兴趣的新手，十分建议从搭建个人博客开始。</p>
+<hr>
 <hr>
 <h2 id="感谢">感谢</h2>
 <p>Allin&rsquo;s Blog:</p>
