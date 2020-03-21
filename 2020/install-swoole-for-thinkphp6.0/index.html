@@ -159,7 +159,7 @@
           
           
 
-          <h3 id="1-linux源码编译安装php">1 linux源码编译安装php</h3>
+          <h2 id="1-linux源码编译安装php">1 linux源码编译安装php</h2>
 <p>wget下载php源码：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://www.php.net/distributions/php-7.2.27.tar.gz
 </code></pre></div><p>linux安装php依赖：</p>
@@ -266,7 +266,8 @@ export PATH<span style="color:#f92672">=</span>$PATH:/usr/local/php/bin
 </code></pre></div><p>把配置文件复制到该目录中：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp php.ini-production /etc/php.ini
 </code></pre></div><hr>
-<h3 id="2-安装swoole模块">2 安装swoole模块</h3>
+<hr>
+<h2 id="2-安装swoole模块">2 安装swoole模块</h2>
 <p>下载并解压：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#下载</span>
 wget http://pecl.php.net/get/swoole-4.4.15.tgz
@@ -299,7 +300,8 @@ extension<span style="color:#f92672">=</span>swoole.so
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php /swoole-4.4.15/examples/server/echo.php
 </code></pre></div><p>没有报错，说明已经可以使用</p>
 <hr>
-<h3 id="3-php动态添加扩展">3 php动态添加扩展</h3>
+<hr>
+<h2 id="3-php动态添加扩展">3 php动态添加扩展</h2>
 <p>进入到扩展目录：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /php-7.2.27/ext
 </code></pre></div><p>里面都是php扩展，要安装哪个扩展就进入该扩展的文件夹，例如curl：</p>
@@ -320,7 +322,8 @@ extension<span style="color:#f92672">=</span>curl.so
 </code></pre></div><p>查看扩展相关信息：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php --ri curl
 </code></pre></div><hr>
-<h3 id="4-安装composer">4 安装Composer</h3>
+<hr>
+<h2 id="4-安装composer">4 安装Composer</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 </code></pre></div><p>由于众所周知的原因，国内使用composer速度感人，使用命令：</p>
@@ -328,7 +331,8 @@ mv composer.phar /usr/local/bin/composer
 </code></pre></div><p>切换为国内镜像，当然速度比原先快一些但是速度依然感人。如果要恢复官方源，使用命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer config -g --unset repos.packagist
 </code></pre></div><hr>
-<h3 id="5-使用composer安装thinkphp60">5 使用Composer安装ThinkPHP6.0</h3>
+<hr>
+<h2 id="5-使用composer安装thinkphp60">5 使用Composer安装ThinkPHP6.0</h2>
 <p>创建项目目录：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir swoole
 </code></pre></div><p>设置权限777：</p>
@@ -343,12 +347,14 @@ composer create-project topthink/think<span style="color:#f92672">=</span>6.0.x-
 </code></pre></div><p>浏览器访问  http://localhost:8000/</p>
 <p>TP6安装完成！</p>
 <hr>
-<h3 id="6-安装tp6的swoole扩展">6 安装TP6的swoole扩展</h3>
+<hr>
+<h2 id="6-安装tp6的swoole扩展">6 安装TP6的swoole扩展</h2>
 <p>到项目根目录：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer require topthink/think-swoole
 </code></pre></div><p>安装好后在根目录使用命令：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php think swoole
 </code></pre></div><p>如果显示启动了swoole服务就说明安装成功了 ！</p>
+<hr>
 <hr>
 <p>　　以上就是使用源码安装php、swoole扩展、thinkPHP6.0和think-swoole插件的全过程，强烈推荐小白自己过一遍，对Linux操作能有一个大致的理解。</p>
 

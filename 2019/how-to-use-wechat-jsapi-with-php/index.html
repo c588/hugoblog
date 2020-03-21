@@ -161,9 +161,11 @@
 
           <p>　　上周做一个公众号商城，涉及到微信支付，来来回回地踩了一些坑。网上确实能搜到很多很多的文章，但是不一定和你当前的环境一致，甚至很多发布在 Github/CSDN/看云声称开源的代码最后扭扭捏捏藏了一段要求付费吃相着实难看。</p>
 <hr>
+<hr>
 <p>语言：Php</p>
 <p>框架：Thinkphp5.1</p>
 <p>流程：配置域名 =&gt; 获取 code =&gt; 获取 openid =&gt; 获取 prepay_id =&gt; 调起支付页面 =&gt; 回调</p>
+<hr>
 <hr>
 <p>第一步 申请微信公众号并提交商家认证，应该不用赘述。分别获取到 APPID、Mer_id、APPSECRET、APISECRET（key）。具体见 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=3_1">微信支付开发文档——支付账户</a></p>
 <hr>
@@ -262,6 +264,7 @@ public function notify()
   <span style="color:#f92672">&lt;return_msg</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
 <span style="color:#f92672">&lt;/xml&gt;</span>
 </code></pre></div><p>微信服务器接收到这串 XML 之后就知道商户对这笔订单进行了确认，这笔订单在H5付款的流程就完成了！</p>
+<hr>
 <hr>
 <p>这么点字码了这么久，累。</p>
 <p>2019-11-26 00:52:51 老吴于窝前。</p>

@@ -163,11 +163,13 @@
 
           <p>　　关于自建博客的想法，已经有了一年多了。自从18年10月下旬被裁员开始海投简历，我就发现很多公司招聘要求都有一条“加分：有维护个人博客/Github项目”。虽然在后来N多次面试中一次也没提过这一条，而且无论是知乎还是简书还是Github，只要可以使用Markdown，写文章的效果基本都一致，但是我还是觉得维护一个博客，偶尔写一些矫情点的文字也是挺好的，而且搭博客的过程也是一段不错的经历。</p>
 <hr>
+<hr>
 <p>本地环境：黑苹果 macOS Catalina 10.15</p>
 <p>需要软件：自带的终端 Terminal，安装 Git, Homebrew, Hexo, nodejs, npm, sass</p>
 <p>站点：免费的 Github Page</p>
 <p>可选项：个人域名</p>
 <p>　　Github Page创建后会有一个 username.github.io 的域名可供访问，当然要提升一下 bigger 个人域名必不可少，我用的是 nameliso 家的域名，之前偶尔看到有个博主推荐了，价格也还行8刀左右就买了一个玩玩。</p>
+<hr>
 <hr>
 <h2 id="1-下载配置-git">1. 下载配置 Git</h2>
 <p>首先感谢大佬 <a href="https://www.zhihu.com/people/6adaa6c626266b76394ce55273b94cc0">吴润</a> 的教程：<a href="https://zhuanlan.zhihu.com/p/26625249">吴润：GitHub+Hexo 搭建个人网站详细教程</a></p>
@@ -176,6 +178,7 @@
 <p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="mailto:git@github.com">git@github.com</a> ：</p>
 </blockquote>
 <p>这一步，输入 ssh <a href="mailto:git@github.com">git@github.com</a> 之后不要直接敲击回车，按照提示 (yes/no) 输入 &ldquo;yes&rdquo; 不然会失败。</p>
+<hr>
 <hr>
 <h2 id="2-下载-homebrew">2. 下载 Homebrew</h2>
 <p>下载 Homebrew 废了老大的劲儿，主要就是因为众所周知的原因导致速度很慢。一开始按照官方给的教程下载：</p>
@@ -193,12 +196,14 @@ $ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 <p><a href="https://www.zhihu.com/question/31360766">Homebrew有比较快的源（mirror）吗？</a></p>
 <p>安装好以后运行一下 brew -v 看一下有没有输出版本号，有输出那就说明确实已经安装完成。</p>
 <hr>
+<hr>
 <h2 id="3-使用-homebrew-下载-nodejs--npm">3. 使用 Homebrew 下载 NodeJS &amp; NPM</h2>
 <p>　　安装好 Homebrew 后，再下载 NodeJS，同时也会安装好 NPM。NPM 对于 NodeJS 就好比 Composer 之于 PHP，Homebrew 之于 MacOS，yum 之于 CentOS，apt 之于 Ubuntu，都是包管理工具。曾经这些乱七八糟的把我迷了好一阵子，傻傻分不清楚，一边百度一边用：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ brew install node
 $ node -v
 $ npm -v
 </code></pre></div><p>输出版本号，安装完成。至于修改 NPM 全局安装，这里没有涉及，跳过。</p>
+<hr>
 <hr>
 <h2 id="4-使用-npm-下载-hexo">4. 使用 NPM 下载 Hexo</h2>
 <p>　　在磁盘上找个位置，比如我是在 macOS/用户/user 文件夹下建了个 Project 文件夹存放各种代码，然后再 Project 里新建 blog 文件夹用来放博客的文件（也可以不用建 blog 文件夹，后边会生成）。</p>
@@ -216,11 +221,13 @@ $ npm -v
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ hexo server
 </code></pre></div><p>此时终端会输出网址 localhost:4000，按住 ctrl 点击网址，打开，就能看到本地跑起来的博客页面。</p>
 <hr>
+<hr>
 <h2 id="5-到-github-创建自己的博客站点">5. 到 Github 创建自己的博客站点</h2>
 <p>登录 Github，点击左上方绿色的 New 新建一个仓库“repo”</p>
 <p><strong>Repository name （仓库名称）必须填写为自己 Github 的用户名，必须！</strong></p>
 <p>仓库设为公开 Public （默认）</p>
 <p>创建好以后这个仓库就是你个人的博客站点了，以后 Hexo 文章的更新，主题的更换都会将代码同步到这个仓库中。</p>
+<hr>
 <hr>
 <h2 id="6-将本地项目关联到-github-的仓库中">6. 将本地项目关联到 Github 的仓库中</h2>
 <p>　　进入 hexoblog 文件夹，找到第一个 _config.yml 文件。这个文件是你的 Hexo 配置文件，使用文本编辑器或者 Xcode 打开，拉到最下方，设置好你的仓库：</p>
@@ -238,6 +245,7 @@ $ hexo g
 $ hexo d
 </code></pre></div><p>使用你的 Github Page 地址进行访问: username.github.io</p>
 <hr>
+<hr>
 <h2 id="7-更换主题">7. 更换主题</h2>
 <p>初始的主题过于单一，可以到 Hexo 主题网站挑选：<a href="https://hexo.io/themes/">Hexo:主题</a></p>
 <p>选好主题后，复制下作者的 Github 地址备用，比如：</p>
@@ -253,6 +261,7 @@ $ hexo d
 theme: your_theme
 </code></pre></div><p>保存退出，hexo clean、g、d 常规套餐。</p>
 <hr>
+<hr>
 <h2 id="75-css-报错各种-404-一片红">7.5 css 报错？各种 404 一片红？</h2>
 <p>　　恭喜你碰到了和我一样的情况，我在这一步卡了很久很久。更新到 Github 上之后，发现访问页面排版完全错乱，F12 打开调试，console 报错 main.css 404。打开本地调试，也是一样。打开本地项目文件夹 hexoblog/themes/主题名/sourse/sass 发现里面的文件名为 main.scss，再继续进入 libs 文件夹也都是 .scss 文件，跟要读取的 .css 文件不一致啊。尝试修改本地文件扩展名，上传以后还是发现改回了 scss，无奈继续谷歌，终于在一篇 SCDN 的文章中发现了一样的字眼。</p>
 <p><a href="https://segmentfault.com/a/1190000009622863">陈帅：hexo主题配置</a></p>
@@ -265,11 +274,13 @@ theme: your_theme
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install hexo-renderer-sass --save
 </code></pre></div><p>安装好 SASS 插件后重新 hexo clean、g、d 一套流程，滚动的代码串中出现了一排 .css 我就知道，终于成功了！</p>
 <hr>
+<hr>
 <h2 id="8-域名解析">8. 域名解析</h2>
 <p>　　接下来就要提升逼格了，自己的博客，当然要搭配自己的域名。打开域名供应商的网站，进入管理后台，找到买好的域名，找到类似”manager DNS for this domain“类似字眼的按钮点进去，将域名映射到 Github：</p>
 <p><img src="https://pic1.zhimg.com/80/v2-162899b8abf78919fcf7896a2ba2df38_hd.jpg" alt="img"></p>
 <p>第一个就填 192.30.252.153 或者 154，表示要链接的地址是 Github Page。第二个可以填剩下的那个 154 或者填 185.199.(109-112).153 四个选一个，表示使用 Github 提供的 CDN 加速服务，提升站点打开速度。第三个 CNAME 填写自己的 Github 站点地址，即 username.github.io，保存，五分钟左右生效。</p>
 <p>开始访问你的域名吧！</p>
+<hr>
 <hr>
 <h2 id="85-等等无法访问刚配置好的域名">8.5 等等，无法访问刚配置好的域名？</h2>
 <p>这是我碰到的最后一个问题。明明做好了映射，为什么一访问就是找不到 xxxx.xxx 的服务器 IP 地址？</p>
