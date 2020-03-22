@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>杂谈 on 可乐橙</title>
-    <link>/categories/%E6%9D%82%E8%B0%88/</link>
+    <link>https://hdwyz.com/categories/%E6%9D%82%E8%B0%88/</link>
     <description>Recent content in 杂谈 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 12 Dec 2019 22:32:34 +0800</lastBuildDate>
     
-	<atom:link href="/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hdwyz.com/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>书 · 影</title>
-      <link>/2019/just-read/</link>
+      <link>https://hdwyz.com/2019/just-read/</link>
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
-      <guid>/2019/just-read/</guid>
+      <guid>https://hdwyz.com/2019/just-read/</guid>
       <description>退以电影行天下 2020/03: 雪国列车 2020/02： 奇异博士 Doctor Strange (2016) 禁闭岛 Shutter Island (2010) 僵尸肖恩 Shaun of the Dead (2004) 热血警探 Hot Fuzz (2007) 世界尽头 The World&amp;rsquo;s End (2013) 无耻混蛋 Inglourious Basterds (2009) 疯狂动物城 Zootopia</description>
     </item>
     

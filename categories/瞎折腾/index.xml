@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>瞎折腾 on 可乐橙</title>
-    <link>/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+    <link>https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
     <description>Recent content in 瞎折腾 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 19 Feb 2020 02:31:24 +0800</lastBuildDate>
     
-	<atom:link href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>趁年轻，多越狱</title>
-      <link>/2020/break-the-jail-before-you-get-old/</link>
+      <link>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</link>
       <pubDate>Wed, 19 Feb 2020 02:31:24 +0800</pubDate>
       
-      <guid>/2020/break-the-jail-before-you-get-old/</guid>
+      <guid>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</guid>
       <description>源 apt.htv123.com 电话助手源 汉化插件 apt.25mao.com 老牌猫源 WeChatHookPro 微信助手 去掉二次通知 repo.qqtlr.com 93嗨客源 插件收集汉化 apt.fcydia.com 蜂巢源 插件收集汉化 spardev.me 作者源 AutoUnlockX 自动解锁 repo.pulandres.me 破解软件 GPSCheater Cracked 虚拟定位 BetterCCXI</description>
     </item>
     
     <item>
       <title>VPS - 酸酸乳基本使用姿势</title>
-      <link>/2020/the-basic-usage-of-ssr-in-a-vps/</link>
+      <link>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</link>
       <pubDate>Thu, 13 Feb 2020 11:48:52 +0800</pubDate>
       
-      <guid>/2020/the-basic-usage-of-ssr-in-a-vps/</guid>
+      <guid>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
     </item>
     
     <item>
       <title>B450 主板自检时间过长</title>
-      <link>/2019/update-b450-motherboards-flash/</link>
+      <link>https://hdwyz.com/2019/update-b450-motherboards-flash/</link>
       <pubDate>Mon, 02 Dec 2019 13:09:40 +0800</pubDate>
       
-      <guid>/2019/update-b450-motherboards-flash/</guid>
+      <guid>https://hdwyz.com/2019/update-b450-motherboards-flash/</guid>
       <description>十月底十一月初，在狗东买了散件组装了一台主机，双十一又入了一台国产品牌显示器，接上以后发现开机启动特别慢，一直没有找到解决办法就默默忍受着长</description>
     </item>
     
