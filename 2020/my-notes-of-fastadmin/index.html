@@ -58,7 +58,7 @@
     "datePublished": "2020-02-12 00:49:28 \x2b0800 CST",
     "dateModified" : "2020-02-12 00:49:28 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/my-notes-of-fastadmin\/",
-    "wordCount" : "640",
+    "wordCount" : "737",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -135,7 +135,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                640 字
+                737 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -159,20 +159,20 @@
           
           
 
-          <h3 id="前端篇">前端篇：</h3>
+          <h2 id="前端篇">前端篇：</h2>
 <p>动态下拉列表：</p>
 <ul>
 <li>data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法）</li>
 <li>data-field：显示的数据对应数据表中的字段</li>
 </ul>
 <hr>
-<h3 id="视图篇">视图篇：</h3>
+<h2 id="视图篇">视图篇：</h2>
 <hr>
-<h3 id="控制器篇">控制器篇：</h3>
+<h2 id="控制器篇">控制器篇：</h2>
 <hr>
-<h3 id="模型篇">模型篇：</h3>
+<h2 id="模型篇">模型篇：</h2>
 <hr>
-<h3 id="命令行篇">命令行篇：</h3>
+<h2 id="命令行篇">命令行篇：</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">//生成fa_test表的CRUD
 php think crud -t test
 //生成fa_test表的CRUD且一键生成菜单
@@ -195,7 +195,20 @@ php think crud -t test --imagefield<span style="color:#f92672">=</span>image --i
 php think crud -t test --relation<span style="color:#f92672">=</span>category --relation<span style="color:#f92672">=</span>admin --relationforeignkey<span style="color:#f92672">=</span>category_id --relationforeignkey<span style="color:#f92672">=</span>admin_id
 //生成v_phealth_db2数据库下的fa_test表的CRUD
 php think crud -t test --db<span style="color:#f92672">=</span>v_phealth_db2
-</code></pre></div>
+</code></pre></div><h2 id="其他">其他：</h2>
+<p>服务器日志</p>
+<p>在路径 thinkphp/library/think/log/driver/File.php 中可以看到日志的配置为：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">protected $config = [
+        &#39;time_format&#39; =&gt; &#39; c &#39;,
+        &#39;single&#39;      =&gt; false,
+        &#39;file_size&#39;   =&gt; 2097152,
+        &#39;path&#39;        =&gt; LOG_PATH,
+        &#39;apart_level&#39; =&gt; [],
+        &#39;max_files&#39;   =&gt; 0,
+        &#39;json&#39;        =&gt; false,
+    ];
+</code></pre></div><p>初始设置的单个日志文件大小为 2M，即在服务器中当前日志文件大小超过 2M 后会生成新的日志文件。</p>
+
     </div>
 
     <div class="post-copyright">
