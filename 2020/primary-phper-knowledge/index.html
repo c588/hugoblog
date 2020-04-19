@@ -23,10 +23,10 @@
   <title>
        
        
-           初级 Phper 知识点 | 可乐橙
+           初级 PHP 知识点 | 可乐橙
        
   </title>
-  <meta name="title" content="初级 Phper 知识点 | 可乐橙">
+  <meta name="title" content="初级 PHP 知识点 | 可乐橙">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -45,8 +45,8 @@
          "@id": "https:\/\/hdwyz.com"
     },
     "articleSection" : "posts",
-    "name" : "初级 Phper 知识点",
-    "headline" : "初级 Phper 知识点",
+    "name" : "初级 PHP 知识点",
+    "headline" : "初级 PHP 知识点",
     "description" : "洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习",
     "inLanguage" : "zh-CN",
     "author" : "ColaChen",
@@ -58,7 +58,7 @@
     "datePublished": "2020-04-19 07:47:55 \x2b0800 CST",
     "dateModified" : "2020-04-19 07:47:55 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/primary-phper-knowledge\/",
-    "wordCount" : "3918",
+    "wordCount" : "3898",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -117,7 +117,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">初级 Phper 知识点</h1>
+        <h1 class="post-title" itemprop="name headline">初级 PHP 知识点</h1>
         <div class="post-meta">
                 
             
@@ -129,7 +129,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                3918 字
+                3898 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -239,16 +239,16 @@ foo(...$parameters);
 <p>原因在于打印时将 &ldquo;1,&rdquo; 识别为浮点数，第二个 &ldquo;.&rdquo; 识别为字符串连接符，最后的 &ldquo;.9&rdquo; 识别为浮点数小数 &ldquo;0.9&rdquo;，即 &ldquo;1.&rdquo; . &ldquo;0.9&rdquo;，拼接后就变成了字符串 &ldquo;10.9&rdquo;</p>
 </li>
 <li>
-<p>判断空值（0/&ldquo;0&rdquo;/&quot;&quot;/[]/Null/False）：
-empty(&ldquo;0&rdquo;) -&gt; true
-isset：只有在检查的变量未赋值或赋值 False 的情况下返回 true
-is_null：只有在变量为赋值为 Null 的情况下返回 true
-详见 <a href="https://www.php.net/manual/zh/types.comparisons.php">PHP 类型比较表</a></p>
+<p>判断空值（0/&ldquo;0&rdquo;/&quot;&quot;/[]/Null/False）：</p>
+<p>empty(&ldquo;0&rdquo;) -&gt; true</p>
+<p>isset：只有在检查的变量未赋值或赋值 False 的情况下返回 true</p>
+<p>is_null：只有在变量为赋值为 Null 的情况下返回 true</p>
+<p>详见 <a href="https://www.php.net/manual/zh/types.comparisons.php">PHP 类型比较表</a></p>
 </li>
 <li>
-<p>等值符 &ldquo;==&rdquo;：左右两边不同类型时，会自动进行类型转换再比较。
-&ldquo;1&rdquo; == &ldquo;01&rdquo;，左右两边均为字符串，不会进行类型转换，返回 false
-NaN == NaN，NaN 和任何值包括本身都不相等，返回 false</p>
+<p>等值符 &ldquo;==&rdquo;：左右两边不同类型时，会自动进行类型转换再比较</p>
+<p>&ldquo;1&rdquo; == &ldquo;01&rdquo;，左右两边均为字符串，不会进行类型转换，返回 false</p>
+<p>NaN == NaN，NaN 和任何值包括本身都不相等，返回 false</p>
 </li>
 </ul>
 <hr>
@@ -304,29 +304,71 @@ $new = [
 <hr>
 <h2 id="php-7-新特性">PHP 7 新特性</h2>
 <ul>
-<li>Object 是 php7.2 中的保留类名，不可以再定义名称为 Object 的类。</li>
-<li>在文件顶部用 declare 声明后意味本文件启用严格声明标量</li>
-<li>支持返回类型声明</li>
-<li>null合并运算符，减少三元表达式和isset()的使用
-$_GET[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 等同于 isset($_GET[&lsquo;user&rsquo;]) ? $_GET[&lsquo;user&rsquo;] : &lsquo;nobody&rsquo;
-​$_GET[&lsquo;user&rsquo;] ?? ​$_POST[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 没有get user → 没有post user → nobody</li>
-<li>太空船操作符（组合比较符） 左&lt;右 返回-1  左=右 返回0  左&gt;右 返回1</li>
-<li>通过 define() 定义常量数组</li>
-<li>现在支持通过 new class 来实例化一个匿名类</li>
-<li>Unicode codepoint 转译语法</li>
-<li>Closure::call()  现在有着更好的性能，简短干练的暂时绑定一个方法到对象上闭包并调用它。</li>
-<li>为 unserialize()  提供过滤</li>
-<li>新增加 IntlChar 类</li>
-<li>预期：向后兼用并增强之前的 assert() 的方法</li>
-<li>Group use declarations：通过单个 use 语句 一次性导入类、函数和常量</li>
-<li>生成器可以返回表达式</li>
-<li>Generator delegation：在最外层生成其中使用 yield from， 就可以把一个生成器自动委派给其他的生成器， Traversable 对象或者 array</li>
-<li>整数除法函数 intdiv() ：进行 整数的除法运算</li>
-<li>会话选项：session_start() 可以接受一个 array 作为参数， 用来覆盖 php.ini 文件中设置的 会话配置选项</li>
-<li>preg_replace_callback_array() ：用一个关联数组来对每个正则表达式注册回调函数， 正则表达式本身作为关联数组的键， 而对应的回调函数就是关联数组的值</li>
-<li>CSPRNG Functions：新加入两个跨平台的函数： random_bytes() 和 random_int() 用来产生高安全级别的随机字符串和随机整数</li>
-<li>可以使用 list() 函数来展开实现了 ArrayAccess 接口的对象</li>
-<li>允许在克隆表达式上访问对象成员，例如： (clone $foo)-&gt;bar()</li>
+<li>
+<p>Object 是 php7.2 中的保留类名，不可以再定义名称为 Object 的类。</p>
+</li>
+<li>
+<p>在文件顶部用 declare 声明后意味本文件启用严格声明标量</p>
+</li>
+<li>
+<p>支持返回类型声明</p>
+</li>
+<li>
+<p>null合并运算符，减少三元表达式和isset()的使用</p>
+<p>$_GET[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 等同于 isset($_GET[&lsquo;user&rsquo;]) ? $_GET[&lsquo;user&rsquo;] : &lsquo;nobody&rsquo;</p>
+<p>$_GET[&lsquo;user&rsquo;] ?? ​$_POST[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 没有get user → 没有post user → nobody</p>
+</li>
+<li>
+<p>太空船操作符（组合比较符） 左&lt;右 返回-1  左=右 返回0  左&gt;右 返回1</p>
+</li>
+<li>
+<p>通过 define() 定义常量数组</p>
+</li>
+<li>
+<p>现在支持通过 new class 来实例化一个匿名类</p>
+</li>
+<li>
+<p>Unicode codepoint 转译语法</p>
+</li>
+<li>
+<p>Closure::call()  现在有着更好的性能，简短干练的暂时绑定一个方法到对象上闭包并调用它。</p>
+</li>
+<li>
+<p>为 unserialize()  提供过滤</p>
+</li>
+<li>
+<p>新增加 IntlChar 类</p>
+</li>
+<li>
+<p>预期：向后兼用并增强之前的 assert() 的方法</p>
+</li>
+<li>
+<p>Group use declarations：通过单个 use 语句 一次性导入类、函数和常量</p>
+</li>
+<li>
+<p>生成器可以返回表达式</p>
+</li>
+<li>
+<p>Generator delegation：在最外层生成其中使用 yield from， 就可以把一个生成器自动委派给其他的生成器， Traversable 对象或者 array</p>
+</li>
+<li>
+<p>整数除法函数 intdiv() ：进行 整数的除法运算</p>
+</li>
+<li>
+<p>会话选项：session_start() 可以接受一个 array 作为参数， 用来覆盖 php.ini 文件中设置的 会话配置选项</p>
+</li>
+<li>
+<p>preg_replace_callback_array() ：用一个关联数组来对每个正则表达式注册回调函数， 正则表达式本身作为关联数组的键， 而对应的回调函数就是关联数组的值</p>
+</li>
+<li>
+<p>CSPRNG Functions：新加入两个跨平台的函数： random_bytes() 和 random_int() 用来产生高安全级别的随机字符串和随机整数</p>
+</li>
+<li>
+<p>可以使用 list() 函数来展开实现了 ArrayAccess 接口的对象</p>
+</li>
+<li>
+<p>允许在克隆表达式上访问对象成员，例如： (clone $foo)-&gt;bar()</p>
+</li>
 </ul>
 <hr>
 <h2 id="mysql-优化">MySQL 优化</h2>
@@ -366,7 +408,7 @@ $_GET[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 等同于 isset($_GET[&lsquo;u
 <li>不便于阅读</li>
 <li>需要手动转换</li>
 </ol>
-<p>ip  -&gt;  inet_aton()  -&gt;  整数  -&gt;  inet_ntoa()  -&gt;  ip</p>
+<p>转换方法：ip  -&gt;  inet_aton()  -&gt;  整数  -&gt;  inet_ntoa()  -&gt;  ip</p>
 </li>
 </ul>
 <h4 id="索引">索引</h4>
