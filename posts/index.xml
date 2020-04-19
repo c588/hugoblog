@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 07:47:55 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>初级 Phper 知识点</title>
+      <link>https://hdwyz.com/2020/primary-phper-knowledge/</link>
+      <pubDate>Sun, 19 Apr 2020 07:47:55 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/primary-phper-knowledge/</guid>
+      <description>洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习</description>
+    </item>
     
     <item>
       <title>Hugo 使用 Caddy 自动部署到阿里云</title>
@@ -98,7 +107,7 @@
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
       <guid>https://hdwyz.com/2019/just-read/</guid>
-      <description>退以电影行天下 2020/04: 沉默的羔羊 The Silence of the Lambs (1991) 狩猎 Jagten (2012) 2020/03: 雪国列车 설국열차 (2013) 2020/02： 奇异博士 Doctor Strange (2016) 禁闭岛 Shutter Island (2010) 僵尸肖恩 Shaun of the Dead (2004) 热血警探 Hot Fuzz (2007)</description>
+      <description>退以电影行天下 2020/04: 7号房的礼物 7번방의 선물 (2013) 沉默的羔羊 The Silence of the Lambs (1991) 狩猎 Jagten (2012) 2020/03: 雪国列车 설국열차 (2013) 2020/02： 奇异博士 Doctor Strange (2016) 禁闭岛 Shutter Island (2010) 僵尸肖</description>
     </item>
     
     <item>
