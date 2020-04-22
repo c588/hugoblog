@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/hugo-caddy-centos/" />
+  
+  <link rel="canonical" href="https://hdwyz.com/2020/primary-phper-knowledge/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           初级 PHP 知识点 | 可乐橙
+       
+  </title>
+  <meta name="title" content="初级 PHP 知识点 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "初级 PHP 知识点",
+    "headline" : "初级 PHP 知识点",
+    "description" : "洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习",
+    "inLanguage" : "zh-CN",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-19 07:47:55 \x2b0800 CST",
+    "dateModified" : "2020-04-19 07:47:55 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/primary-phper-knowledge\/",
+    "wordCount" : "3898",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">初级 PHP 知识点</h1>
+        <div class="post-meta">
+                
+            
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-04-19 itemprop="datePublished">
+                    2020-04-19
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                3898 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                8 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>　　洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习熟悉一下。</p>
+<hr>
+<h2 id="编程">编程</h2>
+<ul>
+<li><strong>面向对象</strong>：三大支柱分别为 <strong>封装</strong>、<strong>继承</strong>、<strong>多态</strong></li>
+<li><strong>封装</strong>：隐藏一切可以隐藏的细节，只向外暴露（提供）简单的编程接口</li>
+<li><strong>继承</strong>：在已有类的基础上创建新类，这其中的一种做法就是让一个类从另一个类那里将属性和方法直接继承下来，从而减少重复代码的编写</li>
+<li><strong>多态</strong>：调用经过子类重写的方法时，不同的子类对象会表现出不同的行为</li>
+</ul>
+<hr>
+<h2 id="php">PHP</h2>
+<ul>
+<li>
+<p>include 和 require 的区别：</p>
+<ol>
+<li>require 在程序解释执行前被加载。被加载的内容，在程序解释执行过程中被经常使用；include 则是在解释执行过程中被加载。由此可见，某些内容经常被使用，推荐用 require 加载。如果每次执行代码是读取不同的文件，或者有通过一组文件迭代的循环，就使用 include。</li>
+<li>include 引入文件失败的时候，产生警告，程序继续执行；require 引入文件失败的时候，产生错误，程序中断。</li>
+<li>include_once 和 require_once 的差别与 include 和 require 的差别类似,不过他们引入的文件只能被使用一次。</li>
+<li>include 和 file_get_contents 类似，但是 include 返回的字符串可以被执行，file_get_contents 返回的字符串不会被执行。</li>
+</ol>
+</li>
+<li>
+<p>字符串不会被执行的理解，延伸，语言结构和函数的区别：</p>
+<ol>
+<li>
+<p>php 中，echo/print/isset/for/foreach/continue 等是语言结构，var_dump/is_null 等是函数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"># 可以顺利执行
+$func = &#34;is_null&#34;;
+$var = &#34;&#34;;
+$func($var);
+# 不可以执行,报错
+$func = &#34;echo&#34;;
+$string = &#34;Hello&#34;;
+$func($string);
+</code></pre></div></li>
+<li>
+<p>语言结构在语法分析时会被“抹掉”，即被逻辑代替，且没有返回值</p>
+</li>
+<li>
+<p>语言结构执行速度快  isset &gt; array_key_exists</p>
+</li>
+</ol>
+<p>建议：<strong>用函数做函数应该做的事情</strong>，即如果当前需要判断某一变量是否已经被赋值/声明，使用 isset；如果当前需要判断某个变量是否为 NULL，使用 is_null。尽量保持语义上的一致。且从效率上考虑，&ldquo;=== NULL&rdquo; 与 isset 接近，均优于 is_null，所以推荐使用 &ldquo;=== NULL&rdquo; 代替 is_null。</p>
+</li>
+<li>
+<p>php 中 echo/print/print_r/var_dump/var_export 的区别：</p>
+<ol>
+<li>
+<p>echo 和 print 是语言结构，echo 输出多个值，使用逗号分隔，无返回值。print 只能输出一个值，返回值为 1。echo 和 print 只能输出整型和字符串，无法输出布尔型：true -&gt; 1, false/Null -&gt; &quot;&rdquo;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">if (print(&#34;1\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;2\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;3\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;4\n&#34;)) {
+    ;
+}
+# 输出
+4
+111
+</code></pre></div><p>理由同上，print 是语言结构（外层的括号会被忽略）且返回值为 1，实际执行时被解释为：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">if (print (&#34;1\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print (&#34;2\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print (&#34;3\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print &#34;4\n&#34;)))) {
+  ;
+}
+</code></pre></div></li>
+<li>
+<p>print_r() 只能输出一个值，可以为整型/字符串/数组/对象，返回 true，无法输出布尔型：true -&gt; 1, false/Null -&gt; &ldquo;&quot;。第二个参数为 true 时不打印，返回内容</p>
+</li>
+<li>
+<p>var_export()  只能输出一个值，可以为整型/字符串/数组/对象/布尔值，返回 null，第二个参数为 true 时不打印，返回内容</p>
+</li>
+<li>
+<p>var_dump() 可以输出多个值，可以为任意类型，没有返回值</p>
+</li>
+</ol>
+</li>
+<li>
+<p>关于 PHP 5.6 版本后引入的 Splat operate，即 &ldquo;&hellip;&quot;：
+&ldquo;&hellip;&rdquo; 操作符可以定义可变参数函数或对数组进行解包，如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function  foo($a, $b, $c) {
+        var_dump($a + $b + $c);
+}
+  
+// 将数组解包拆分为三个整型 
+$parameters = array (1, 2, 3);
+   
+foo(...$parameters);
+</code></pre></div><p>但是 var_dump(1&hellip;9); 会输出 string(4) &ldquo;10.9&rdquo;;</p>
+<p>原因在于打印时将 &ldquo;1,&rdquo; 识别为浮点数，第二个 &ldquo;.&rdquo; 识别为字符串连接符，最后的 &ldquo;.9&rdquo; 识别为浮点数小数 &ldquo;0.9&rdquo;，即 &ldquo;1.&rdquo; . &ldquo;0.9&rdquo;，拼接后就变成了字符串 &ldquo;10.9&rdquo;</p>
+</li>
+<li>
+<p>判断空值（0/&ldquo;0&rdquo;/&quot;&quot;/[]/Null/False）：</p>
+<p>empty(&ldquo;0&rdquo;) -&gt; true</p>
+<p>isset：只有在检查的变量未赋值或赋值 False 的情况下返回 true</p>
+<p>is_null：只有在变量为赋值为 Null 的情况下返回 true</p>
+<p>详见 <a href="https://www.php.net/manual/zh/types.comparisons.php">PHP 类型比较表</a></p>
+</li>
+<li>
+<p>等值符 &ldquo;==&rdquo;：左右两边不同类型时，会自动进行类型转换再比较</p>
+<p>&ldquo;1&rdquo; == &ldquo;01&rdquo;，左右两边均为字符串，不会进行类型转换，返回 false</p>
+<p>NaN == NaN，NaN 和任何值包括本身都不相等，返回 false</p>
+</li>
+</ul>
+<hr>
+<h2 id="函数和方法">函数和方法</h2>
+<ul>
+<li>
+<p>array_map(func, arr1, arr2, &hellip;)：返回的是新数组，每个元素都是  arr1, arr2, &hellip; 依次作为参数传入 func 后处理返回的数据。如果回调函数为 null，则会将 arr1, arr2, &hellip; 依次作为新数组的值，即获取转置矩阵。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$arr1 = [1, 2, 3, 4, 5];
+$arr2 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
+$output = array_map(null, $arr1, $arr2);
+$output = [
+  [1, &#39;a&#39;],
+  [2, &#39;b&#39;],
+  [3, &#39;c&#39;],
+  [4, &#39;d&#39;],
+  [5, &#39;e&#39;],
+];
+  
+$old = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+];
+$new = array_map(null, ...$old);
+$new = [
+    [1, 5, 9, 13],
+    [2, 6, 10, 14],
+    [3, 7, 11, 15],
+    [4, 8, 12, 16],
+];
+</code></pre></div></li>
+<li>
+<p>array_walk：返回布尔值，可以对原先的数组进行修改（回调函数第一个参数是地址引用），可以获取元素的 key</p>
+</li>
+<li>
+<p>array_filter：返回的是新数组，原数组不变，作用为<strong>过滤</strong>（回调函数处理后结果为 false ）数组中的元素，可以获取元素的 key</p>
+</li>
+<li>
+<p>使用 array_walk/array_filter 时，如果回调函数已经被定义为静态方法，需要使用数组 [__CLASS__, &lsquo;函数名&rsquo;] 传入</p>
+</li>
+<li>
+<p>静态方法不允许调用静态方法。因为静态方法在对象还没有实例化的时候就分配了内存空间，先于非静态方法存在，所以无法调用。</p>
+</li>
+<li>
+<p>unset：unset 在官方文档中既表示”<a href="https://www.php.net/manual/zh/language.references.unset.php#language.references.unset">取消引用</a>“又表示“<a href="https://www.php.net/manual/zh/function.unset.php#refsect1-function.unset-description">销毁指定的变量</a>”。实践中获得的结论是：</p>
+<ol>
+<li>unset()函数只能在变量值占用内存空间超过256字节时才会释放内存空间</li>
+<li>只有当指向该变量的所有变量（如引用变量）都被销毁后，才会释放内存</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="php-7-新特性">PHP 7 新特性</h2>
+<ul>
+<li>
+<p>Object 是 php7.2 中的保留类名，不可以再定义名称为 Object 的类。</p>
+</li>
+<li>
+<p>在文件顶部用 declare 声明后意味本文件启用严格声明标量</p>
+</li>
+<li>
+<p>支持返回类型声明</p>
+</li>
+<li>
+<p>null合并运算符，减少三元表达式和isset()的使用</p>
+<p>$_GET[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 等同于 isset($_GET[&lsquo;user&rsquo;]) ? $_GET[&lsquo;user&rsquo;] : &lsquo;nobody&rsquo;</p>
+<p>$_GET[&lsquo;user&rsquo;] ?? ​$_POST[&lsquo;user&rsquo;] ?? &lsquo;nobody&rsquo; 没有get user → 没有post user → nobody</p>
+</li>
+<li>
+<p>太空船操作符（组合比较符） 左&lt;右 返回-1  左=右 返回0  左&gt;右 返回1</p>
+</li>
+<li>
+<p>通过 define() 定义常量数组</p>
+</li>
+<li>
+<p>现在支持通过 new class 来实例化一个匿名类</p>
+</li>
+<li>
+<p>Unicode codepoint 转译语法</p>
+</li>
+<li>
+<p>Closure::call()  现在有着更好的性能，简短干练的暂时绑定一个方法到对象上闭包并调用它。</p>
+</li>
+<li>
+<p>为 unserialize()  提供过滤</p>
+</li>
+<li>
+<p>新增加 IntlChar 类</p>
+</li>
+<li>
+<p>预期：向后兼用并增强之前的 assert() 的方法</p>
+</li>
+<li>
+<p>Group use declarations：通过单个 use 语句 一次性导入类、函数和常量</p>
+</li>
+<li>
+<p>生成器可以返回表达式</p>
+</li>
+<li>
+<p>Generator delegation：在最外层生成其中使用 yield from， 就可以把一个生成器自动委派给其他的生成器， Traversable 对象或者 array</p>
+</li>
+<li>
+<p>整数除法函数 intdiv() ：进行 整数的除法运算</p>
+</li>
+<li>
+<p>会话选项：session_start() 可以接受一个 array 作为参数， 用来覆盖 php.ini 文件中设置的 会话配置选项</p>
+</li>
+<li>
+<p>preg_replace_callback_array() ：用一个关联数组来对每个正则表达式注册回调函数， 正则表达式本身作为关联数组的键， 而对应的回调函数就是关联数组的值</p>
+</li>
+<li>
+<p>CSPRNG Functions：新加入两个跨平台的函数： random_bytes() 和 random_int() 用来产生高安全级别的随机字符串和随机整数</p>
+</li>
+<li>
+<p>可以使用 list() 函数来展开实现了 ArrayAccess 接口的对象</p>
+</li>
+<li>
+<p>允许在克隆表达式上访问对象成员，例如： (clone $foo)-&gt;bar()</p>
+</li>
+</ul>
+<hr>
+<h2 id="mysql-优化">MySQL 优化</h2>
+<h4 id="数据表设计">数据表设计</h4>
+<p>三范式：</p>
+<ol>
+<li>第一范式：字段原子性（<strong>不可再分割</strong>）</li>
+<li>第二范式：消除对主键的部分依赖（<strong>保证一张表只描述一件事情</strong>）</li>
+<li>第三范式：消除对主键的传递依赖（<strong>保证每列都和主键直接相关</strong>）</li>
+</ol>
+<p>字段：</p>
+<ul>
+<li>
+<p>表字段避免null值出现，null值很难查询优化且占用额外的索引空间，推荐默认数字0代替null。</p>
+</li>
+<li>
+<p>尽量使用INT而非BIGINT，如果非负则加上UNSIGNED（这样数值容量会扩大一倍），当然能使用TINYINT、SMALLINT、MEDIUM_INT更好。</p>
+</li>
+<li>
+<p>使用枚举或整数代替字符串类型</p>
+</li>
+<li>
+<p>尽量使用TIMESTAMP而非DATETIME</p>
+</li>
+<li>
+<p>单表不要有太多字段，建议在20以内</p>
+</li>
+<li>
+<p>高性能MySQL第3版（4.1.7节）中，作者建议当存储IPv4地址时，应该使用32位的无符号整数（UNSIGNED INT）来存储IP地址，
+好处：</p>
+<ol>
+<li>节省空间，不管是数据存储空间，还是索引存储空间</li>
+<li>便于使用范围查询（BETWEEN&hellip;AND），且效率更高</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>不便于阅读</li>
+<li>需要手动转换</li>
+</ol>
+<p>转换方法：ip  -&gt;  inet_aton()  -&gt;  整数  -&gt;  inet_ntoa()  -&gt;  ip</p>
+</li>
+</ul>
+<h4 id="索引">索引</h4>
+<p>创建：</p>
+<ul>
+<li>根据查询有针对性的创建，考虑在 WHERE 和 ORDER BY 命令上涉及的列建立索引，可根据 EXPLAIN 来查看是否用了索引还是全表扫描</li>
+<li>避免在 WHERE 子句中对字段进行 NULL 值判断，否则将导致引擎放弃使用索引而进行全表扫描</li>
+<li>值分布很稀少的字段不适合建索引，例如&quot;性别&quot;这种只有两三个值的字段</li>
+<li>字符字段只建前缀索引</li>
+<li>字符字段最好不要做主键</li>
+<li>不用外键，由程序保证约束</li>
+<li>不用 UNIQUE，由程序保证约束</li>
+<li>使用多列索引时主意顺序和查询条件保持一致，同时删除不必要的单列索引</li>
+</ul>
+<p>使用：</p>
+<ul>
+<li>字段要独立出现</li>
+<li>like查询，不能以通配符开头</li>
+<li>复合索引只对第一个字段有效</li>
+<li>or，两边条件都有索引可用</li>
+<li>状态值，不容易使用到索引（值分布稀少）</li>
+</ul>
+<h4 id="sql-编写">SQL 编写</h4>
+<ul>
+<li>使用limit对查询结果的记录进行限定</li>
+<li>避免select *，将需要查找的字段列出来</li>
+<li>少用JOIN</li>
+<li>使用连接（join）来代替子查询</li>
+<li>使用同类型进行比较，比如用&rsquo;123'和&rsquo;123'比，123和123比</li>
+<li>尽量避免在WHERE子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描</li>
+<li>对于连续数值，使用BETWEEN不用IN：SELECT id FROM t WHERE num BETWEEN 1 AND 5</li>
+<li>不做列运算：SELECT id WHERE age + 1 = 10，任何对列的操作都将导致表扫描，它包括数据库教程函数、计算表达式等等，查询时要尽可能将操作移至等号右边</li>
+<li>列表数据不要拿全表，要使用LIMIT来分页，每页数量也不要太大</li>
+<li>拆分大的delete或insert语句</li>
+<li>可通过开启慢查询日志来找出较慢的SQL</li>
+<li>sql语句尽可能简单：一条sql只能在一个cpu运算；大语句拆小语句，减少锁时间；一条大sql可以堵死整个库</li>
+<li>OR改写成IN：OR的效率是n级别，IN的效率是log(n)级别，in的个数建议控制在200以内</li>
+<li>不用函数和触发器，在应用程序实现</li>
+<li>避免%xxx式查询</li>
+</ul>
+<h4 id="实例">实例</h4>
+<ul>
+<li>在前端数据浏览翻页，或者大数据分批导出等场景下，是可以将上一页的最大值当成参数作为查询条件的。</li>
+<li>使用JOIN代替子查询和exists</li>
+<li>连接数据很多时先用where对数据较小的表做限定再进行连接</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/primary-phper-knowledge/>https://hdwyz.com/2020/primary-phper-knowledge/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/hugo-caddy-centos/" class="prev" rel="prev" title="Hugo 使用 Caddy 自动部署到阿里云"><i class="iconfont icon-left"></i>&nbsp;Hugo 使用 Caddy 自动部署到阿里云</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
