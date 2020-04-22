@@ -259,9 +259,9 @@ public function notify()
 	WechatService::handleNotify();
 }
 </code></pre></div><p>偷懒了，因为用的 CRMEB 这个项目，里边自带了处理微信支付回调信息的方法，大致的意思就是拿到支付金额和订单号，根据订单号查询用户应该支付的金额，和实际金额对比，相等就对订单的 paid、paid_time 这些字段进行修改，最后返回 XML 格式的数据：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XMl" data-lang="XMl"><span style="color:#f92672">&lt;xml</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;return_code</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[SUCCESS]]&gt;</span><span style="color:#f92672">&lt;/return_code&gt;</span>
-  <span style="color:#f92672">&lt;return_msg</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XMl" data-lang="XMl"><span style="color:#f92672">&lt;xml&gt;</span>
+  <span style="color:#f92672">&lt;return_code&gt;</span><span style="color:#75715e">&lt;![CDATA[SUCCESS]]&gt;</span><span style="color:#f92672">&lt;/return_code&gt;</span>
+  <span style="color:#f92672">&lt;return_msg&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
 <span style="color:#f92672">&lt;/xml&gt;</span>
 </code></pre></div><p>微信服务器接收到这串 XML 之后就知道商户对这笔订单进行了确认，这笔订单在H5付款的流程就完成了！</p>
 <hr>
