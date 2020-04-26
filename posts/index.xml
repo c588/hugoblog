@@ -6,19 +6,10 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Apr 2020 04:24:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>《剑仙情缘三》四天观光有感</title>
-      <link>https://hdwyz.com/2020/my-first-experience-in-jx3/</link>
-      <pubDate>Sat, 25 Apr 2020 04:24:05 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/my-first-experience-in-jx3/</guid>
-      <description>观看提醒 本片文章为个人在四天左右时间内，从创建角色到下场撕逼，体验到的一系列游戏内容，带主观因素，所有言论仅代表个人观点，请勿上纲上线。 全文</description>
-    </item>
     
     <item>
       <title>Hugo 使用 Caddy 自动部署到阿里云</title>
