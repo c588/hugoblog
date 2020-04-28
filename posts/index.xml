@@ -49,10 +49,10 @@
     
     <item>
       <title>VPS - 酸酸乳基本使用姿势</title>
-      <link>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</link>
+      <link>https://hdwyz.com/2020/build-ssr-with-your-vps/</link>
       <pubDate>Thu, 13 Feb 2020 11:48:52 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</guid>
+      <guid>https://hdwyz.com/2020/build-ssr-with-your-vps/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
     </item>
     

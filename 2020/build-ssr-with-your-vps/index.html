@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/my-notes-of-fastadmin/" />
+  <link rel="next" href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" />
+  <link rel="canonical" href="https://hdwyz.com/2020/build-ssr-with-your-vps/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           VPS - 酸酸乳基本使用姿势 | 可乐橙
+       
+  </title>
+  <meta name="title" content="VPS - 酸酸乳基本使用姿势 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "VPS - 酸酸乳基本使用姿势",
+    "headline" : "VPS - 酸酸乳基本使用姿势",
+    "description" : "Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)\/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http:\/\/shadowsocks-all.sh\/) [https:\/\/raw.githubusercontent.com\/teddysun\/shadowsocks_install\/master\/shadowsocks-all.sh](https:\/\/raw.githubusercontent.com\/teddysun\/shadowsocks_install\/master\/shadowsocks-all.sh) # 设置运行权限 chmod \x2bx [shadowsocks-all.sh](http:\/\/shadowsocks-all.sh\/) #",
+    "inLanguage" : "zh-CN",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-13 11:48:52 \x2b0800 CST",
+    "dateModified" : "2020-02-13 11:48:52 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/build-ssr-with-your-vps\/",
+    "wordCount" : "393",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">VPS - 酸酸乳基本使用姿势</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">
+                    瞎折腾
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-02-13 itemprop="datePublished">
+                    2020-02-13
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                393 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                1 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="centos-安装-ssr">Centos 安装 SSR</h2>
+<ol>
+<li>
+<p>购买 VPS</p>
+</li>
+<li>
+<p>使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS
+<a href="http://colachen.com/2019/12/15/how-to-connect-vps-with-macOs/">在 macOS 上连接 vps 服务器</a></p>
+</li>
+<li>
+<p>查看系统版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 安装 lsb</span>
+sudo yum install -y redhat-lsb
+lsb_release -a
+</code></pre></div><p>CentOS Linux release 7.6.1810 (Core)</p>
+</li>
+<li>
+<p>安装 SSR</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本文件</span>
+wget --no-check-certificate -O <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">](</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">](</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">)</span>
+<span style="color:#75715e"># 设置运行权限</span>
+chmod +x <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">](</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span>
+<span style="color:#75715e"># 运行脚本</span>
+./shadowsocks-all.sh 2&gt;&amp;<span style="color:#ae81ff">1</span> | tee shadowsocks-all.log
+</code></pre></div></li>
+<li>
+<p>安装 BBR 加速</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本文件</span>
+wget --no-check-certificate -O <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">](</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">](</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> chmod +x <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">](</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> ./tcp.sh
+<span style="color:#75715e"># 安装完成后重启 VPS，启用加速</span>
+./tcp.sh
+</code></pre></div></li>
+<li>
+<p>安装 SSR 客户端
+<a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip">Windows</a></p>
+<p><a href="https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk">Android</a></p>
+<p><a href="https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.4-r8/ShadowsocksX-NG-R8.dmg">MacOs</a></p>
+<p>iPhone: 登录外区  App Store 后搜索 shadowrocket 下载安装使用</p>
+</li>
+<li>
+<p>测速：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本</span>
+wget <span style="color:#f92672">[</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">](</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">)</span>
+<span style="color:#75715e"># 添加权限</span>
+chmod a+rx <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">](</span>http://speedtest.py/<span style="color:#f92672">)</span>
+<span style="color:#75715e"># 测速</span>
+python <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">](</span>http://speedtest.py/<span style="color:#f92672">)</span>
+<span style="color:#75715e"># 选择节点</span>
+python speedtest.py --server <span style="color:#ae81ff">4751</span>
+</code></pre></div></li>
+</ol>
+<hr>
+<hr>
+<h2 id="ubuntu-16-安装-v2ray-并启用锐速进行加速">Ubuntu 16 安装 V2ray 并启用锐速进行加速</h2>
+<ol>
+<li>
+<p>设置 root 密码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo passwd
+</code></pre></div></li>
+<li>
+<p>下载并运行 233boy 的安装脚本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -s -L https://git.io/v2ray.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>一路回车，保存最后显示的配置信息</p>
+</li>
+<li>
+<p>安装锐速</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo v2ray
+</code></pre></div><p>选择 11</p>
+<p>选择 2 安装锐速加速</p>
+<p>内核不匹配</p>
+<p>选择1 安装 BBR 加速</p>
+</li>
+<li>
+<p>重启 vps</p>
+</li>
+<li>
+<p>先用 speedtest 脚本测速，下载脚本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://raw.github.com/sivel/speedtest-cli/master/speedtest.py
+</code></pre></div></li>
+<li>
+<p>添加权限</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod a+rx speedtest.py
+</code></pre></div></li>
+<li>
+<p>运行脚本测速</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python speedtest.py
+</code></pre></div><p>报错没有 python 命令，提示使用 python3 命令。测速完成：</p>
+<pre><code class="language-shshellell" data-lang="shshellell">Hosted by Singtel (Singapore) [6.13 km]: 2.006 ms
+Download: 485.25 Mbit/s
+Upload: 276.00 Mbit/s
+</code></pre></li>
+<li>
+<p>客户端启动并配置 v2ray</p>
+</li>
+</ol>
+<hr>
+<hr>
+<h2 id="各工具客户端下载">各工具客户端下载</h2>
+<p>macOS：</p>
+<ul>
+<li><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases/">ShadowsocksX-NG</a> SS</li>
+<li><a href="https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.4-r8/ShadowsocksX-NG-R8.dmg">ShadowsocksX-NG-R8</a>  SSR 已停止维护</li>
+<li><a href="https://github.com/Cenmrev/V2RayX/releases">V2RayX</a></li>
+</ul>
+<p>iOS:</p>
+<ul>
+<li>收费：Shadowrocket（App Store）</li>
+</ul>
+<p>Windows:</p>
+<ul>
+<li><a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip">ShadowsocksR</a></li>
+</ul>
+<p>Android:</p>
+<ul>
+<li><a href="https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk">ShadowsocksR</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/build-ssr-with-your-vps/>https://hdwyz.com/2020/build-ssr-with-your-vps/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/my-notes-of-fastadmin/" class="prev" rel="prev" title="FastAdmin 框架二次开发笔记"><i class="iconfont icon-left"></i>&nbsp;FastAdmin 框架二次开发笔记</a>
+         
+        
+        <a href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" class="next" rel="next" title="趁年轻，多越狱">趁年轻，多越狱&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
