@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 22:47:30 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>个人 Vps 账号</title>
+      <link>https://hdwyz.com/2020/vps/</link>
+      <pubDate>Tue, 28 Apr 2020 22:47:30 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/vps/</guid>
+      <description>请勿分享。只是推荐不要随意分享，因为同一个 IP ，使用的人越多，被封禁的概率越大。现在审查力度不断加强，万一哪天被封掉可能会面临 ”无法上外网 &amp;ndash; 租</description>
+    </item>
     
     <item>
       <title>Hugo 使用 Caddy 自动部署到阿里云</title>
