@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2020 07:01:39 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP 初级笔试题</title>
+      <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
+      <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</guid>
+      <description>各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以</description>
+    </item>
     
     <item>
       <title>Hugo 使用 Caddy 自动部署到阿里云</title>
