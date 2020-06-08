@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>FastAdmin 框架二次开发笔记</title>
-      <link>https://hdwyz.com/2020/my-notes-of-fastadmin/</link>
-      <pubDate>Wed, 12 Feb 2020 00:49:28 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/my-notes-of-fastadmin/</guid>
-      <description>前端篇： 动态下拉列表： data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法） data-fie</description>
-    </item>
-    
-    <item>
       <title>MacOS 搭建 Php 开发环境</title>
       <link>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</link>
       <pubDate>Tue, 04 Feb 2020 04:01:21 +0800</pubDate>
