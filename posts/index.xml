@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>Markdown 在 Leaveit 主题中的效果</title>
-      <link>https://hdwyz.com/2020/the-markdown-in-this-theme/</link>
-      <pubDate>Wed, 18 Mar 2020 21:43:41 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/the-markdown-in-this-theme/</guid>
-      <description>这是一级标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 这是普通段落文字 这是一个 4x2 的表格 # 这是一个代码块 echo &amp;#34;Hello, World!&amp;#34; $$ E=mc^2 $$ 这是一句</description>
-    </item>
-    
-    <item>
       <title>服务器上安装 TP6.0 和 Swoole 扩展</title>
       <link>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</link>
       <pubDate>Fri, 13 Mar 2020 22:41:11 +0800</pubDate>
@@ -53,7 +44,7 @@
       <pubDate>Wed, 19 Feb 2020 02:31:24 +0800</pubDate>
       
       <guid>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</guid>
-      <description>源 apt.htv123.com 电话助手源 汉化插件 apt.25mao.com 老牌猫源 WeChatHookPro 微信助手 去掉二次通知 repo.qqtlr.com 93嗨客源 插件收集汉化 apt.fcydia.com 蜂巢源 插件收集汉化 spardev.me 作者源 AutoUnlockX 自动解锁 repo.pulandres.me 破解软件 GPSCheater Cracked 虚拟定位 BetterCCXI</description>
+      <description>设备要求 越狱方式：unc0ver、Chimera、checkra1n 工具：macOS、windows(实际 Linux) + u 盘 系统版本：iOS 12.3 以上的 A7(X)-A11</description>
     </item>
     
     <item>
