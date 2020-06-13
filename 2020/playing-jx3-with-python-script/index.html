@@ -58,7 +58,7 @@
     "datePublished": "2020-06-13 07:47:19 \x2b0800 CST",
     "dateModified" : "2020-06-13 07:47:19 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/playing-jx3-with-python-script\/",
-    "wordCount" : "2490",
+    "wordCount" : "2513",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -129,11 +129,11 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                2490 字
+                2513 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
-                5 分钟
+                6 分钟
             </span>
         </div>
     </header>
@@ -202,7 +202,7 @@
 <blockquote>
 <p>早期剑三使用的是 SendInput API 来接受键盘和鼠标消息，那个时候任何一个按键工具都可以在剑三下生效，后来改用了 DirectInput API 来接受键盘和鼠标消息，DirectInput API 下的软件和游戏，是直接和键盘和鼠标的驱动层交互的，以前的按键方式已经无法在这种模式下工作了。</p>
 </blockquote>
-<p>使用 <a href="http://www.ddxoft.com/">DD 驱动</a> 模拟按键。因为 DD 驱动免费版本在加载前会进行联网验证，有一定概率加载失败或加载时间过长，需要重新运行脚本。</p>
+<p>使用 <a href="http://www.ddxoft.com/">DD 驱动</a> 模拟按键。因为 DD 驱动免费版本在加载前会进行联网验证，有一定概率加载失败或加载时间过长，需要重新运行脚本。以下代码片段仅为大致流程，具体文件见文末网盘。</p>
 <h4 id="查找并切换游戏窗口">查找并切换游戏窗口：</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> win32gui
 
@@ -292,7 +292,7 @@ jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</s
             time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.03</span>)
         end <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;第&#34;</span> <span style="color:#f92672">+</span> str(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;次循环用时  &#34;</span> <span style="color:#f92672">+</span> str(end<span style="color:#f92672">-</span>start) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; 秒&#34;</span>)
-</code></pre></div><p><strong>以上键码均为我个人使用习惯设置，可以对照 DD 键码表自行修改。相关文件存与 <a href="https://pan.baidu.com/s/11bj9k4HvteMbZpfrEFtp4A">百度网盘</a>  密码：ukle  。使用前使用 “自测.exe” 根据系统版本进行驱动测试。</strong></p>
+</code></pre></div><p><strong>以上键码均为我个人使用习惯设置，可以对照 DD 键码表自行修改。相关文件存于 <a href="https://pan.baidu.com/s/11bj9k4HvteMbZpfrEFtp4A">百度网盘</a>  密码：ukle  。使用前使用 “自测.exe” 根据系统版本进行驱动测试。</strong></p>
 
     </div>
 
