@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>不务正业 on 可乐橙</title>
+    <link>https://hdwyz.com/categories/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/</link>
+    <description>Recent content in 不务正业 on 可乐橙</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 13 Jun 2020 07:47:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://hdwyz.com/categories/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 Python 调用 DD 驱动玩剑三</title>
+      <link>https://hdwyz.com/2020/playing-jx3-with-python-script/</link>
+      <pubDate>Sat, 13 Jun 2020 07:47:19 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/playing-jx3-with-python-script/</guid>
+      <description>前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减</description>
+    </item>
+    
+  </channel>
+</rss>
