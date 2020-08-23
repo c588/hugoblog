@@ -15,6 +15,7 @@
       <title>使用 Python 调用 DD 驱动玩剑三</title>
       <link>https://hdwyz.com/2020/playing-jx3-with-python-script/</link>
       <pubDate>Sat, 13 Jun 2020 07:47:19 +0800</pubDate>
+<<<<<<< HEAD
       
       <guid>https://hdwyz.com/2020/playing-jx3-with-python-script/</guid>
       <description>前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减</description>
@@ -33,9 +34,20 @@
       <title>初级 PHP 知识点</title>
       <link>https://hdwyz.com/2020/primary-phper-knowledge/</link>
       <pubDate>Sun, 19 Apr 2020 07:47:55 +0800</pubDate>
+=======
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
-      <guid>https://hdwyz.com/2020/primary-phper-knowledge/</guid>
-      <description>洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习</description>
+      <guid>https://hdwyz.com/2020/playing-jx3-with-python-script/</guid>
+      <description>前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减</description>
+    </item>
+    
+    <item>
+      <title>PHP 初级笔试题</title>
+      <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
+      <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</guid>
+      <description>各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以</description>
     </item>
     
     <item>
@@ -45,15 +57,6 @@
       
       <guid>https://hdwyz.com/2020/hugo-caddy-centos/</guid>
       <description>引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane&amp;rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户</description>
-    </item>
-    
-    <item>
-      <title>Markdown 在 Leaveit 主题中的效果</title>
-      <link>https://hdwyz.com/2020/the-markdown-in-this-theme/</link>
-      <pubDate>Wed, 18 Mar 2020 21:43:41 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/the-markdown-in-this-theme/</guid>
-      <description>这是一级标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 这是普通段落文字 这是一个 4x2 的表格 # 这是一个代码块 echo &amp;#34;Hello, World!&amp;#34; $$ E=mc^2 $$ 这是一句</description>
     </item>
     
     <item>
@@ -84,6 +87,7 @@
     </item>
     
     <item>
+<<<<<<< HEAD
       <title>FastAdmin 框架二次开发笔记</title>
       <link>https://hdwyz.com/2020/my-notes-of-fastadmin/</link>
       <pubDate>Wed, 12 Feb 2020 00:49:28 +0800</pubDate>
@@ -93,6 +97,8 @@
     </item>
     
     <item>
+=======
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       <title>MacOS 搭建 PHP 开发环境</title>
       <link>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</link>
       <pubDate>Tue, 04 Feb 2020 04:01:21 +0800</pubDate>
@@ -125,7 +131,11 @@
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
       <guid>https://hdwyz.com/2019/just-read/</guid>
+<<<<<<< HEAD
       <description>退以电影行天下 2020/08: 八佰 (2020) 2001太空漫游 2001: A Space Odyssey (1968) 咒怨 呪怨 (2002) 星际穿越 Interstellar (2014) 2020/06: 神盾局特工 第七季 Agents of S.H.I.E.L.D. Season 7‎ (2020) 一步之遥‎ (2014) 邪不压正 (2018) 2020/05: Hello！树</description>
+=======
+      <description>退以电影行天下 2020/06: 神盾局特工 第七季 Agents of S.H.I.E.L.D. Season 7‎ (2020) 一步之遥‎ (2014) 邪不压正 (2018) 2020/05: Hello！树先生 (2011) 小谢尔顿 第四季 Young Sheldon Season 4‎ (2020) 小谢尔顿 第三季 Young Sheldon Season 3‎</description>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
     </item>
     
     <item>

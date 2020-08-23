@@ -3,6 +3,7 @@
   
     <url>
       <loc>https://hdwyz.com/categories/</loc>
+<<<<<<< HEAD
       
       <lastmod>2020-06-13T07:47:19+08:00</lastmod>
       
@@ -13,6 +14,8 @@
   
     <url>
       <loc>https://hdwyz.com/posts/</loc>
+=======
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       <lastmod>2020-06-13T07:47:19+08:00</lastmod>
       
@@ -22,7 +25,11 @@
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>https://hdwyz.com/categories/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/</loc>
+=======
+      <loc>https://hdwyz.com/posts/</loc>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       <lastmod>2020-06-13T07:47:19+08:00</lastmod>
       
@@ -32,7 +39,11 @@
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>https://hdwyz.com/2020/playing-jx3-with-python-script/</loc>
+=======
+      <loc>https://hdwyz.com/categories/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/</loc>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       <lastmod>2020-06-13T07:47:19+08:00</lastmod>
       
@@ -42,9 +53,29 @@
     </url>
   
     <url>
+<<<<<<< HEAD
+      <loc>https://hdwyz.com/</loc>
+=======
+      <loc>https://hdwyz.com/2020/playing-jx3-with-python-script/</loc>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
+      
+      <lastmod>2020-06-13T07:47:19+08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</loc>
+      
+      <lastmod>2020-06-07T07:01:39+08:00</lastmod>
+=======
       <loc>https://hdwyz.com/</loc>
       
       <lastmod>2020-06-13T07:47:19+08:00</lastmod>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       
       
@@ -55,16 +86,7 @@
       <loc>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</loc>
       
       <lastmod>2020-06-07T07:01:39+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/</loc>
-      
-      <lastmod>2020-06-07T07:01:39+08:00</lastmod>
+<<<<<<< HEAD
       
       
       
@@ -85,6 +107,8 @@
       <loc>https://hdwyz.com/2020/hugo-caddy-centos/</loc>
       
       <lastmod>2020-03-21T00:22:52+08:00</lastmod>
+=======
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       
       
@@ -92,7 +116,27 @@
     </url>
   
     <url>
+<<<<<<< HEAD
       <loc>https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</loc>
+      
+      <lastmod>2020-03-21T00:22:52+08:00</lastmod>
+=======
+      <loc>https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/</loc>
+      
+      <lastmod>2020-06-07T07:01:39+08:00</lastmod>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
+      
+      
+      
+      
+    </url>
+  
+    <url>
+<<<<<<< HEAD
+      <loc>https://hdwyz.com/2020/the-markdown-in-this-theme/</loc>
+=======
+      <loc>https://hdwyz.com/2020/hugo-caddy-centos/</loc>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       <lastmod>2020-03-21T00:22:52+08:00</lastmod>
       
@@ -102,19 +146,15 @@
     </url>
   
     <url>
-      <loc>https://hdwyz.com/2020/the-markdown-in-this-theme/</loc>
-      
-      <lastmod>2020-03-18T21:43:41+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
+<<<<<<< HEAD
       <loc>https://hdwyz.com/categories/%E6%B5%8B%E8%AF%95/</loc>
       
       <lastmod>2020-03-18T21:43:41+08:00</lastmod>
+=======
+      <loc>https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</loc>
+      
+      <lastmod>2020-03-21T00:22:52+08:00</lastmod>
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
       
       
       
@@ -145,16 +185,6 @@
       <loc>https://hdwyz.com/2020/build-ssr-with-your-vps/</loc>
       
       <lastmod>2020-02-13T11:48:52+08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://hdwyz.com/2020/my-notes-of-fastadmin/</loc>
-      
-      <lastmod>2020-02-12T00:49:28+08:00</lastmod>
       
       
       

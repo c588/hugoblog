@@ -58,7 +58,11 @@
     "datePublished": "2020-06-13 07:47:19 \x2b0800 CST",
     "dateModified" : "2020-06-13 07:47:19 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/playing-jx3-with-python-script\/",
+<<<<<<< HEAD
     "wordCount" : "2513",
+=======
+    "wordCount" : "2509",
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -135,7 +139,11 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
+<<<<<<< HEAD
                 2513 字
+=======
+                2509 字
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -222,35 +230,58 @@ hwnd_title <span style="color:#f92672">=</span> dict()
 win32gui<span style="color:#f92672">.</span>EnumWindows(get_all_hwnd, <span style="color:#ae81ff">0</span>)
 jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 <span style="color:#66d9ef">for</span> h, t <span style="color:#f92672">in</span> hwnd_title<span style="color:#f92672">.</span>items():
+<<<<<<< HEAD
     <span style="color:#66d9ef">if</span> t <span style="color:#f92672">!=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>:
         <span style="color:#66d9ef">if</span> t<span style="color:#f92672">.</span>find(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">剑网3 - </span><span style="color:#e6db74">&#39;</span>) <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>:
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">查找到窗口</span><span style="color:#e6db74">&#39;</span>, h, t)
+=======
+    <span style="color:#66d9ef">if</span> t <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>:
+        <span style="color:#66d9ef">if</span> t<span style="color:#f92672">.</span>find(<span style="color:#e6db74">&#39;剑网3 - &#39;</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;查找到窗口&#39;</span>, h, t)
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
             hwnd <span style="color:#f92672">=</span> win32gui<span style="color:#f92672">.</span>FindWindow(None, t)
             <span style="color:#66d9ef">if</span> hwnd <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
                 jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
                 left, top, right, bottom <span style="color:#f92672">=</span> win32gui<span style="color:#f92672">.</span>GetWindowRect(hwnd)
                 <span style="color:#66d9ef">print</span>(left, top, right, bottom)
                 win32gui<span style="color:#f92672">.</span>SetForegroundWindow(hwnd)
+<<<<<<< HEAD
                 <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">窗口已切换</span><span style="color:#e6db74">&#34;</span>)
+=======
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;窗口已切换&#34;</span>)
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
                 <span style="color:#66d9ef">break</span>
         <span style="color:#66d9ef">else</span>:
             <span style="color:#66d9ef">print</span>(h, t)
 </code></pre></div><h4 id="云裳心经">云裳心经：</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># cd: 回雪飘摇释放时间  auto_choose: 自动选择血量低的队友  auto_move: 自动释放余寒映日</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">qixiu</span>(cd, auto_choose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, auto_move<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+<<<<<<< HEAD
     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">开始运行云裳心经脚本</span><span style="color:#e6db74">&#34;</span>)
     <span style="color:#75715e"># 技能分配键位</span>
     skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">201</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[回雪飘摇]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">202</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[翔鸾舞柳]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">203</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[上元点鬟]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">703</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[王母挥袂]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">704</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[风袖低昂]</span><span style="color:#e6db74">&#39;</span>,
               <span style="color:#ae81ff">304</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[余寒映日]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">306</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[繁音急节]</span><span style="color:#e6db74">&#39;</span>}
+=======
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;开始运行云裳心经脚本&#34;</span>)
+    <span style="color:#75715e"># 技能分配键位</span>
+    skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">201</span>: <span style="color:#e6db74">&#39;[回雪飘摇]&#39;</span>, <span style="color:#ae81ff">202</span>: <span style="color:#e6db74">&#39;[翔鸾舞柳]&#39;</span>, <span style="color:#ae81ff">203</span>: <span style="color:#e6db74">&#39;[上元点鬟]&#39;</span>, <span style="color:#ae81ff">703</span>: <span style="color:#e6db74">&#39;[王母挥袂]&#39;</span>, <span style="color:#ae81ff">704</span>: <span style="color:#e6db74">&#39;[风袖低昂]&#39;</span>,
+              <span style="color:#ae81ff">304</span>: <span style="color:#e6db74">&#39;[余寒映日]&#39;</span>, <span style="color:#ae81ff">306</span>: <span style="color:#e6db74">&#39;[繁音急节]&#39;</span>}
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
     <span style="color:#75715e"># 设置回雪飘摇技能CD</span>
     huixuepiaoyao <span style="color:#f92672">=</span> cd
     <span style="color:#75715e"># 技能循环</span>
     heats <span style="color:#f92672">=</span> [<span style="color:#ae81ff">703</span>, <span style="color:#ae81ff">704</span>, <span style="color:#ae81ff">203</span>, <span style="color:#ae81ff">201</span>, <span style="color:#ae81ff">703</span>, <span style="color:#ae81ff">704</span>, <span style="color:#ae81ff">202</span>, <span style="color:#ae81ff">201</span>]
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
         <span style="color:#66d9ef">if</span> auto_choose:
+<<<<<<< HEAD
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">选择最低血量目标</span><span style="color:#e6db74">&#34;</span>)
         <span style="color:#66d9ef">else</span>:
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">手动选择目标</span><span style="color:#e6db74">&#34;</span>)
+=======
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;选择最低血量目标&#34;</span>)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;手动选择目标&#34;</span>)
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
         dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">306</span>, <span style="color:#ae81ff">1</span>)
         dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">306</span>, <span style="color:#ae81ff">2</span>)
         time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.05</span>)
@@ -274,6 +305,7 @@ jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</s
 </code></pre></div><h4 id="天罗诡道">天罗诡道：</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># auto_choose: 自动选择敌方单位  auto_buff: 自动开爆发</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tangmen</span>(auto_choose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, auto_buff<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+<<<<<<< HEAD
     <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">开始运行天罗诡道脚本</span><span style="color:#e6db74">&#34;</span>)
     <span style="color:#75715e"># 技能分配键位</span>
     skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">206</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[天女散花]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">207</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[暗藏杀机]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">208</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[千秋万劫]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">209</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[天绝地灭]</span><span style="color:#e6db74">&#39;</span>,
@@ -282,6 +314,16 @@ jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</s
         <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
             orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">210</span>, <span style="color:#ae81ff">211</span>, <span style="color:#ae81ff">208</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>
             <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">释放千机变</span><span style="color:#e6db74">&#34;</span>)
+=======
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;开始运行天罗诡道脚本&#34;</span>)
+    <span style="color:#75715e"># 技能分配键位</span>
+    skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">206</span>: <span style="color:#e6db74">&#39;[天女散花]&#39;</span>, <span style="color:#ae81ff">207</span>: <span style="color:#e6db74">&#39;[暗藏杀机]&#39;</span>, <span style="color:#ae81ff">208</span>: <span style="color:#e6db74">&#39;[千秋万劫]&#39;</span>, <span style="color:#ae81ff">209</span>: <span style="color:#e6db74">&#39;[天绝地灭]&#39;</span>,
+              <span style="color:#ae81ff">210</span>: <span style="color:#e6db74">&#39;[千机变]&#39;</span>, <span style="color:#ae81ff">211</span>: <span style="color:#e6db74">&#39;[千机变-攻击]&#39;</span>, <span style="color:#ae81ff">303</span>: <span style="color:#e6db74">&#39;[心无旁骛]&#39;</span>}
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">210</span>, <span style="color:#ae81ff">211</span>, <span style="color:#ae81ff">208</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;释放千机变&#34;</span>)
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
         <span style="color:#66d9ef">else</span>:
             <span style="color:#75715e"># 设置权重</span>
             orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">209</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">25</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">208</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">207</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">206</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">211</span>]
@@ -298,7 +340,11 @@ jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</s
             dd_dll<span style="color:#f92672">.</span>DD_key(skill, <span style="color:#ae81ff">2</span>)
             time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.03</span>)
         end <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+<<<<<<< HEAD
         <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">第</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> str(i) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">次循环用时  </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> str(end<span style="color:#f92672">-</span>start) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> 秒</span><span style="color:#e6db74">&#34;</span>)
+=======
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;第&#34;</span> <span style="color:#f92672">+</span> str(i) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;次循环用时  &#34;</span> <span style="color:#f92672">+</span> str(end<span style="color:#f92672">-</span>start) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; 秒&#34;</span>)
+>>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
 </code></pre></div><p><strong>以上键码均为我个人使用习惯设置，可以对照 DD 键码表自行修改。相关文件存于 <a href="https://pan.baidu.com/s/11bj9k4HvteMbZpfrEFtp4A">百度网盘</a>  密码：ukle  。使用前使用 “自测.exe” 根据系统版本进行驱动测试，并需要以管理员身份运行 PyCharm 。</strong></p>
 
     </div>
