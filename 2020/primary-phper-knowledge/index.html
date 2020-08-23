@@ -10,7 +10,7 @@
   
   
   <link rel="prev" href="https://hdwyz.com/2020/hugo-caddy-centos/" />
-  
+  <link rel="next" href="https://hdwyz.com/2020/elementary-interview-questions-for-phper/" />
   <link rel="canonical" href="https://hdwyz.com/2020/primary-phper-knowledge/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -58,7 +58,7 @@
     "datePublished": "2020-04-19 07:47:55 \x2b0800 CST",
     "dateModified" : "2020-04-19 07:47:55 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/primary-phper-knowledge\/",
-    "wordCount" : "3898",
+    "wordCount" : "3805",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -129,7 +129,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                3898 字
+                3805 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -382,22 +382,22 @@ $new = [
 <p>字段：</p>
 <ul>
 <li>
-<p>表字段避免null值出现，null值很难查询优化且占用额外的索引空间，推荐默认数字0代替null。</p>
+<p>表字段避免 NULL 值出现，NULL 值很难查询优化且占用额外的索引空间，推荐默认数字 0 代替 null。</p>
 </li>
 <li>
-<p>尽量使用INT而非BIGINT，如果非负则加上UNSIGNED（这样数值容量会扩大一倍），当然能使用TINYINT、SMALLINT、MEDIUM_INT更好。</p>
+<p>尽量使用 INT 而非 BIGINT，如果非负则加上 UNSIGNED（这样数值容量会扩大一倍），当然能使用 TINYINT、SMALLINT、MEDIUM_INT 更好。</p>
 </li>
 <li>
 <p>使用枚举或整数代替字符串类型</p>
 </li>
 <li>
-<p>尽量使用TIMESTAMP而非DATETIME</p>
+<p>尽量使用 TIMESTAMP 而非 DATETIME</p>
 </li>
 <li>
 <p>单表不要有太多字段，建议在20以内</p>
 </li>
 <li>
-<p>高性能MySQL第3版（4.1.7节）中，作者建议当存储IPv4地址时，应该使用32位的无符号整数（UNSIGNED INT）来存储IP地址，
+<p>高性能 MySQL 第 3 版（4.1.7节）中，作者建议当存储 IPv4 地址时，应该使用 32 位的无符号整数（UNSIGNED INT）来存储IP地址，
 好处：</p>
 <ol>
 <li>节省空间，不管是数据存储空间，还是索引存储空间</li>
@@ -433,27 +433,27 @@ $new = [
 </ul>
 <h4 id="sql-编写">SQL 编写</h4>
 <ul>
-<li>使用limit对查询结果的记录进行限定</li>
-<li>避免select *，将需要查找的字段列出来</li>
-<li>少用JOIN</li>
-<li>使用连接（join）来代替子查询</li>
+<li>使用 limit 对查询结果的记录进行限定</li>
+<li>避免 select *，将需要查找的字段列出来</li>
+<li>少用 JOIN</li>
+<li>使用连接 JOIN 来代替子查询</li>
 <li>使用同类型进行比较，比如用&rsquo;123'和&rsquo;123'比，123和123比</li>
-<li>尽量避免在WHERE子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描</li>
-<li>对于连续数值，使用BETWEEN不用IN：SELECT id FROM t WHERE num BETWEEN 1 AND 5</li>
+<li>尽量避免在 WHERE 子句中使用 != 或 &lt;&gt; 操作符，否则将引擎放弃使用索引而进行全表扫描</li>
+<li>对于连续数值，使用 BETWEEN 不用IN：SELECT id FROM t WHERE num BETWEEN 1 AND 5</li>
 <li>不做列运算：SELECT id WHERE age + 1 = 10，任何对列的操作都将导致表扫描，它包括数据库教程函数、计算表达式等等，查询时要尽可能将操作移至等号右边</li>
 <li>列表数据不要拿全表，要使用LIMIT来分页，每页数量也不要太大</li>
-<li>拆分大的delete或insert语句</li>
+<li>拆分大的 DELETE 或 INSERT 语句</li>
 <li>可通过开启慢查询日志来找出较慢的SQL</li>
 <li>sql语句尽可能简单：一条sql只能在一个cpu运算；大语句拆小语句，减少锁时间；一条大sql可以堵死整个库</li>
-<li>OR改写成IN：OR的效率是n级别，IN的效率是log(n)级别，in的个数建议控制在200以内</li>
+<li>OR 改写成 IN：OR 的效率是 n 级别，IN 的效率是 log(n) 级别，IN 的个数建议控制在 200 以内</li>
 <li>不用函数和触发器，在应用程序实现</li>
 <li>避免%xxx式查询</li>
 </ul>
 <h4 id="实例">实例</h4>
 <ul>
 <li>在前端数据浏览翻页，或者大数据分批导出等场景下，是可以将上一页的最大值当成参数作为查询条件的。</li>
-<li>使用JOIN代替子查询和exists</li>
-<li>连接数据很多时先用where对数据较小的表做限定再进行连接</li>
+<li>使用 JOIN 代替子查询和 EXISTS</li>
+<li>连接数据很多时先用 where 对数据较小的表做限定再进行连接</li>
 </ul>
 
     </div>
@@ -492,6 +492,8 @@ $new = [
         
         <a href="https://hdwyz.com/2020/hugo-caddy-centos/" class="prev" rel="prev" title="Hugo 使用 Caddy 自动部署到阿里云"><i class="iconfont icon-left"></i>&nbsp;Hugo 使用 Caddy 自动部署到阿里云</a>
          
+        
+        <a href="https://hdwyz.com/2020/elementary-interview-questions-for-phper/" class="next" rel="next" title="PHP 初级笔试题">PHP 初级笔试题&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

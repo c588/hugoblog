@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/elementary-interview-questions-for-phper/" />
+  
+  <link rel="canonical" href="https://hdwyz.com/2020/playing-jx3-with-python-script/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           使用 Python 调用 DD 驱动玩剑三 | 可乐橙
+       
+  </title>
+  <meta name="title" content="使用 Python 调用 DD 驱动玩剑三 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "使用 Python 调用 DD 驱动玩剑三",
+    "headline" : "使用 Python 调用 DD 驱动玩剑三",
+    "description" : "前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减",
+    "inLanguage" : "zh-CN",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-06-13 07:47:19 \x2b0800 CST",
+    "dateModified" : "2020-06-13 07:47:19 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/playing-jx3-with-python-script\/",
+    "wordCount" : "2513",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">使用 Python 调用 DD 驱动玩剑三</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/">
+                    不务正业
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-06-13 itemprop="datePublished">
+                    2020-06-13
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                2513 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                6 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="前言">前言</h2>
+<p><em>在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减少按键频率，在此记录一下实现过程。</em></p>
+<p><strong>只适用于阵营攻防战</strong></p>
+<hr>
+<h2 id="环境">环境</h2>
+<ul>
+<li>Windows 10 x64</li>
+<li>python 3.8.4</li>
+<li>PyCharm</li>
+<li>DD 驱动 64 位免安装版</li>
+<li>剑侠情缘网络版叁（下称：剑网三）</li>
+</ul>
+<hr>
+<h2 id="思路">思路</h2>
+<p>首先剑网三的角色技能分为三种：</p>
+<ol>
+<li>第一类为瞬间释放，即没有技能前摇读条时间，也没有持续时间。</li>
+<li>第二类为释放前需要读条。</li>
+<li>第三类为技能释放前不需要读条但是有技能释放持续时间，在释放时无法移动。</li>
+</ol>
+<p>技能释放读条不会被其他技能打断，需要持续释放的技能会被移动或者其他技能打断。所以，最理想的游戏角色为主要技能都是瞬间释放的第一类技能，其次是第二类，最后是第三类。</p>
+<h4 id="云裳心经七秀">【云裳心经（七秀）】：</h4>
+<p>云裳心经是一个治疗职业，主要技能为</p>
+<ol>
+<li>[繁音急节]：辅助技能，第一类，技能 CD 长，无公共 CD</li>
+<li>[余寒映日]：辅助技能，第一类，技能 CD 长，无公共 CD</li>
+<li>[风袖低昂]：大技能，第一类，技能 CD 长，有公共 CD</li>
+<li>[王母挥袂]：大技能，第一类，技能 CD 长，有公共 CD</li>
+<li>[上元点鬟]：小技能，第一类，无技能 CD，有公共 CD</li>
+<li>[翔鸾舞柳]：小技能，第一类，无技能 CD，有公共 CD</li>
+<li>[回雪飘摇]：小技能，第三类，无技能 CD，无公共 CD</li>
+</ol>
+<p>技能循环：考虑到 1 和 2 为辅助类技能且无公共 CD，可以设置为每轮循环头部使用，即“有就放”“早用早 CD”。3 和 4 技能 CD 较长，可以在循环中部使用，也是“有就放”。5 和 6 因为没有技能 CD，在循环后部使用，降低优先级。2 3 4 5 四个技能在成功释放后会有 1.5 秒冷却，称为公共 CD（GCD）。7 技能在以上技能全部释放后瞬间释放。所以循环为 123457123467，即只要有 12 技能就必定释放，随后 34 技能 &gt; 56 技能，最后补上 7 技能。7 技能释放时不可以移动或释放其他技能，否则会被打断。</p>
+<p>目标选择：剑网三中在 设置 - 快捷键 中设置 Q 为选择自己，设置 E 为选择血量最低队友，释放技能前加上按 E 键这一操作即可。如果自身血线过低（40%），则疯狂按 Q 键，强制选择自己。</p>
+<p>其他技能：三个减伤/解控技能手动释放，注意观察技能栏避免被卡 GCD 导致没有成功释放。</p>
+<p>提高收益：12 技能手动释放，7 技能观察到读条打断手动补。</p>
+<h4 id="天罗诡道唐门">【天罗诡道（唐门）】：</h4>
+<p>天罗诡道是一个群攻职业，主要技能均不存在读条。</p>
+<p>技能循环：千机变每隔 45 秒释放一次（降低位置移动导致离开攻击范围） &gt; 千秋万劫 &gt; 天绝地灭 &gt; 暗藏杀机 &gt; 天女散花</p>
+<p>由于后四个技能都属于“有就放”的类型，此处不做具体释放顺序，而是根据优先级设置权重，减少被卡 GCD 的概率。经过按键测试，100次需要 0.00273s，完全可以忽略不计，只计算按键后的停留时间。因为技能 GCD 是 1.5s，为方便计算，每次按键后使用 sleep() 堵塞 30ms，50 次按键刚好 1.5s。50 次按键分别分配给后四个技能 25/15/4/4 次，和爆发技[心无旁骛] 1 次，[千机变]目标选择 1 次。循环前打乱顺序。</p>
+<p>目标选择：每个攻击技能释放前均按下 Tab 键。</p>
+<p>其他技能：[千机变]爆发技[鬼斧神工]、减伤免控技能 [惊鸿游龙] [飞星遁影]、辅助技[鸟翔碧空]、控制技[子母飞爪]等手动释放，注意观察技能栏避免被卡 GCD。<strong>[浮光掠影]技能必须关闭脚本停止自动释放技能后使用</strong>。</p>
+<p>提高收益：手动释放爆发技和千机变，使用浮光掠影前关闭脚本。</p>
+<hr>
+<h2 id="代码实现">代码实现：</h2>
+<p>为了实现开启脚本后自动切换到游戏界面，使用了 pywin32 这个库，需要提前安装。或者开启脚本后设置 1-3 秒延迟，手动切换。</p>
+<p>使用 win32gui 库自动切换窗口时，只允许启动一个剑网三游戏进程。</p>
+<blockquote>
+<p>早期剑三使用的是 SendInput API 来接受键盘和鼠标消息，那个时候任何一个按键工具都可以在剑三下生效，后来改用了 DirectInput API 来接受键盘和鼠标消息，DirectInput API 下的软件和游戏，是直接和键盘和鼠标的驱动层交互的，以前的按键方式已经无法在这种模式下工作了。</p>
+</blockquote>
+<p>使用 <a href="http://www.ddxoft.com/">DD 驱动</a> 模拟按键。因为 DD 驱动免费版本在加载前会进行联网验证，有一定概率加载失败或加载时间过长，需要重新运行脚本。以下代码片段仅为大致流程，具体文件见文末网盘。</p>
+<h4 id="查找并切换游戏窗口">查找并切换游戏窗口：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> win32gui
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_all_hwnd</span>(hwnd, mouse):
+    <span style="color:#66d9ef">if</span> win32gui<span style="color:#f92672">.</span>IsWindow(hwnd) <span style="color:#f92672">and</span> win32gui<span style="color:#f92672">.</span>IsWindowEnabled(hwnd) <span style="color:#f92672">and</span> win32gui<span style="color:#f92672">.</span>IsWindowVisible(hwnd):
+        hwnd_title<span style="color:#f92672">.</span>update({hwnd: win32gui<span style="color:#f92672">.</span>GetWindowText(hwnd)})
+        
+<span style="color:#75715e"># 遍历窗口句柄，找到剑网三窗口并切换</span>
+hwnd_title <span style="color:#f92672">=</span> dict()
+win32gui<span style="color:#f92672">.</span>EnumWindows(get_all_hwnd, <span style="color:#ae81ff">0</span>)
+jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">for</span> h, t <span style="color:#f92672">in</span> hwnd_title<span style="color:#f92672">.</span>items():
+    <span style="color:#66d9ef">if</span> t <span style="color:#f92672">!=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span>:
+        <span style="color:#66d9ef">if</span> t<span style="color:#f92672">.</span>find(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">剑网3 - </span><span style="color:#e6db74">&#39;</span>) <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">查找到窗口</span><span style="color:#e6db74">&#39;</span>, h, t)
+            hwnd <span style="color:#f92672">=</span> win32gui<span style="color:#f92672">.</span>FindWindow(None, t)
+            <span style="color:#66d9ef">if</span> hwnd <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+                jx3_exists <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+                left, top, right, bottom <span style="color:#f92672">=</span> win32gui<span style="color:#f92672">.</span>GetWindowRect(hwnd)
+                <span style="color:#66d9ef">print</span>(left, top, right, bottom)
+                win32gui<span style="color:#f92672">.</span>SetForegroundWindow(hwnd)
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">窗口已切换</span><span style="color:#e6db74">&#34;</span>)
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">print</span>(h, t)
+</code></pre></div><h4 id="云裳心经">云裳心经：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># cd: 回雪飘摇释放时间  auto_choose: 自动选择血量低的队友  auto_move: 自动释放余寒映日</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">qixiu</span>(cd, auto_choose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, auto_move<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">开始运行云裳心经脚本</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#75715e"># 技能分配键位</span>
+    skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">201</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[回雪飘摇]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">202</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[翔鸾舞柳]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">203</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[上元点鬟]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">703</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[王母挥袂]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">704</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[风袖低昂]</span><span style="color:#e6db74">&#39;</span>,
+              <span style="color:#ae81ff">304</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[余寒映日]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">306</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[繁音急节]</span><span style="color:#e6db74">&#39;</span>}
+    <span style="color:#75715e"># 设置回雪飘摇技能CD</span>
+    huixuepiaoyao <span style="color:#f92672">=</span> cd
+    <span style="color:#75715e"># 技能循环</span>
+    heats <span style="color:#f92672">=</span> [<span style="color:#ae81ff">703</span>, <span style="color:#ae81ff">704</span>, <span style="color:#ae81ff">203</span>, <span style="color:#ae81ff">201</span>, <span style="color:#ae81ff">703</span>, <span style="color:#ae81ff">704</span>, <span style="color:#ae81ff">202</span>, <span style="color:#ae81ff">201</span>]
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+        <span style="color:#66d9ef">if</span> auto_choose:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">选择最低血量目标</span><span style="color:#e6db74">&#34;</span>)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">手动选择目标</span><span style="color:#e6db74">&#34;</span>)
+        dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">306</span>, <span style="color:#ae81ff">1</span>)
+        dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">306</span>, <span style="color:#ae81ff">2</span>)
+        time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.05</span>)
+        <span style="color:#66d9ef">if</span> auto_move:
+            dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">304</span>, <span style="color:#ae81ff">1</span>)
+            dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">304</span>, <span style="color:#ae81ff">2</span>)
+            time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.05</span>)
+        <span style="color:#66d9ef">for</span> heat <span style="color:#f92672">in</span> heats:
+            <span style="color:#75715e"># 选择血线最低的队友</span>
+            <span style="color:#66d9ef">if</span> auto_choose:
+                dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">303</span>, <span style="color:#ae81ff">1</span>)
+                dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">303</span>, <span style="color:#ae81ff">2</span>)
+                time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.02</span>)
+            <span style="color:#75715e"># 使用治疗技能</span>
+            dd_dll<span style="color:#f92672">.</span>DD_key(heat, <span style="color:#ae81ff">1</span>)
+            dd_dll<span style="color:#f92672">.</span>DD_key(heat, <span style="color:#ae81ff">2</span>)
+            <span style="color:#66d9ef">if</span> heat <span style="color:#f92672">==</span> <span style="color:#ae81ff">201</span>:
+                time<span style="color:#f92672">.</span>sleep(huixuepiaoyao)
+            <span style="color:#66d9ef">else</span>:
+                time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.05</span>)
+</code></pre></div><h4 id="天罗诡道">天罗诡道：</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># auto_choose: 自动选择敌方单位  auto_buff: 自动开爆发</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tangmen</span>(auto_choose<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, auto_buff<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">开始运行天罗诡道脚本</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#75715e"># 技能分配键位</span>
+    skills <span style="color:#f92672">=</span> {<span style="color:#ae81ff">206</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[天女散花]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">207</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[暗藏杀机]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">208</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[千秋万劫]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">209</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[天绝地灭]</span><span style="color:#e6db74">&#39;</span>,
+              <span style="color:#ae81ff">210</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[千机变]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">211</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[千机变-攻击]</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">303</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">[心无旁骛]</span><span style="color:#e6db74">&#39;</span>}
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">210</span>, <span style="color:#ae81ff">211</span>, <span style="color:#ae81ff">208</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">20</span>
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">释放千机变</span><span style="color:#e6db74">&#34;</span>)
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#75715e"># 设置权重</span>
+            orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">209</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">25</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">208</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">207</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">206</span>] <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> [<span style="color:#ae81ff">211</span>]
+            <span style="color:#75715e"># 打乱技能散布</span>
+            random<span style="color:#f92672">.</span>shuffle(orders)
+            <span style="color:#66d9ef">if</span> auto_buff:
+                orders <span style="color:#f92672">=</span> [<span style="color:#ae81ff">303</span>] <span style="color:#f92672">+</span> orders
+        start <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+        <span style="color:#66d9ef">if</span> auto_choose <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> i <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+            dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">1</span>)
+            dd_dll<span style="color:#f92672">.</span>DD_key(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">2</span>)
+        <span style="color:#66d9ef">for</span> skill <span style="color:#f92672">in</span> orders:
+            dd_dll<span style="color:#f92672">.</span>DD_key(skill, <span style="color:#ae81ff">1</span>)
+            dd_dll<span style="color:#f92672">.</span>DD_key(skill, <span style="color:#ae81ff">2</span>)
+            time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.03</span>)
+        end <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">第</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> str(i) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">次循环用时  </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> str(end<span style="color:#f92672">-</span>start) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> 秒</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><p><strong>以上键码均为我个人使用习惯设置，可以对照 DD 键码表自行修改。相关文件存于 <a href="https://pan.baidu.com/s/11bj9k4HvteMbZpfrEFtp4A">百度网盘</a>  密码：ukle  。使用前使用 “自测.exe” 根据系统版本进行驱动测试，并需要以管理员身份运行 PyCharm 。</strong></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/playing-jx3-with-python-script/>https://hdwyz.com/2020/playing-jx3-with-python-script/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/elementary-interview-questions-for-phper/" class="prev" rel="prev" title="PHP 初级笔试题"><i class="iconfont icon-left"></i>&nbsp;PHP 初级笔试题</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

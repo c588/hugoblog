@@ -6,10 +6,19 @@
     <description>Recent content in 瞎折腾 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Feb 2020 02:31:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 使用 Caddy 自动部署到阿里云</title>
+      <link>https://hdwyz.com/2020/hugo-caddy-centos/</link>
+      <pubDate>Sat, 21 Mar 2020 00:22:52 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/hugo-caddy-centos/</guid>
+      <description>引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane&amp;rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户</description>
+    </item>
     
     <item>
       <title>趁年轻，多越狱</title>
@@ -17,15 +26,15 @@
       <pubDate>Wed, 19 Feb 2020 02:31:24 +0800</pubDate>
       
       <guid>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</guid>
-      <description>源 apt.htv123.com 电话助手源 汉化插件 apt.25mao.com 老牌猫源 WeChatHookPro 微信助手 去掉二次通知 repo.qqtlr.com 93嗨客源 插件收集汉化 apt.fcydia.com 蜂巢源 插件收集汉化 spardev.me 作者源 AutoUnlockX 自动解锁 repo.pulandres.me 破解软件 GPSCheater Cracked 虚拟定位 BetterCCXI</description>
+      <description>设备要求 越狱方式：unc0ver、Chimera、checkra1n 工具：macOS、windows(实际 Linux) + u 盘 系统版本：iOS 12.3 以上的 A7(X)-A11</description>
     </item>
     
     <item>
       <title>VPS - 酸酸乳基本使用姿势</title>
-      <link>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</link>
+      <link>https://hdwyz.com/2020/build-ssr-with-your-vps/</link>
       <pubDate>Thu, 13 Feb 2020 11:48:52 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</guid>
+      <guid>https://hdwyz.com/2020/build-ssr-with-your-vps/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
     </item>
     
@@ -36,6 +45,15 @@
       
       <guid>https://hdwyz.com/2019/update-b450-motherboards-flash/</guid>
       <description>十月底十一月初，在狗东买了散件组装了一台主机，双十一又入了一台国产品牌显示器，接上以后发现开机启动特别慢，一直没有找到解决办法就默默忍受着长</description>
+    </item>
+    
+    <item>
+      <title>MacOS 使用 Github &#43; Hexo 搭建个人博客</title>
+      <link>https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/</link>
+      <pubDate>Sun, 24 Nov 2019 16:19:38 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/</guid>
+      <description>关于自建博客的想法，已经有了一年多了。自从18年10月下旬被裁员开始海投简历，我就发现很多公司招聘要求都有一条“加分：有维护个人博客/Git</description>
     </item>
     
   </channel>

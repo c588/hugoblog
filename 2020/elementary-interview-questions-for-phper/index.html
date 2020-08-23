@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://hdwyz.com/2020/primary-phper-knowledge/" />
+  <link rel="next" href="https://hdwyz.com/2020/playing-jx3-with-python-script/" />
+  <link rel="canonical" href="https://hdwyz.com/2020/elementary-interview-questions-for-phper/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           PHP 初级笔试题 | 可乐橙
+       
+  </title>
+  <meta name="title" content="PHP 初级笔试题 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hdwyz.com"
+    },
+    "articleSection" : "posts",
+    "name" : "PHP 初级笔试题",
+    "headline" : "PHP 初级笔试题",
+    "description" : "各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以",
+    "inLanguage" : "zh-CN",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-06-07 07:01:39 \x2b0800 CST",
+    "dateModified" : "2020-06-07 07:01:39 \x2b0800 CST",
+    "url" : "https:\/\/hdwyz.com\/2020\/elementary-interview-questions-for-phper\/",
+    "wordCount" : "2130",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hdwyz.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">PHP 初级笔试题</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-06-07 itemprop="datePublished">
+                    2020-06-07
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                2130 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                5 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p><a href="https://visualgo.net/zh/sorting?slide=1">各类排序算法动画流程</a></p>
+<p><a href="https://github.com/MisterBooo/LeetCodeAnimation">[Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路</a></p>
+<p><a href="https://github.com/azl397985856/leetcode">[Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路</a></p>
+<hr>
+<h2 id="冒泡排序">冒泡排序</h2>
+<p>对于 n 个元素的数组，第一轮通过 n-1 次比较可以确定最 大/小 的元素，第二轮通过 n-2 次比较可以确定第二 大/小 的元素。以此类推，第 n-2 轮通过 2 次比较可以确定第 n-2 个元素，第 n-1 轮通过 1 次比较确定第 n-1 （即倒数第二）个元素，最后一个元素不需要比较，就是最 小/大 的元素。关系：n 个元素的数组，需要 n-1 轮，第 i 轮需要比较 n-i 次。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bub</span>($arr) {
+    $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
+    
+    <span style="color:#66d9ef">if</span> ($count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    <span style="color:#66d9ef">if</span> ($count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">return</span> $arr;
+    
+	<span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $count <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>; $i<span style="color:#f92672">++</span>) {
+		<span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $j <span style="color:#f92672">&lt;</span> $count <span style="color:#f92672">-</span> $i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>; $j<span style="color:#f92672">++</span>) {
+			$k <span style="color:#f92672">=</span> $j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+			<span style="color:#66d9ef">if</span> ($arr[$j] <span style="color:#f92672">&gt;</span> $arr[$k]) {
+				$arr[$j] <span style="color:#f92672">+=</span> $arr[$k];
+				$arr[$k] <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">$</span>[$j] <span style="color:#f92672">-</span> $arr[$k];
+				$arr[$j] <span style="color:#f92672">-=</span> $arr[$k];
+			}
+		}
+	}
+}
+</code></pre></div><h2 id="选择排序">选择排序</h2>
+<p>跟冒泡排序类似，对于 n 个元素的数组需要进行 n 次遍历，第 i 次遍历确定第 i 个元素的位置。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">selSort</span>($arr) {
+    $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
+    
+    <span style="color:#66d9ef">if</span> ($count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    <span style="color:#66d9ef">if</span> ($count <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">return</span> $arr;
+    
+    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $count <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
+        $min <span style="color:#f92672">=</span> $i;
+        <span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> $i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; $j <span style="color:#f92672">&lt;</span> $count; $j<span style="color:#f92672">++</span>) {
+            <span style="color:#66d9ef">if</span> ($arr[$j] <span style="color:#f92672">&lt;</span> $arr[$min]) {
+                $min <span style="color:#f92672">=</span> $j;
+            }
+        }
+        <span style="color:#66d9ef">if</span> ($min <span style="color:#f92672">!=</span> $i) {
+            $arr[$i] <span style="color:#f92672">+=</span> $arr[$min];
+            $arr[$min] <span style="color:#f92672">=</span> $arr[$i] <span style="color:#f92672">-</span> $arr[$min];
+            $arr[$i] <span style="color:#f92672">-=</span> $arr[$min];
+        }
+    }
+    
+    <span style="color:#66d9ef">return</span> $arr;
+}
+</code></pre></div><p>第二层循环结束后必须先判断当前最小元素的索引 $min 是否改变，如果仍为 $i 说明第一位就是最小数，不做元素调换。否则会赋值成 0。第一层循环结束条件为 $count - 1 因为需要循环 n - 1 次，第二层循环结束条件为 $count 因为 $j 已经赋值成 $i + 1。</p>
+<p>类似的，如果需要循环 n 次，初始值为 0，条件为 &lt; n，计数器从 0 到 n-1 执行 n 次。</p>
+<h2 id="快速排序">快速排序</h2>
+<p>首先将数组中的第一个元素作为基准值，向后遍历，将小于基准值的数放入 $left 数组，大于基准值的数放入 $right 数组，将两个数组作为参数递归调用该方法，最后将 $left $right 数组以及 [$base] 结合，（按要求使用 sort/rsort）排序完成。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">quick</span>($arr) {
+    $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
+
+    <span style="color:#66d9ef">if</span>($count <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">return</span> $arr;
+
+    $left <span style="color:#f92672">=</span> $right <span style="color:#f92672">=</span> [];
+    $base <span style="color:#f92672">=</span> $arr[<span style="color:#ae81ff">0</span>];
+
+    <span style="color:#66d9ef">for</span>($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">&lt;</span> $count; $i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span>($base <span style="color:#f92672">&gt;</span> $arr[$i]) {
+            $left[] <span style="color:#f92672">=</span> $arr[$i];
+        } <span style="color:#66d9ef">else</span> {
+            $right[] <span style="color:#f92672">=</span> $arr[$i];
+        }
+    }
+
+    $left <span style="color:#f92672">=</span> <span style="color:#a6e22e">quick</span>($left);
+    $right <span style="color:#f92672">=</span> <span style="color:#a6e22e">quick</span>($right);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">array_merge</span>($left, [$base], $right);
+}
+</code></pre></div><h2 id="抢红包算法">抢红包算法</h2>
+<p><a href="https://blog.csdn.net/bjweimengshu/article/details/80045958">漫画：如何实现抢红包算法？</a></p>
+<ol>
+<li>二倍均值法</li>
+<li>线段法</li>
+</ol>
+<p>二倍均值法为了保证每个人分到的红包金额的数学期望相同，采用了在 (0, M/N * 2) 范围内取值。但是从微信的抢红包结果来看，有出现总额 300 的红包分成 150+、30+、10+ 的情况，而二倍均值法除了最后一位都不会超过 M/N * 2。</p>
+<p>线段法随机性更强。例如总额为 100 的红包分给 10 个人，只需要在 (0, 100) 间确定 9 个随机点 n1~n9，很容易确定 10 个红包的金额为 n1, n2-n1, n3-n2, &hellip;, n9-n8, 100-n9 。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">// red envelope
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">redEnvelope</span>($total, $count) {
+	$total <span style="color:#f92672">=</span> $total <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>;<span style="color:#75715e">// 转为分
+</span><span style="color:#75715e"></span>	$envelope <span style="color:#f92672">=</span> $pos <span style="color:#f92672">=</span> [];
+	<span style="color:#66d9ef">do</span> {
+		$pos[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">mt_rand</span>(<span style="color:#ae81ff">1</span>, $total <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+	} <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">count</span>($pos) <span style="color:#f92672">!=</span> $count <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+	<span style="color:#a6e22e">sort</span>($pos);
+	<span style="color:#a6e22e">print_r</span>($pos);
+	$envelope[] <span style="color:#f92672">=</span> $pos[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>;
+	<span style="color:#66d9ef">foreach</span> ($pos <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $value) {
+		<span style="color:#66d9ef">if</span> ($key <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">continue</span>;
+		<span style="color:#66d9ef">if</span> ($key <span style="color:#f92672">==</span> $count <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">break</span>;
+		$envelope[] <span style="color:#f92672">=</span> ($pos[$key <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> $value) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>;
+	}
+	$envelope[] <span style="color:#f92672">=</span> ($total <span style="color:#f92672">-</span> $value) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>;
+	<span style="color:#66d9ef">return</span> $envelope;
+}
+</code></pre></div><p>主要需要处理的地方为生成随机点时，需要确定范围，最小值为 1 分，所以应该是 [1, $total * 100 - 1]，随机函数使用 mb_rand()，官方说明：生成更好的随机数。<strong>mt_rand()</strong>  函数是非正式用来替换 <strong>rand()</strong> 。</p>
+<h2 id="猴子选大王问题">猴子选大王问题</h2>
+<p>即约瑟夫环。共 M 只猴子，编号 1-M，依次排数，当数到为 N 时出局，继续从 1 开始。循环至最后一只猴子停止，求编号。</p>
+<p>大一 C 语言课程题目，小白噩梦。</p>
+<p>直观解法：用数组储存所有猴子编号，for 循环计数，如果序号不为 N 的倍数，将当前元素放到数组末尾，否则删除当前元素。当数组内元素个数为 1 时，输出该元素。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#75715e">// joseph ring
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">monkeyKing</span>($m, $n) {
+    $arr <span style="color:#f92672">=</span> <span style="color:#a6e22e">range</span>(<span style="color:#ae81ff">1</span>, $m);
+    $i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">count</span>($arr) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+        <span style="color:#66d9ef">if</span>(($i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> $n) {
+            $arr[] <span style="color:#f92672">=</span> $arr[$i];
+        }
+        <span style="color:#a6e22e">unset</span>($arr[$i]);
+        $i<span style="color:#f92672">++</span>;
+    }
+
+    <span style="color:#66d9ef">return</span> $arr[$i];
+}
+
+<span style="color:#a6e22e">print_r</span>(<span style="color:#a6e22e">monkeyKing</span>(<span style="color:#ae81ff">5000</span>, <span style="color:#ae81ff">5000</span>));  <span style="color:#75715e">// 3977
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">print_r</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+
+</code></pre></div><p>缺点：时间复杂度高达O(nm)</p>
+<p>数学解法： 没看懂  <a href="https://blog.csdn.net/u011500062/article/details/72855826">约瑟夫环——公式法（递推公式）</a></p>
+<h2 id="n阶井字棋">n阶井字棋</h2>
+<p>井字棋，国外称为 <em>Tic</em>-<em>Tac</em>-<em>Toe</em> ，规则为“两个玩家，一个打圈（◯），一个打叉（✗），轮流在3乘3的格上打自己的符号，最先以横、直、斜连成一线则为胜。”现在要求代码实现对 n 阶井字棋的胜负判定。</p>
+<p>每下一步棋，进行 2+1+1 次判断，横向是否一致，纵向是否一致，如果在任意一条对角线上，额外进行 1 或 2 次对角线判断。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+$n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;  <span style="color:#75715e">// 五阶棋盘
+</span><span style="color:#75715e"></span>$res <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">check</span>($arr)
+{
+    $n <span style="color:#f92672">=</span> $GLOBALS[<span style="color:#e6db74">&#39;n&#39;</span>];
+    $res <span style="color:#f92672">=</span> $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>];
+    <span style="color:#75715e">// 已经下过这一步，返回false；没有，赋值
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($res[$arr[<span style="color:#ae81ff">1</span>]][$arr[<span style="color:#ae81ff">2</span>]])) {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+    } <span style="color:#66d9ef">else</span> {
+        $res[$arr[<span style="color:#ae81ff">1</span>]][$arr[<span style="color:#ae81ff">2</span>]] <span style="color:#f92672">=</span> $arr[<span style="color:#ae81ff">0</span>];
+    }
+    <span style="color:#75715e">// 如果某一步下在对角线上，额外进行一次对角线判断(前提：阶数为奇数)  // 错误，阶数为偶数也会出现对角线
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//if ($n % 2 == 1) {
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">1</span>) {
+        <span style="color:#66d9ef">if</span> ($arr[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> $arr[<span style="color:#ae81ff">2</span>]) {
+            <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">isset</span>($res[$i][$i]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($res[$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>][$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])) <span style="color:#f92672">||</span> $res[$i][$i] <span style="color:#f92672">!=</span> $res[$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>][$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]) {
+                    <span style="color:#66d9ef">break</span>;
+                } <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> $i) {
+                    <span style="color:#a6e22e">var_dump</span>($arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;--- Win!&#39;</span>);
+                    $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>] <span style="color:#f92672">=</span> $res;
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+                }
+            }
+        } <span style="color:#66d9ef">elseif</span> ($arr[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> $arr[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> $n) {
+            <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">isset</span>($res[$i][$n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> $i]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($res[$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>][$n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> $i])) <span style="color:#f92672">||</span> $res[$i][$n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> $i] <span style="color:#f92672">!=</span> $res[$i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>][$n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> $i]) {
+                    <span style="color:#66d9ef">break</span>;
+                } <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> $i) {
+                    <span style="color:#a6e22e">var_dump</span>($arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;--- Win!&#39;</span>);
+                    $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>] <span style="color:#f92672">=</span> $res;
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+                }
+            }
+        }
+    }
+    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
+        <span style="color:#75715e">// 横列判断(是否赋值 or 是否相等)，不符合则进行纵列判断
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">isset</span>($res[$arr[<span style="color:#ae81ff">1</span>]][$i]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($res[$arr[<span style="color:#ae81ff">1</span>]][$i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])) <span style="color:#f92672">||</span> $res[$arr[<span style="color:#ae81ff">1</span>][$i]] <span style="color:#f92672">!=</span> $res[$arr[<span style="color:#ae81ff">1</span>][$i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]]) {
+            <span style="color:#75715e">// 进行纵列判断(是否赋值 or 是否相等)，不符合则跳出两层循环
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> ($j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $j <span style="color:#f92672">&lt;</span> $n <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; $j<span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">isset</span>($res[$j][$arr[<span style="color:#ae81ff">2</span>]]) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isset</span>($res[$j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][$arr[<span style="color:#ae81ff">2</span>]])) <span style="color:#f92672">||</span> $res[$j][$arr[<span style="color:#ae81ff">2</span>]] <span style="color:#f92672">!=</span> $res[$j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>][$arr[<span style="color:#ae81ff">2</span>]]) {
+                    <span style="color:#66d9ef">break</span> <span style="color:#ae81ff">2</span>;
+                } <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> $j) {
+                    <span style="color:#a6e22e">var_dump</span>($arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;--- Win!&#39;</span>);
+                    $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>] <span style="color:#f92672">=</span> $res;
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+                }
+            }
+            <span style="color:#66d9ef">break</span>;
+        } <span style="color:#66d9ef">elseif</span> ($n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> $i) {
+            <span style="color:#a6e22e">var_dump</span>($arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;--- Win!&#39;</span>);
+            $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>] <span style="color:#f92672">=</span> $res;
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+        }
+    }
+    $GLOBALS[<span style="color:#e6db74">&#39;res&#39;</span>] <span style="color:#f92672">=</span> $res;
+}
+</code></pre></div><h2 id="字符串处理">字符串处理</h2>
+<p>给定字符串 &ldquo;Hello WORld&rdquo; 要求转换成 &ldquo;Olleh DLRow&rdquo;，逆序，对应位置大小写不变。</p>
+<p>字符串逆序，按照原字符串改变大小写。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">strFmt</span>($str) {
+    $len <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($str);
+    $res <span style="color:#f92672">=</span> <span style="color:#a6e22e">strrev</span>($str);
+    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $len; $i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ord</span>($str[$i]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">64</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">ord</span>($str[$i]) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">91</span>) {
+            $res[$i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtoupper</span>($res[$i]);
+        }
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ord</span>($str[$i]) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">96</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">ord</span>($str[$i]) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">123</span>) {
+            $res[$i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">strtolower</span>($res[$i]);
+        }
+    }
+
+    <span style="color:#66d9ef">return</span> $res;
+}
+</code></pre></div><p>ord() 方法可以解析 <code>string</code> 二进制值第一个字节为 0 到 255 范围的无符号整型类型。此处返回的是字母在 ASCII 编码表中的位置。</p>
+<p>ASCII 表中，65-90 对应大写字母，97-122 对应小写字母。</p>
+<h2 id="获取-url-中的后缀名">获取 URL 中的后缀名</h2>
+<p>优先使用 pathinfo，内置函数，效率高</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+$url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.pan.baidu.com/r/s231242FSeq13/index.jpeg&#34;</span>;
+<span style="color:#75715e">// 使用 pathinfo()
+</span><span style="color:#75715e"></span>$ext <span style="color:#f92672">=</span> <span style="color:#a6e22e">pathinfo</span>($url, <span style="color:#a6e22e">PATHINFO_EXTENSION</span>);
+<span style="color:#75715e">// 打散成数组取最后一个
+</span><span style="color:#75715e"></span>$ext <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reverse</span>(<span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;.&#39;</span>, $url))[<span style="color:#ae81ff">0</span>];
+<span style="color:#75715e">// 搜索最后一个 dot 符号，截取字符串到末尾
+</span><span style="color:#75715e"></span>$ext <span style="color:#f92672">=</span> <span style="color:#a6e22e">substr</span>($url, <span style="color:#a6e22e">strrpos</span>($url, <span style="color:#e6db74">&#39;.&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</code></pre></div><h2 id="重复数组">重复数组</h2>
+<p>将 [1, 2, 3] 变为 [1, 2, 3, 1, 2, 3, 1, 2, 3]</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+
+$arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
+$res <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;,&#39;</span>, $arr) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;,&#39;</span>;
+$res <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_repeat</span>($res, <span style="color:#ae81ff">3</span>);
+$res <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;,&#39;</span>, $res);
+$res <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_filter</span>($arr);
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hdwyz.com/2020/elementary-interview-questions-for-phper/>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hdwyz.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hdwyz.com/2020/primary-phper-knowledge/" class="prev" rel="prev" title="初级 PHP 知识点"><i class="iconfont icon-left"></i>&nbsp;初级 PHP 知识点</a>
+         
+        
+        <a href="https://hdwyz.com/2020/playing-jx3-with-python-script/" class="next" rel="next" title="使用 Python 调用 DD 驱动玩剑三">使用 Python 调用 DD 驱动玩剑三&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://hdwyz.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

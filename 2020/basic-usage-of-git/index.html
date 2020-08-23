@@ -58,7 +58,7 @@
     "datePublished": "2020-01-06 01:28:07 \x2b0800 CST",
     "dateModified" : "2020-01-06 01:28:07 \x2b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/basic-usage-of-git\/",
-    "wordCount" : "784",
+    "wordCount" : "720",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -135,7 +135,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                784 字
+                720 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -161,40 +161,44 @@
 
           <p>　　入职了一家小公司，后端就仨菜鸡还裁了一个，比上不足比下有余的老陈就担负起了管理代码的重担。虽然说一直都在使用 git，但之前也仅仅局限在本地往测试服务器提交代码，更新到正式服务器都是由主管/组长负责，经常接触的命令也只有</p>
 <ol>
-<li><code>git status</code></li>
-<li><code>git commit</code></li>
-<li><code>git fetch</code></li>
-<li><code>git pull</code></li>
-<li><code>git push</code></li>
+<li>git status</li>
+<li>git commit</li>
+<li>git fetch</li>
+<li>git pull</li>
+<li>git push</li>
 </ol>
 <p>　　突然从一对一变成一对多让我手足无措了一阵子，百度上找了好几篇文章看的云里雾里。上头催得紧实在是没有时间去细品更希望有一篇简洁明了的文章告诉我怎么去做。所以在此做一个记录，希望某一天可以帮助到另外一个迷茫的小菜鸡。</p>
 <hr>
 <p>　　代码一般托管在 github 或者码云上，即远程仓库 remote，仓库里有两个分支，主分支master 和开发分支 dev。你的手上有两台服务器，一台测试，一台正式。</p>
 <p>首先，你在本地进行开发，确认你在 dev 分支上：</p>
-<p><code>git branch</code></p>
+<p>git branch</p>
 <p>如果不在 dev 分支则切换到 dev 分支：</p>
-<p><code>git checkout dev</code></p>
+<p>git checkout dev</p>
 <p>接下来愉快地写 bug，本地测试完成后进行提交：</p>
-<p><code>git status</code>  <code>git add .</code>  <code>git commit -m 'update msg'</code></p>
-<p><code>git fetch</code>  <code>git pull</code>  <code>git push</code></p>
+<ul>
+<li>git status</li>
+<li>git add</li>
+<li>git commit -m ‘update msg&rsquo;</li>
+<li>git fetch</li>
+<li>git pull</li>
+<li>git push</li>
+</ul>
 <p>此时你的代码以及更新到远程仓库 remote 的 dev 分支中</p>
 <p>然后在测试服务器上拉取 remote 的 dev 分支代码：</p>
-<p>使用 xshell 连接，确认当前在 dev 分支，执行<code>git pull</code></p>
+<p>使用 xshell 连接，确认当前在 dev 分支，执行 git pull</p>
 <p>代码就更新到了测试服务器，进行测试。测试通过后进行合并，本地执行：</p>
-<p><code>git checkout master</code> ：切换到 master 分支</p>
-<p><code>git merge dev</code> ：将 dev 上的改动合并到 master 分支</p>
-<p><code>git pull</code> ：将合并后的代码推送到 remote 的 master 分支</p>
+<p>git checkout master ：切换到 master 分支</p>
+<p>git merge dev ：将 dev 上的改动合并到 master 分支</p>
+<p>git pull ：将合并后的代码推送到 remote 的 master 分支</p>
 <p>然后在正式服务器上拉取 remote 的 master 分支代码：</p>
 <p>使用 xshell 连接，确认当前在 master 分支，执行<code>git pull</code></p>
 <p>期间如果出现问题，按照 git 给出的提示进行操作。</p>
 <p>要点：</p>
 <ul>
-<li>如非必要，测试及生产只执行  <code>git pull</code>  命令</li>
-<li>干活前，先确认当前使用的分支 <code>git branch</code></li>
-<li>如果遇到本地通过，测试/正式报错，某某文件权限问题，不要直接  <code>chmod 777 filename</code>  因为 git 会把文件权限也列入了版本管理，下次更新代码执行  <code>git pull</code>  会报错，让你先提交。正确姿势是先用命令  <code>git config core.filemode false</code>  取消 git 对文件权限的管理再修改文件权限</li>
+<li>如非必要，测试及生产只执行  git pull  命令</li>
+<li>干活前，先确认当前使用的分支 git branch</li>
+<li>如果遇到本地通过，测试/正式报错，某某文件权限问题，不要直接  chmod 777 filename  因为 git 会把文件权限也列入了版本管理，下次更新代码执行  git pull  会报错，让你先提交。正确姿势是先用命令  git config core.filemode false  取消 git 对文件权限的管理再修改文件权限</li>
 </ul>
-<hr>
-<p>　　简单的一点点问题这两天把老吴折腾得够呛。如果在杭州的正常规模的公司，问一下旁边的老哥，五分钟解决，所以来义乌真是近两年最错误的决定 : (</p>
 
     </div>
 
@@ -230,10 +234,10 @@
 
     <div class="post-nav">
         
-        <a href="https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/" class="prev" rel="prev" title="在 MacOS 上连接 vps 服务器"><i class="iconfont icon-left"></i>&nbsp;在 MacOS 上连接 vps 服务器</a>
+        <a href="https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/" class="prev" rel="prev" title="在 MacOS 上连接 VPS 服务器"><i class="iconfont icon-left"></i>&nbsp;在 MacOS 上连接 VPS 服务器</a>
          
         
-        <a href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" class="next" rel="next" title="MacOS 搭建 Php 开发环境">MacOS 搭建 Php 开发环境&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" class="next" rel="next" title="MacOS 搭建 PHP 开发环境">MacOS 搭建 PHP 开发环境&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

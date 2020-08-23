@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 19 Apr 2020 07:47:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2020 07:47:19 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 Python 调用 DD 驱动玩剑三</title>
+      <link>https://hdwyz.com/2020/playing-jx3-with-python-script/</link>
+      <pubDate>Sat, 13 Jun 2020 07:47:19 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/playing-jx3-with-python-script/</guid>
+      <description>前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减</description>
+    </item>
+    
+    <item>
+      <title>PHP 初级笔试题</title>
+      <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
+      <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</guid>
+      <description>各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以</description>
+    </item>
     
     <item>
       <title>初级 PHP 知识点</title>
@@ -53,15 +71,15 @@
       <pubDate>Wed, 19 Feb 2020 02:31:24 +0800</pubDate>
       
       <guid>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</guid>
-      <description>源 apt.htv123.com 电话助手源 汉化插件 apt.25mao.com 老牌猫源 WeChatHookPro 微信助手 去掉二次通知 repo.qqtlr.com 93嗨客源 插件收集汉化 apt.fcydia.com 蜂巢源 插件收集汉化 spardev.me 作者源 AutoUnlockX 自动解锁 repo.pulandres.me 破解软件 GPSCheater Cracked 虚拟定位 BetterCCXI</description>
+      <description>设备要求 越狱方式：unc0ver、Chimera、checkra1n 工具：macOS、windows(实际 Linux) + u 盘 系统版本：iOS 12.3 以上的 A7(X)-A11</description>
     </item>
     
     <item>
       <title>VPS - 酸酸乳基本使用姿势</title>
-      <link>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</link>
+      <link>https://hdwyz.com/2020/build-ssr-with-your-vps/</link>
       <pubDate>Thu, 13 Feb 2020 11:48:52 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/the-basic-usage-of-ssr-in-a-vps/</guid>
+      <guid>https://hdwyz.com/2020/build-ssr-with-your-vps/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
     </item>
     
@@ -75,7 +93,7 @@
     </item>
     
     <item>
-      <title>MacOS 搭建 Php 开发环境</title>
+      <title>MacOS 搭建 PHP 开发环境</title>
       <link>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</link>
       <pubDate>Tue, 04 Feb 2020 04:01:21 +0800</pubDate>
       
@@ -93,7 +111,7 @@
     </item>
     
     <item>
-      <title>在 MacOS 上连接 vps 服务器</title>
+      <title>在 MacOS 上连接 VPS 服务器</title>
       <link>https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/</link>
       <pubDate>Sun, 15 Dec 2019 05:31:46 +0800</pubDate>
       
@@ -107,7 +125,7 @@
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
       <guid>https://hdwyz.com/2019/just-read/</guid>
-      <description>退以电影行天下 2020/04: 7号房的礼物 7번방의 선물 (2013) 沉默的羔羊 The Silence of the Lambs (1991) 狩猎 Jagten (2012) 2020/03: 雪国列车 설국열차 (2013) 2020/02： 奇异博士 Doctor Strange (2016) 禁闭岛 Shutter Island (2010) 僵尸肖</description>
+      <description>退以电影行天下 2020/08: 八佰 (2020) 2001太空漫游 2001: A Space Odyssey (1968) 咒怨 呪怨 (2002) 星际穿越 Interstellar (2014) 2020/06: 神盾局特工 第七季 Agents of S.H.I.E.L.D. Season 7‎ (2020) 一步之遥‎ (2014) 邪不压正 (2018) 2020/05: Hello！树</description>
     </item>
     
     <item>
@@ -120,7 +138,7 @@
     </item>
     
     <item>
-      <title>Php 使用微信支付 Jsapi 进行 h5 支付（半成品）</title>
+      <title>PHP 使用微信支付 JSAPI 进行 H5 支付（半成品）</title>
       <link>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</link>
       <pubDate>Mon, 25 Nov 2019 23:16:02 +0800</pubDate>
       

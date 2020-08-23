@@ -161,19 +161,24 @@
 
           <h2 id="1-linux源码编译安装php">1 linux源码编译安装php</h2>
 <p>wget下载php源码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://www.php.net/distributions/php-7.2.27.tar.gz
-</code></pre></div><p>linux安装php依赖：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum install -y gcc gcc-c++  make zlib zlib-devel pcre pcre-devel  libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel openssl openssl-devel openldap openldap-devel nss_ldap openldap-clients openldap-servers
-</code></pre></div><p>解压php源码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf php-7.2.27.tar.gz
-</code></pre></div><p>进入文件夹：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd php-7.2.27
-</code></pre></div><p>新建php安装目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /usr/local/php
-</code></pre></div><p>php源码文件夹中有一个可执行文件config，使用这个文件进行环境检测，生成 Makefile，为编译做准备：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure
---prefix<span style="color:#f92672">=</span>/usr/local/php
---with-config-file-path<span style="color:#f92672">=</span>/usr/local/php/etc
+<p><code>wget https://www.php.net/distributions/php-7.2.27.tar.gz</code></p>
+<p>linux安装php依赖：</p>
+<pre><code>sudo yum install -y gcc gcc-c++  make zlib zlib-devel pcre pcre-devel 
+libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel
+libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2
+bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs
+e2fsprogs-devel krb5 krb5-devel openssl openssl-devel openldap
+openldap-devel nss_ldap openldap-clients openldap-servers
+</code></pre><p>解压php源码：</p>
+<p><code>tar -zxvf php-7.2.27.tar.gz</code></p>
+<p>进入文件夹：</p>
+<p><code>cd php-7.2.27</code></p>
+<p>新建php安装目录：</p>
+<p><code>sudo mkdir /usr/local/php</code></p>
+<p>php源码文件夹中有一个可执行文件config，使用这个文件进行环境检测，生成 Makefile，为编译做准备：</p>
+<pre><code>./configure
+--prefix=/usr/local/php
+--with-config-file-path=/usr/local/php/etc
 --enable-inline-optimization
 --disable-debug
 --disable-rpath
@@ -209,8 +214,8 @@
 --enable-mbregex
 --enable-mbregex-backtrack
 --with-libmbfl--with-onig
---with-mysqli<span style="color:#f92672">=</span>shared,mysqlnd
---with-pdo-mysql<span style="color:#f92672">=</span>shared,mysqlnd
+--with-mysqli=shared,mysqlnd
+--with-pdo-mysql=shared,mysqlnd
 --with-zlib-dir
 --with-pdo-sqlite--enable-session
 --enable-shmop--enable-simplexml
@@ -225,47 +230,46 @@
 --enable-mysqlnd-compression-support
 --with-pear
 --enable-opcache
-</code></pre></div><p>WARNING：</p>
+</code></pre><p>WARNING：</p>
 <p>1 先切到root用户，否则编译安装后无法创建相关文件夹</p>
 <p>2 最好先进行环境清理 make clean</p>
 <p>make是用来编译的，它从Makefile中读取指令，然后编译：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make
-</code></pre></div><p>make install是用来安装的，它也从Makefile中读取指令，安装到指定的位置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make install
-</code></pre></div><p>报错：virtual memory exhausted: 无法分配内存  make: *** [ext/fileinfo/libmagic/apprentice.lo] 错误 1</p>
+<p><code>make</code></p>
+<p>make install是用来安装的，它也从Makefile中读取指令，安装到指定的位置：</p>
+<p><code>make install</code></p>
+<p>报错：virtual memory exhausted: 无法分配内存  make: *** [ext/fileinfo/libmagic/apprentice.lo] 错误 1</p>
 <p>原因：内存不足，无法完成编译（vps买不起贵的）</p>
 <p>解决：设置虚拟内存</p>
 <p><a href="https://huaien.co/technology/no-enough-memory-to-make-php/">编译安装PHP组件出现错误提示内存不足：virtual memory exhausted Cannot allocate memory</a></p>
 <p>查看内存使用情况：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">free -m
-</code></pre></div><p>创建目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /opt/images/
-</code></pre></div><p>创建一个2GB大小的文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>/opt/images/swap bs<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">2048000</span>
-</code></pre></div><p>把创建的文件变成SWAP分区：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkswap /opt/images/swap
-</code></pre></div><p>启用这个SWAP文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapon /opt/images/swap
-</code></pre></div><p>查看SWAP是否生效：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">free -m
-</code></pre></div><p>已经生效，继续编译安装：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">make <span style="color:#f92672">&amp;&amp;</span> make install
-</code></pre></div><p>完成后释放虚拟内存：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapoff swap
-</code></pre></div><p>或者：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo swapoff -a
-</code></pre></div><p>删除：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rm -f /opt/images/swap
-</code></pre></div><p>将php添加到环境变量中方便使用：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /etc/profile.d/php.sh
-export PATH<span style="color:#f92672">=</span>$PATH:/usr/local/php/bin
-</code></pre></div><p>重新载入以生效：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">source /etc/profile.d/php.sh
-</code></pre></div><p>查看php配置文件应该放在哪个目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php --ini
-</code></pre></div><p>把配置文件复制到该目录中：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp php.ini-production /etc/php.ini
-</code></pre></div><hr>
+<p><code>free -m</code></p>
+<p>创建目录：</p>
+<p><code>sudo mkdir /opt/images/</code></p>
+<p>创建一个2GB大小的文件：</p>
+<p><code>sudo dd if=/dev/zero of=/opt/images/swap bs=1024 count=2048000</code></p>
+<p>把创建的文件变成SWAP分区：</p>
+<p><code>sudo mkswap /opt/images/swap</code></p>
+<p>启用这个SWAP文件：</p>
+<p><code>sudo swapon /opt/images/swap</code></p>
+<p>查看SWAP是否生效：</p>
+<p><code>free -m</code></p>
+<p>已经生效，继续编译安装：</p>
+<p><code>make &amp;&amp; make install</code></p>
+<p>完成后释放虚拟内存：</p>
+<p><code>sudo swapoff swap</code></p>
+<p>或者：</p>
+<p><code>sudo swapoff -a</code></p>
+<p>删除：</p>
+<p><code>rm -f /opt/images/swap</code></p>
+<p>将php添加到环境变量中方便使用：</p>
+<pre><code>vim /etc/profile.d/php.sh
+export PATH=$PATH:/usr/local/php/bin
+</code></pre><p>重新载入以生效：</p>
+<p><code>source /etc/profile.d/php.sh</code></p>
+<p>查看php配置文件应该放在哪个目录：</p>
+<p><code>php --ini</code></p>
+<p>把配置文件复制到该目录中：</p>
+<p><code>cp php.ini-production /etc/php.ini</code></p>
 <hr>
 <h2 id="2-安装swoole模块">2 安装swoole模块</h2>
 <p>下载并解压：</p>
@@ -276,8 +280,8 @@ tar -zxvf swoole-4.4.15.tgz
 <span style="color:#75715e">#进目录</span>
 cd swoole-4.4.15/
 </code></pre></div><p>发现没有config文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">phpize
-</code></pre></div><p>生成了config文件，继续构建编译安装：</p>
+<p><code>phpize</code></p>
+<p>生成了config文件，继续构建编译安装：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#构建</span>
 ./configure --enable-openssl  --enable-http2
 <span style="color:#75715e">#如果有多个PHP版本，需要指定php-config</span>
@@ -295,66 +299,61 @@ vi /usr/local/lib/php.ini
 <span style="color:#75715e">#写入swoole</span>
 extension<span style="color:#f92672">=</span>swoole.so
 </code></pre></div><p>查看swoole模块是否已经添加：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php -m
-</code></pre></div><p>测试：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php /swoole-4.4.15/examples/server/echo.php
-</code></pre></div><p>没有报错，说明已经可以使用</p>
-<hr>
+<p><code>php -m</code></p>
+<p>测试：</p>
+<p><code>php /swoole-4.4.15/examples/server/echo.php</code></p>
+<p>没有报错，说明已经可以使用</p>
 <hr>
 <h2 id="3-php动态添加扩展">3 php动态添加扩展</h2>
 <p>进入到扩展目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /php-7.2.27/ext
-</code></pre></div><p>里面都是php扩展，要安装哪个扩展就进入该扩展的文件夹，例如curl：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd curl/
-</code></pre></div><p>这里是curl的源码，执行phpize（php添加扩展的外挂程序）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">phpize
-</code></pre></div><p>在当前文件夹中生成了config文件，执行：</p>
+<p><code>cd /php-7.2.27/ext</code></p>
+<p>里面都是php扩展，要安装哪个扩展就进入该扩展的文件夹，例如curl：</p>
+<p><code>cd curl/</code></p>
+<p>这里是curl的源码，执行phpize（php添加扩展的外挂程序）：</p>
+<p><code>phpize</code></p>
+<p>在当前文件夹中生成了config文件，执行：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure
 <span style="color:#75715e">#切记一切make之前都要先进行make clean</span>
 make clean
 make
 make install
 </code></pre></div><p>显示扩展文件安装路径：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20170718/
-</code></pre></div><p>最后在php.ini中添加扩展：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /usr/local/lib/php.ini
-extension<span style="color:#f92672">=</span>curl.so
-</code></pre></div><p>查看扩展相关信息：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php --ri curl
-</code></pre></div><hr>
+<p><code>Installing shared extensions:     /usr/local/lib/php/extensions/no-debug-non-zts-20170718/</code></p>
+<p>最后在php.ini中添加扩展：</p>
+<pre><code>vim /usr/local/lib/php.ini
+extension=curl.so
+</code></pre><p>查看扩展相关信息：</p>
+<p><code>php --ri curl</code></p>
 <hr>
 <h2 id="4-安装composer">4 安装Composer</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -sS https://getcomposer.org/installer | php
+<pre><code>curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
-</code></pre></div><p>由于众所周知的原因，国内使用composer速度感人，使用命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer config -g repo.packagist composer https://packagist.phpcomposer.com
-</code></pre></div><p>切换为国内镜像，当然速度比原先快一些但是速度依然感人。如果要恢复官方源，使用命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer config -g --unset repos.packagist
-</code></pre></div><hr>
+</code></pre><p>由于众所周知的原因，国内使用composer速度感人，使用命令：</p>
+<p><code>composer config -g repo.packagist composer https://packagist.phpcomposer.com</code></p>
+<p>切换为国内镜像，当然速度比原先快一些但是速度依然感人。如果要恢复官方源，使用命令：</p>
+<p><code>composer config -g --unset repos.packagist</code></p>
 <hr>
 <h2 id="5-使用composer安装thinkphp60">5 使用Composer安装ThinkPHP6.0</h2>
 <p>创建项目目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir swoole
-</code></pre></div><p>设置权限777：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod -R <span style="color:#ae81ff">777</span> swoole
-</code></pre></div><p>进入目录并安装开发版：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd swoole
-composer create-project topthink/think<span style="color:#f92672">=</span>6.0.x-dev tp
-</code></pre></div><p>复制.env文件：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp .example.env .env
-</code></pre></div><p>测试运行：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php think run
-</code></pre></div><p>浏览器访问  http://localhost:8000/</p>
+<p><code>mkdir swoole</code></p>
+<p>设置权限777：</p>
+<p><code>chmod -R 777 swoole</code></p>
+<p>进入目录并安装开发版：</p>
+<pre><code>cd swoole
+composer create-project topthink/think=6.0.x-dev tp
+</code></pre><p>复制.env文件：</p>
+<p><code>cp .example.env .env</code></p>
+<p>测试运行：</p>
+<p><code>php think run</code></p>
+<p>浏览器访问  http://localhost:8000/</p>
 <p>TP6安装完成！</p>
-<hr>
 <hr>
 <h2 id="6-安装tp6的swoole扩展">6 安装TP6的swoole扩展</h2>
 <p>到项目根目录：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">composer require topthink/think-swoole
-</code></pre></div><p>安装好后在根目录使用命令：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">php think swoole
-</code></pre></div><p>如果显示启动了swoole服务就说明安装成功了 ！</p>
-<hr>
+<p><code>composer require topthink/think-swoole</code></p>
+<p>安装好后在根目录使用命令：</p>
+<p><code>php think swoole</code></p>
+<p>如果显示启动了swoole服务就说明安装成功了 ！</p>
 <hr>
 <p>　　以上就是使用源码安装php、swoole扩展、thinkPHP6.0和think-swoole插件的全过程，强烈推荐小白自己过一遍，对Linux操作能有一个大致的理解。</p>
 
