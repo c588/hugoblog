@@ -9,11 +9,7 @@
   
   
   
-<<<<<<< HEAD
   <link rel="prev" href="https://hdwyz.com/2020/my-notes-of-fastadmin/" />
-=======
-  <link rel="prev" href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" />
->>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
   <link rel="next" href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" />
   <link rel="canonical" href="https://hdwyz.com/2020/build-ssr-with-your-vps/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -182,26 +178,16 @@ lsb_release -a
 <li>
 <p>安装 SSR</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本文件</span>
-<<<<<<< HEAD
 wget --no-check-certificate -O <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">)</span>
 <span style="color:#75715e"># 设置运行权限</span>
 chmod +x <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span>
-=======
-wget --no-check-certificate -O <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">](</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">](</span>https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh<span style="color:#f92672">)</span>
-<span style="color:#75715e"># 设置运行权限</span>
-chmod +x <span style="color:#f92672">[</span>shadowsocks-all.sh<span style="color:#f92672">](</span>http://shadowsocks-all.sh/<span style="color:#f92672">)</span>
->>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
 <span style="color:#75715e"># 运行脚本</span>
 ./shadowsocks-all.sh 2&gt;&amp;<span style="color:#ae81ff">1</span> | tee shadowsocks-all.log
 </code></pre></div></li>
 <li>
 <p>安装 BBR 加速</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本文件</span>
-<<<<<<< HEAD
 wget --no-check-certificate -O <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> chmod +x <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> ./tcp.sh
-=======
-wget --no-check-certificate -O <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">](</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">](</span>https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> chmod +x <span style="color:#f92672">[</span>tcp.sh<span style="color:#f92672">](</span>http://tcp.sh/<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> ./tcp.sh
->>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
 <span style="color:#75715e"># 安装完成后重启 VPS，启用加速</span>
 ./tcp.sh
 </code></pre></div></li>
@@ -215,19 +201,11 @@ wget --no-check-certificate -O <span style="color:#f92672">[</span>tcp.sh<span s
 <li>
 <p>测速：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 下载脚本</span>
-<<<<<<< HEAD
 wget <span style="color:#f92672">[</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">]</span><span style="color:#f92672">(</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">)</span>
 <span style="color:#75715e"># 添加权限</span>
 chmod a+rx <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://speedtest.py/<span style="color:#f92672">)</span>
 <span style="color:#75715e"># 测速</span>
 python <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">]</span><span style="color:#f92672">(</span>http://speedtest.py/<span style="color:#f92672">)</span>
-=======
-wget <span style="color:#f92672">[</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">](</span>https://raw.github.com/sivel/speedtest-cli/master/speedtest.py<span style="color:#f92672">)</span>
-<span style="color:#75715e"># 添加权限</span>
-chmod a+rx <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">](</span>http://speedtest.py/<span style="color:#f92672">)</span>
-<span style="color:#75715e"># 测速</span>
-python <span style="color:#f92672">[</span>speedtest.py<span style="color:#f92672">](</span>http://speedtest.py/<span style="color:#f92672">)</span>
->>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
 <span style="color:#75715e"># 选择节点</span>
 python speedtest.py --server <span style="color:#ae81ff">4751</span>
 </code></pre></div></li>
@@ -332,11 +310,7 @@ Upload: 276.00 Mbit/s
 
     <div class="post-nav">
         
-<<<<<<< HEAD
         <a href="https://hdwyz.com/2020/my-notes-of-fastadmin/" class="prev" rel="prev" title="FastAdmin 框架二次开发笔记"><i class="iconfont icon-left"></i>&nbsp;FastAdmin 框架二次开发笔记</a>
-=======
-        <a href="https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/" class="prev" rel="prev" title="MacOS 搭建 PHP 开发环境"><i class="iconfont icon-left"></i>&nbsp;MacOS 搭建 PHP 开发环境</a>
->>>>>>> 804db2c1e1f85cdfa7c861a5e791ea82371b25f6
          
         
         <a href="https://hdwyz.com/2020/break-the-jail-before-you-get-old/" class="next" rel="next" title="趁年轻，多越狱">趁年轻，多越狱&nbsp;<i class="iconfont icon-right"></i></a>
