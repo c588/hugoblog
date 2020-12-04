@@ -6,10 +6,19 @@
     <description>Recent content in 入门 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 07 Jun 2020 07:01:39 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>解决 PHPWord 中的 ProofErr 问题</title>
+      <link>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</link>
+      <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</guid>
+      <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
+    </item>
     
     <item>
       <title>PHP 初级笔试题</title>

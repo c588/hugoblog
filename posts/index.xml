@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 13 Jun 2020 07:47:19 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>解决 PHPWord 中的 ProofErr 问题</title>
+      <link>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</link>
+      <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</guid>
+      <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
+    </item>
     
     <item>
       <title>使用 Python 调用 DD 驱动玩剑三</title>
