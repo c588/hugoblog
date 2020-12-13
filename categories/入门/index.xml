@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>PHP 初级笔试题</title>
+      <title>初级 PHP 笔试题</title>
       <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
       <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
       
@@ -36,15 +36,6 @@
       
       <guid>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</guid>
       <description>1 linux源码编译安装php wget下载php源码： wget https://www.php.net/distributions/php-7.2.27.tar.gz linux安装php依赖： sudo yum install -y gcc gcc-c++ make zlib zlib-devel pcre pcre-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl</description>
-    </item>
-    
-    <item>
-      <title>FastAdmin 框架二次开发笔记</title>
-      <link>https://hdwyz.com/2020/my-notes-of-fastadmin/</link>
-      <pubDate>Wed, 12 Feb 2020 00:49:28 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/my-notes-of-fastadmin/</guid>
-      <description>前端篇： 动态下拉列表： data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法） data-fie</description>
     </item>
     
     <item>

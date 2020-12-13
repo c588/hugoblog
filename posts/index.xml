@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Dec 2020 23:35:05 +0800</lastBuildDate>
     
 	<atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>电话/短信轰炸机的前生今世</title>
+      <link>https://hdwyz.com/2020/escape-from-sms-bomber/</link>
+      <pubDate>Sun, 13 Dec 2020 23:35:05 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2020/escape-from-sms-bomber/</guid>
+      <description>一、前言 今天打开即可刷了会儿突然看到有即友提到了被大量验证码短信骚扰，并且不知道怎么解决，就在这里简单聊一聊这种定向的短信和电话骚扰途径。 二</description>
+    </item>
     
     <item>
       <title>解决 PHPWord 中的 ProofErr 问题</title>
@@ -30,7 +39,7 @@
     </item>
     
     <item>
-      <title>PHP 初级笔试题</title>
+      <title>初级 PHP 笔试题</title>
       <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
       <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
       
@@ -54,15 +63,6 @@
       
       <guid>https://hdwyz.com/2020/hugo-caddy-centos/</guid>
       <description>引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane&amp;rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户</description>
-    </item>
-    
-    <item>
-      <title>Markdown 在 Leaveit 主题中的效果</title>
-      <link>https://hdwyz.com/2020/the-markdown-in-this-theme/</link>
-      <pubDate>Wed, 18 Mar 2020 21:43:41 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/the-markdown-in-this-theme/</guid>
-      <description>这是一级标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 这是普通段落文字 这是一个 4x2 的表格 # 这是一个代码块 echo &amp;#34;Hello, World!&amp;#34; $$ E=mc^2 $$ 这是一句</description>
     </item>
     
     <item>
@@ -90,15 +90,6 @@
       
       <guid>https://hdwyz.com/2020/build-ssr-with-your-vps/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
-    </item>
-    
-    <item>
-      <title>FastAdmin 框架二次开发笔记</title>
-      <link>https://hdwyz.com/2020/my-notes-of-fastadmin/</link>
-      <pubDate>Wed, 12 Feb 2020 00:49:28 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/my-notes-of-fastadmin/</guid>
-      <description>前端篇： 动态下拉列表： data-source：数据来源，一般为控制器的index方法（会自动跳转到selectpage方法） data-fie</description>
     </item>
     
     <item>
