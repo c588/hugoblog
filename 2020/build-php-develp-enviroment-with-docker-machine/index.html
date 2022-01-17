@@ -47,7 +47,7 @@
     "articleSection" : "posts",
     "name" : "MacOS 搭建 PHP 开发环境",
     "headline" : "MacOS 搭建 PHP 开发环境",
-    "description" : "macOS 搭建 PHP 开发环境： 安装 docker toolbox docker-machine -v 确认已经安装并查看当前版本 docker-machine ls 查看当前可用主机 docker-machine create \x26ndash;driver virtualbox default 创建一个基本主机 若打开 VT-X\/AMD-X 后仍提示，使用跳过检测的命令：",
+    "description" : "macOS 搭建 PHP 开发环境： 安装 docker toolbox docker-machine -v 确认已经安装并查看当前版本 docker-machine ls 查看当前可用主机 docker-machine create \u0026ndash;driver virtualbox default 创建一个基本主机 若打开 VT-X\/AMD-X 后仍提示，使用跳过检测的命令：",
     "inLanguage" : "zh-CN",
     "author" : "ColaChen",
     "creator" : "ColaChen",
@@ -55,8 +55,8 @@
     "accountablePerson" : "ColaChen",
     "copyrightHolder" : "ColaChen",
     "copyrightYear" : "2020",
-    "datePublished": "2020-02-04 04:01:21 \x2b0800 CST",
-    "dateModified" : "2020-02-04 04:01:21 \x2b0800 CST",
+    "datePublished": "2020-02-04 04:01:21 \u002b0800 CST",
+    "dateModified" : "2020-02-04 04:01:21 \u002b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/build-php-develp-enviroment-with-docker-machine\/",
     "wordCount" : "1777",
     "keywords" : [  "可乐橙"]
@@ -341,7 +341,7 @@ valet restart
 <p>sudo /usr/local/mysql/bin/mysql -u root  进入 mysql</p>
 </li>
 <li>
-<p>UPDATE mysql.user SET authentication_string=PASSWORD(&lsquo;新密码&rsquo;) WHERE User='root&rsquo;;  设置新密码</p>
+<p>UPDATE mysql.user SET authentication_string=PASSWORD(&lsquo;新密码&rsquo;) WHERE User=&lsquo;root&rsquo;;  设置新密码</p>
 </li>
 <li>
 <p>FLUSH PRIVILEGES;  刷新</p>
@@ -408,7 +408,7 @@ collation-server=utf8mb4_unicode_ci
 cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 git remote set-url origin git://mirrors.ustc.edu.cn/brew.git
 <span style="color:#75715e"># 替换homebrew-core源（核心软件仓库）</span>
-cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">/Library/Taps/homebrew/homebrew-core</span><span style="color:#e6db74">&#34;</span>
+cd <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>brew --repo<span style="color:#66d9ef">)</span><span style="color:#e6db74">/Library/Taps/homebrew/homebrew-core&#34;</span>
 git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-core.git
 <span style="color:#75715e"># 替换homebrew-bottles（预编译二进制软件包）（zsh 用户）</span>
 echo <span style="color:#e6db74">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#39;</span> &gt;&gt; ~/.zshrc
@@ -475,7 +475,7 @@ source ~/.zshrc
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2020 - 2020</span>
+        <span itemprop="copyrightYear">2020 - 2022</span>
         
         <span class="with-love">
     	   <i class="iconfont icon-love"></i> 

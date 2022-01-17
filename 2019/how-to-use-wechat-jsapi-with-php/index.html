@@ -55,8 +55,8 @@
     "accountablePerson" : "ColaChen",
     "copyrightHolder" : "ColaChen",
     "copyrightYear" : "2019",
-    "datePublished": "2019-11-25 23:16:02 \x2b0800 CST",
-    "dateModified" : "2019-11-25 23:16:02 \x2b0800 CST",
+    "datePublished": "2019-11-25 23:16:02 \u002b0800 CST",
+    "dateModified" : "2019-11-25 23:16:02 \u002b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2019\/how-to-use-wechat-jsapi-with-php\/",
     "wordCount" : "1774",
     "keywords" : [  "可乐橙"]
@@ -173,8 +173,8 @@
 <hr>
 <p>第三步 获取 code</p>
 <p>在项目中，我在一个控制器下新建了一个方法 getCode()，只有两行代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$redirect_uri = “domian/controller/getOpenid”
-header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect&#34;);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$redirect_uri <span style="color:#f92672">=</span> <span style="color:#a6e22e">“domian</span><span style="color:#f92672">/</span><span style="color:#a6e22e">controller</span><span style="color:#f92672">/</span><span style="color:#a6e22e">getOpenid”</span>
+<span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;state=STATE#wechat_redirect&#34;</span>);
 </code></pre></div><p>第一行定义的 uri 为第四部的访问地址</p>
 <p>使用 header 方法直接跳转到这个地址。这个地址是微信官方的用于获取用户信息的地址。scope 有 snsapi_base 和 snsapi_userinfo 可选</p>
 <p>参数说明：<a href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html">微信官方文档·公众号——网页授权</a></p>
@@ -190,20 +190,20 @@ header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;
 <p>写一个 unifiedorder() 方法，构造参数 <a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1">微信支付开发文档——统一下单</a></p>
 <p>根据文档中的请求参数，把必填的都写上。由于是使用 JSAPI 支付，所以 openid 也是必须的。然后将所有参数按照字典序拼接好，末尾再加上 API 密钥 “&amp;key=你的key”，将这一整个字符串进行 MD5 加密（或者 HMAC-SHA256，和请求参数统一），并且转为全大写，得到了签名 sign。</p>
 <p>将所有的请求参数加上这个 sign，组合成 XML：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$params = &#34;&lt;<span style="color:#f92672">xml</span>&gt;
-   &lt;<span style="color:#f92672">appid</span>&gt;wx2421b1c4370ec43b&lt;/<span style="color:#f92672">appid</span>&gt;
-   &lt;<span style="color:#f92672">attach</span>&gt;支付测试&lt;/<span style="color:#f92672">attach</span>&gt;
-   &lt;<span style="color:#f92672">body</span>&gt;JSAPI支付测试&lt;/<span style="color:#f92672">body</span>&gt;
-   &lt;<span style="color:#f92672">mch_id</span>&gt;10000100&lt;/<span style="color:#f92672">mch_id</span>&gt;
-   &lt;<span style="color:#f92672">nonce_str</span>&gt;1add1a30ac87aa2db72f57a2375d8fec&lt;/<span style="color:#f92672">nonce_str</span>&gt;
-  &lt;<span style="color:#f92672">notify_url</span>&gt;http://wxpay.wxutil.com/pub_v2/pay/notify.v2.php&lt;/<span style="color:#f92672">notify_url</span>&gt;
-   &lt;<span style="color:#f92672">openid</span>&gt;oUpF8uMuAJO_M2pxb1Q9zNjWeS6o&lt;/<span style="color:#f92672">openid</span>&gt;
-   &lt;<span style="color:#f92672">out_trade_no</span>&gt;1415659990&lt;/<span style="color:#f92672">out_trade_no</span>&gt;
-   &lt;<span style="color:#f92672">spbill_create_ip</span>&gt;14.23.150.211&lt;/<span style="color:#f92672">spbill_create_ip</span>&gt;
-   &lt;<span style="color:#f92672">total_fee</span>&gt;1&lt;/<span style="color:#f92672">total_fee</span>&gt;
-   &lt;<span style="color:#f92672">trade_type</span>&gt;JSAPI&lt;/<span style="color:#f92672">trade_type</span>&gt;
-   &lt;<span style="color:#f92672">sign</span>&gt;0CB01533B8C1EF103065174F50BCA001&lt;/<span style="color:#f92672">sign</span>&gt;
-&lt;/<span style="color:#f92672">xml</span>&gt;&#34;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$params <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;xml&gt;
+</span><span style="color:#e6db74">   &lt;appid&gt;wx2421b1c4370ec43b&lt;/appid&gt;
+</span><span style="color:#e6db74">   &lt;attach&gt;支付测试&lt;/attach&gt;
+</span><span style="color:#e6db74">   &lt;body&gt;JSAPI支付测试&lt;/body&gt;
+</span><span style="color:#e6db74">   &lt;mch_id&gt;10000100&lt;/mch_id&gt;
+</span><span style="color:#e6db74">   &lt;nonce_str&gt;1add1a30ac87aa2db72f57a2375d8fec&lt;/nonce_str&gt;
+</span><span style="color:#e6db74">  &lt;notify_url&gt;http://wxpay.wxutil.com/pub_v2/pay/notify.v2.php&lt;/notify_url&gt;
+</span><span style="color:#e6db74">   &lt;openid&gt;oUpF8uMuAJO_M2pxb1Q9zNjWeS6o&lt;/openid&gt;
+</span><span style="color:#e6db74">   &lt;out_trade_no&gt;1415659990&lt;/out_trade_no&gt;
+</span><span style="color:#e6db74">   &lt;spbill_create_ip&gt;14.23.150.211&lt;/spbill_create_ip&gt;
+</span><span style="color:#e6db74">   &lt;total_fee&gt;1&lt;/total_fee&gt;
+</span><span style="color:#e6db74">   &lt;trade_type&gt;JSAPI&lt;/trade_type&gt;
+</span><span style="color:#e6db74">   &lt;sign&gt;0CB01533B8C1EF103065174F50BCA001&lt;/sign&gt;
+</span><span style="color:#e6db74">&lt;/xml&gt;&#34;</span>
 </code></pre></div><p>然后用 curl 进行 POST 请求（百度一个就成）</p>
 <pre><code>$params = postCurl(https://api.mch.weixin.qq.com/pay/unifiedorder);
 </code></pre><p>得到一众返回值，挑出 prepay_id。</p>
@@ -250,16 +250,16 @@ header(&#34;https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&amp;
 <p>定义一个可以访问到的方法（不能带任何参数），作为回调通知接收地址。</p>
 <p>支付成功后，微信服务器24小时内会持续向这个地址发送数据，直到超时或者得到答复。</p>
 <p>比如我在第五步的 notify_url 参数填写了 mydomain/wechat/notify，那么我就在 wechatController 中定义一个 notify 方法，接收数据，核对数据，返回数据：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">use crmeb\services\WechatService;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">crmeb\services\WechatService</span>;
 
-public function notify()
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">notify</span>()
 {
-	WechatService::handleNotify();
+	<span style="color:#a6e22e">WechatService</span><span style="color:#f92672">::</span><span style="color:#a6e22e">handleNotify</span>();
 }
 </code></pre></div><p>偷懒了，因为用的 CRMEB 这个项目，里边自带了处理微信支付回调信息的方法，大致的意思就是拿到支付金额和订单号，根据订单号查询用户应该支付的金额，和实际金额对比，相等就对订单的 paid、paid_time 这些字段进行修改，最后返回 XML 格式的数据：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XMl" data-lang="XMl"><span style="color:#f92672">&lt;xml</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;return_code</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[SUCCESS]]&gt;</span><span style="color:#f92672">&lt;/return_code&gt;</span>
-  <span style="color:#f92672">&lt;return_msg</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-XMl" data-lang="XMl"><span style="color:#f92672">&lt;xml&gt;</span>
+  <span style="color:#f92672">&lt;return_code&gt;</span><span style="color:#75715e">&lt;![CDATA[SUCCESS]]&gt;</span><span style="color:#f92672">&lt;/return_code&gt;</span>
+  <span style="color:#f92672">&lt;return_msg&gt;</span><span style="color:#75715e">&lt;![CDATA[OK]]&gt;</span><span style="color:#f92672">&lt;/return_msg&gt;</span>
 <span style="color:#f92672">&lt;/xml&gt;</span>
 </code></pre></div><p>微信服务器接收到这串 XML 之后就知道商户对这笔订单进行了确认，这笔订单在H5付款的流程就完成了！</p>
 <hr>
@@ -318,7 +318,7 @@ public function notify()
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2020 - 2020</span>
+        <span itemprop="copyrightYear">2020 - 2022</span>
         
         <span class="with-love">
     	   <i class="iconfont icon-love"></i> 

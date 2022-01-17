@@ -10,7 +10,7 @@
   
   
   <link rel="prev" href="https://hdwyz.com/2020/playing-jx3-with-python-script/" />
-  <link rel="next" href="https://hdwyz.com/2020/escape-from-sms-bomber/" />
+  
   <link rel="canonical" href="https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -55,10 +55,10 @@
     "accountablePerson" : "ColaChen",
     "copyrightHolder" : "ColaChen",
     "copyrightYear" : "2020",
-    "datePublished": "2020-12-04 23:59:48 \x2b0800 CST",
-    "dateModified" : "2020-12-04 23:59:48 \x2b0800 CST",
+    "datePublished": "2020-12-04 23:59:48 \u002b0800 CST",
+    "dateModified" : "2020-12-04 23:59:48 \u002b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/how-to-solve-error-with-prooferr-when-using-phpword\/",
-    "wordCount" : "1987",
+    "wordCount" : "1762",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -135,7 +135,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                1987 字
+                1762 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -175,60 +175,60 @@
 <p>事实证明，在每个占位符只取前 3~4 个字母的情况下，仍然出现了大批量的翻车事故。除了 <code>{{bank}}</code> 这个占位符，一如既往的坚挺。无奈之下，只能使用最低级的方法——打印内容。</p>
 <h2 id="三查看输出">三、查看输出</h2>
 <p>首先，看一下 PHPWord 在项目中的用法：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$templateProcessor = new TemplateProcessor($file_path);
-$templateProcessor-&gt;setValue(&#39;{{invoiceTitle}}&#39;, $invoiceTitle);
-$templateProcessor-&gt;saveAs($save_path);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$templateProcessor <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TemplateProcessor</span>($file_path);
+$templateProcessor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setValue</span>(<span style="color:#e6db74">&#39;{{invoiceTitle}}&#39;</span>, $invoiceTitle);
+$templateProcessor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">saveAs</span>($save_path);
 </code></pre></div><p>其实很容易理解，读取一个模版，把对应的占位符用想输出的变量使用 setValue() 方法替换，然后保存，所以直接把 setValue() 后的 $templateProcessor 打印出来看看就可以了。通过比较替换成功/失败的两种情况：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">#  正常情况
 <span style="color:#f92672">&lt;w:r</span> <span style="color:#a6e22e">w:rsidR=</span><span style="color:#e6db74">&#34;00B06CB3&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;w:rPr</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;w:rPr&gt;</span>
     <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:b</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:bCs</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;w:b/&gt;</span>
+    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
     <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/w:rPr&gt;</span>
-  <span style="color:#f92672">&lt;w:t</span><span style="color:#f92672">&gt;</span>{{bank}}<span style="color:#f92672">&lt;/w:t&gt;</span>
+  <span style="color:#f92672">&lt;w:t&gt;</span>{{bank}}<span style="color:#f92672">&lt;/w:t&gt;</span>
 <span style="color:#f92672">&lt;/w:r&gt;</span>
 
 #  错误情况
-<span style="color:#f92672">&lt;w:r</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;w:rPr</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;w:r&gt;</span>
+  <span style="color:#f92672">&lt;w:rPr&gt;</span>
     <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:b</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:bCs</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;w:b/&gt;</span>
+    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
     <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/w:rPr&gt;</span>
-  <span style="color:#f92672">&lt;w:t</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;w:t&gt;</span>
     {{
   <span style="color:#f92672">&lt;/w:t&gt;</span>
 <span style="color:#f92672">&lt;/w:r&gt;</span>
 <span style="color:#f92672">&lt;w:proofErr</span> <span style="color:#a6e22e">w:type=</span><span style="color:#e6db74">&#34;spellStart&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;w:r</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;w:rPr</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;w:r&gt;</span>
+  <span style="color:#f92672">&lt;w:rPr&gt;</span>
     <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:b</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:bCs</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;w:b/&gt;</span>
+    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
     <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/w:rPr&gt;</span>
-  <span style="color:#f92672">&lt;w:t</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;w:t&gt;</span>
     invoiceTitle
   <span style="color:#f92672">&lt;/w:t&gt;</span>
 <span style="color:#f92672">&lt;/w:r&gt;</span>
 <span style="color:#f92672">&lt;w:bookmarkStart</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">w:name=</span><span style="color:#e6db74">&#34;OLE_LINK3&#34;</span><span style="color:#f92672">/&gt;</span>
 <span style="color:#f92672">&lt;w:bookmarkStart</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">w:name=</span><span style="color:#e6db74">&#34;OLE_LINK4&#34;</span><span style="color:#f92672">/&gt;</span>
 <span style="color:#f92672">&lt;w:proofErr</span> <span style="color:#a6e22e">w:type=</span><span style="color:#e6db74">&#34;spellEnd&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;w:r</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;w:rPr</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;w:r&gt;</span>
+  <span style="color:#f92672">&lt;w:rPr&gt;</span>
     <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:b</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;w:bCs</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;w:b/&gt;</span>
+    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
     <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/w:rPr&gt;</span>
-  <span style="color:#f92672">&lt;w:t</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;w:t&gt;</span>
     }}
   <span style="color:#f92672">&lt;/w:t&gt;</span>
 <span style="color:#f92672">&lt;/w:r&gt;</span>
@@ -266,9 +266,6 @@ You will want to apply these changes at the end of editing, before you save. If 
 <li>并不是说用谷歌的就比用百度的有逼格，但是在编程这一块，毕竟发源地在国外，早起步了十几二十年，沉淀下来的有帮助的东西总归是多一些</li>
 <li>即使现在的翻译功能十分好用，良好的英文阅读能力在提升编程水平的路上会有重要帮助</li>
 </ol>
-<h2 id="七一些题外话">七、一些题外话</h2>
-<p>看似洋洋洒洒写了一篇短文章，其实这个问题用几句话就可以简单概括。写这么多字，一来是重新锻炼一下自己的归纳总结能力，二来是最近部门里合作的几个后端同事水平不尽如人意，希望写下的这么一个对小问题的排查解决过程能对正在学习 PHP 的人一些帮助。
-程序员真的是一个神奇的职业，既有毕业两年已经精通算法和 C 甚至单片机、FPGA 等软硬件通吃的大佬，也有月薪过万的三年工作经验只会用 PHP 写写业务碰到问题只会两手一摊说“我不会” 的同事。<strong>“用代码改变世界”</strong>，共勉。</p>
 
     </div>
 
@@ -307,8 +304,6 @@ You will want to apply these changes at the end of editing, before you save. If 
         <a href="https://hdwyz.com/2020/playing-jx3-with-python-script/" class="prev" rel="prev" title="使用 Python 调用 DD 驱动玩剑三"><i class="iconfont icon-left"></i>&nbsp;使用 Python 调用 DD 驱动玩剑三</a>
          
         
-        <a href="https://hdwyz.com/2020/escape-from-sms-bomber/" class="next" rel="next" title="电话/短信轰炸机的前生今世">电话/短信轰炸机的前生今世&nbsp;<i class="iconfont icon-right"></i></a>
-        
     </div>
 
     <div class="post-comment">
@@ -323,7 +318,7 @@ You will want to apply these changes at the end of editing, before you save. If 
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2020 - 2020</span>
+        <span itemprop="copyrightYear">2020 - 2022</span>
         
         <span class="with-love">
     	   <i class="iconfont icon-love"></i> 

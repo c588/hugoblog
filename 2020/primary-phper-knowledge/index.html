@@ -55,10 +55,10 @@
     "accountablePerson" : "ColaChen",
     "copyrightHolder" : "ColaChen",
     "copyrightYear" : "2020",
-    "datePublished": "2020-04-19 07:47:55 \x2b0800 CST",
-    "dateModified" : "2020-04-19 07:47:55 \x2b0800 CST",
+    "datePublished": "2020-04-19 07:47:55 \u002b0800 CST",
+    "dateModified" : "2020-04-19 07:47:55 \u002b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/primary-phper-knowledge\/",
-    "wordCount" : "3805",
+    "wordCount" : "3803",
     "keywords" : [  "可乐橙"]
 }
 </script>
@@ -129,7 +129,7 @@
             </span>
             <i class="far fa-file-word"></i>
             <span class="post-word-count">
-                3805 字
+                3803 字
             </span>
             <i class="far fa-clock"></i>
             <span class="more-meta">
@@ -179,13 +179,13 @@
 <ol>
 <li>
 <p>php 中，echo/print/isset/for/foreach/continue 等是语言结构，var_dump/is_null 等是函数。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"># 可以顺利执行
-$func = &#34;is_null&#34;;
-$var = &#34;&#34;;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e"># 可以顺利执行
+</span><span style="color:#75715e"></span>$func <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;is_null&#34;</span>;
+$var <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
 $func($var);
-# 不可以执行,报错
-$func = &#34;echo&#34;;
-$string = &#34;Hello&#34;;
+<span style="color:#75715e"># 不可以执行,报错
+</span><span style="color:#75715e"></span>$func <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;echo&#34;</span>;
+$string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
 $func($string);
 </code></pre></div></li>
 <li>
@@ -195,21 +195,21 @@ $func($string);
 <p>语言结构执行速度快  isset &gt; array_key_exists</p>
 </li>
 </ol>
-<p>建议：<strong>用函数做函数应该做的事情</strong>，即如果当前需要判断某一变量是否已经被赋值/声明，使用 isset；如果当前需要判断某个变量是否为 NULL，使用 is_null。尽量保持语义上的一致。且从效率上考虑，&ldquo;=== NULL&rdquo; 与 isset 接近，均优于 is_null，所以推荐使用 &ldquo;=== NULL&rdquo; 代替 is_null。</p>
+<p>建议：<strong>用函数做函数应该做的事情</strong>，即如果当前需要判断某一变量是否已经被赋值/声明，使用 isset；如果当前需要判断某个变量是否为 NULL，使用 is_null。尽量保持语义上的一致。且从效率上考虑，&quot;=== NULL&quot; 与 isset 接近，均优于 is_null，所以推荐使用 &ldquo;=== NULL&rdquo; 代替 is_null。</p>
 </li>
 <li>
 <p>php 中 echo/print/print_r/var_dump/var_export 的区别：</p>
 <ol>
 <li>
-<p>echo 和 print 是语言结构，echo 输出多个值，使用逗号分隔，无返回值。print 只能输出一个值，返回值为 1。echo 和 print 只能输出整型和字符串，无法输出布尔型：true -&gt; 1, false/Null -&gt; &quot;&rdquo;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">if (print(&#34;1\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;2\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;3\n&#34;) <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print(&#34;4\n&#34;)) {
+<p>echo 和 print 是语言结构，echo 输出多个值，使用逗号分隔，无返回值。print 只能输出一个值，返回值为 1。echo 和 print 只能输出整型和字符串，无法输出布尔型：true -&gt; 1, false/Null -&gt; &quot;&quot;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;4</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)) {
     ;
 }
-# 输出
-4
-111
+<span style="color:#75715e"># 输出
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">4</span>
+<span style="color:#ae81ff">111</span>
 </code></pre></div><p>理由同上，print 是语言结构（外层的括号会被忽略）且返回值为 1，实际执行时被解释为：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">if (print (&#34;1\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print (&#34;2\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print (&#34;3\n&#34; <span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#960050;background-color:#1e0010">&amp;</span> print &#34;4\n&#34;)))) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#34;1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#34;2</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span> (<span style="color:#e6db74">&#34;3</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">print</span> <span style="color:#e6db74">&#34;4</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)))) {
   ;
 }
 </code></pre></div></li>
@@ -227,14 +227,14 @@ $func($string);
 <li>
 <p>关于 PHP 5.6 版本后引入的 Splat operate，即 &ldquo;&hellip;&quot;：
 &ldquo;&hellip;&rdquo; 操作符可以定义可变参数函数或对数组进行解包，如</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">function  foo($a, $b, $c) {
-        var_dump($a + $b + $c);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">function</span>  <span style="color:#a6e22e">foo</span>($a, $b, $c) {
+        <span style="color:#a6e22e">var_dump</span>($a <span style="color:#f92672">+</span> $b <span style="color:#f92672">+</span> $c);
 }
-  
-// 将数组解包拆分为三个整型 
-$parameters = array (1, 2, 3);
-   
-foo(...$parameters);
+
+<span style="color:#75715e">// 将数组解包拆分为三个整型 
+</span><span style="color:#75715e"></span>$parameters <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span> (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+
+<span style="color:#a6e22e">foo</span>(<span style="color:#f92672">...</span>$parameters);
 </code></pre></div><p>但是 var_dump(1&hellip;9); 会输出 string(4) &ldquo;10.9&rdquo;;</p>
 <p>原因在于打印时将 &ldquo;1,&rdquo; 识别为浮点数，第二个 &ldquo;.&rdquo; 识别为字符串连接符，最后的 &ldquo;.9&rdquo; 识别为浮点数小数 &ldquo;0.9&rdquo;，即 &ldquo;1.&rdquo; . &ldquo;0.9&rdquo;，拼接后就变成了字符串 &ldquo;10.9&rdquo;</p>
 </li>
@@ -246,7 +246,7 @@ foo(...$parameters);
 <p>详见 <a href="https://www.php.net/manual/zh/types.comparisons.php">PHP 类型比较表</a></p>
 </li>
 <li>
-<p>等值符 &ldquo;==&rdquo;：左右两边不同类型时，会自动进行类型转换再比较</p>
+<p>等值符 &ldquo;==&quot;：左右两边不同类型时，会自动进行类型转换再比较</p>
 <p>&ldquo;1&rdquo; == &ldquo;01&rdquo;，左右两边均为字符串，不会进行类型转换，返回 false</p>
 <p>NaN == NaN，NaN 和任何值包括本身都不相等，返回 false</p>
 </li>
@@ -256,29 +256,29 @@ foo(...$parameters);
 <ul>
 <li>
 <p>array_map(func, arr1, arr2, &hellip;)：返回的是新数组，每个元素都是  arr1, arr2, &hellip; 依次作为参数传入 func 后处理返回的数据。如果回调函数为 null，则会将 arr1, arr2, &hellip; 依次作为新数组的值，即获取转置矩阵。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$arr1 = [1, 2, 3, 4, 5];
-$arr2 = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
-$output = array_map(null, $arr1, $arr2);
-$output = [
-  [1, &#39;a&#39;],
-  [2, &#39;b&#39;],
-  [3, &#39;c&#39;],
-  [4, &#39;d&#39;],
-  [5, &#39;e&#39;],
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$arr1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+$arr2 <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>];
+$output <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#66d9ef">null</span>, $arr1, $arr2);
+$output <span style="color:#f92672">=</span> [
+  [<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;a&#39;</span>],
+  [<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;b&#39;</span>],
+  [<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;c&#39;</span>],
+  [<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;d&#39;</span>],
+  [<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;e&#39;</span>],
 ];
-  
-$old = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16],
+
+$old <span style="color:#f92672">=</span> [
+    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>],
+    [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>],
+    [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>],
+    [<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>],
 ];
-$new = array_map(null, ...$old);
-$new = [
-    [1, 5, 9, 13],
-    [2, 6, 10, 14],
-    [3, 7, 11, 15],
-    [4, 8, 12, 16],
+$new <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_map</span>(<span style="color:#66d9ef">null</span>, <span style="color:#f92672">...</span>$old);
+$new <span style="color:#f92672">=</span> [
+    [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">13</span>],
+    [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">14</span>],
+    [<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">15</span>],
+    [<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">16</span>],
 ];
 </code></pre></div></li>
 <li>
@@ -437,7 +437,7 @@ $new = [
 <li>避免 select *，将需要查找的字段列出来</li>
 <li>少用 JOIN</li>
 <li>使用连接 JOIN 来代替子查询</li>
-<li>使用同类型进行比较，比如用&rsquo;123'和&rsquo;123'比，123和123比</li>
+<li>使用同类型进行比较，比如用'123&rsquo;和'123&rsquo;比，123和123比</li>
 <li>尽量避免在 WHERE 子句中使用 != 或 &lt;&gt; 操作符，否则将引擎放弃使用索引而进行全表扫描</li>
 <li>对于连续数值，使用 BETWEEN 不用IN：SELECT id FROM t WHERE num BETWEEN 1 AND 5</li>
 <li>不做列运算：SELECT id WHERE age + 1 = 10，任何对列的操作都将导致表扫描，它包括数据库教程函数、计算表达式等等，查询时要尽可能将操作移至等号右边</li>
@@ -509,7 +509,7 @@ $new = [
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2020 - 2020</span>
+        <span itemprop="copyrightYear">2020 - 2022</span>
         
         <span class="with-love">
     	   <i class="iconfont icon-love"></i> 

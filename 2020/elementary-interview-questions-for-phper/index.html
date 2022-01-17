@@ -55,8 +55,8 @@
     "accountablePerson" : "ColaChen",
     "copyrightHolder" : "ColaChen",
     "copyrightYear" : "2020",
-    "datePublished": "2020-06-07 07:01:39 \x2b0800 CST",
-    "dateModified" : "2020-06-07 07:01:39 \x2b0800 CST",
+    "datePublished": "2020-06-07 07:01:39 \u002b0800 CST",
+    "dateModified" : "2020-06-07 07:01:39 \u002b0800 CST",
     "url" : "https:\/\/hdwyz.com\/2020\/elementary-interview-questions-for-phper\/",
     "wordCount" : "2130",
     "keywords" : [  "可乐橙"]
@@ -165,7 +165,7 @@
 <hr>
 <h2 id="冒泡排序">冒泡排序</h2>
 <p>对于 n 个元素的数组，第一轮通过 n-1 次比较可以确定最 大/小 的元素，第二轮通过 n-2 次比较可以确定第二 大/小 的元素。以此类推，第 n-2 轮通过 2 次比较可以确定第 n-2 个元素，第 n-1 轮通过 1 次比较确定第 n-1 （即倒数第二）个元素，最后一个元素不需要比较，就是最 小/大 的元素。关系：n 个元素的数组，需要 n-1 轮，第 i 轮需要比较 n-i 次。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bub</span>($arr) {
     $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
@@ -186,7 +186,7 @@
 }
 </code></pre></div><h2 id="选择排序">选择排序</h2>
 <p>跟冒泡排序类似，对于 n 个元素的数组需要进行 n 次遍历，第 i 次遍历确定第 i 个元素的位置。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">selSort</span>($arr) {
     $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
@@ -214,7 +214,7 @@
 <p>类似的，如果需要循环 n 次，初始值为 0，条件为 &lt; n，计数器从 0 到 n-1 执行 n 次。</p>
 <h2 id="快速排序">快速排序</h2>
 <p>首先将数组中的第一个元素作为基准值，向后遍历，将小于基准值的数放入 $left 数组，大于基准值的数放入 $right 数组，将两个数组作为参数递归调用该方法，最后将 $left $right 数组以及 [$base] 结合，（按要求使用 sort/rsort）排序完成。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">quick</span>($arr) {
     $count <span style="color:#f92672">=</span> <span style="color:#a6e22e">count</span>($arr);
@@ -245,7 +245,7 @@
 </ol>
 <p>二倍均值法为了保证每个人分到的红包金额的数学期望相同，采用了在 (0, M/N * 2) 范围内取值。但是从微信的抢红包结果来看，有出现总额 300 的红包分成 150+、30+、10+ 的情况，而二倍均值法除了最后一位都不会超过 M/N * 2。</p>
 <p>线段法随机性更强。例如总额为 100 的红包分给 10 个人，只需要在 (0, 100) 间确定 9 个随机点 n1~n9，很容易确定 10 个红包的金额为 n1, n2-n1, n3-n2, &hellip;, n9-n8, 100-n9 。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#75715e">// red envelope
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">redEnvelope</span>($total, $count) {
@@ -270,7 +270,7 @@
 <p>即约瑟夫环。共 M 只猴子，编号 1-M，依次排数，当数到为 N 时出局，继续从 1 开始。循环至最后一只猴子停止，求编号。</p>
 <p>大一 C 语言课程题目，小白噩梦。</p>
 <p>直观解法：用数组储存所有猴子编号，for 循环计数，如果序号不为 N 的倍数，将当前元素放到数组末尾，否则删除当前元素。当数组内元素个数为 1 时，输出该元素。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#75715e">// joseph ring
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">monkeyKing</span>($m, $n) {
@@ -295,7 +295,7 @@
 <h2 id="n阶井字棋">n阶井字棋</h2>
 <p>井字棋，国外称为 <em>Tic</em>-<em>Tac</em>-<em>Toe</em> ，规则为“两个玩家，一个打圈（◯），一个打叉（✗），轮流在3乘3的格上打自己的符号，最先以横、直、斜连成一线则为胜。”现在要求代码实现对 n 阶井字棋的胜负判定。</p>
 <p>每下一步棋，进行 2+1+1 次判断，横向是否一致，纵向是否一致，如果在任意一条对角线上，额外进行 1 或 2 次对角线判断。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;  <span style="color:#75715e">// 五阶棋盘
 </span><span style="color:#75715e"></span>$res <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
@@ -360,7 +360,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;  <
 </code></pre></div><h2 id="字符串处理">字符串处理</h2>
 <p>给定字符串 &ldquo;Hello WORld&rdquo; 要求转换成 &ldquo;Olleh DLRow&rdquo;，逆序，对应位置大小写不变。</p>
 <p>字符串逆序，按照原字符串改变大小写。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">strFmt</span>($str) {
     $len <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($str);
@@ -380,7 +380,7 @@ $n <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;  <
 <p>ASCII 表中，65-90 对应大写字母，97-122 对应小写字母。</p>
 <h2 id="获取-url-中的后缀名">获取 URL 中的后缀名</h2>
 <p>优先使用 pathinfo，内置函数，效率高</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www.pan.baidu.com/r/s231242FSeq13/index.jpeg&#34;</span>;
 <span style="color:#75715e">// 使用 pathinfo()
@@ -391,7 +391,7 @@ $url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https
 </span><span style="color:#75715e"></span>$ext <span style="color:#f92672">=</span> <span style="color:#a6e22e">substr</span>($url, <span style="color:#a6e22e">strrpos</span>($url, <span style="color:#e6db74">&#39;.&#39;</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
 </code></pre></div><h2 id="重复数组">重复数组</h2>
 <p>将 [1, 2, 3] 变为 [1, 2, 3, 1, 2, 3, 1, 2, 3]</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $arr <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>];
 $res <span style="color:#f92672">=</span> <span style="color:#a6e22e">implode</span>(<span style="color:#e6db74">&#39;,&#39;</span>, $arr) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;,&#39;</span>;
@@ -452,7 +452,7 @@ $res <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_filt
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2020 - 2020</span>
+        <span itemprop="copyrightYear">2020 - 2022</span>
         
         <span class="with-love">
     	   <i class="iconfont icon-love"></i> 
