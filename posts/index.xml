@@ -6,140 +6,32 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate><atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 06:42:14 +0800</lastBuildDate><atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>解决 PHPWord 中的 ProofErr 问题</title>
-      <link>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</link>
-      <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
+      <title>酸酸乳客户端使用姿势</title>
+      <link>https://hdwyz.com/2022/%E9%85%B8%E9%85%B8%E4%B9%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</link>
+      <pubDate>Tue, 27 Dec 2022 06:42:14 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</guid>
-      <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
-    </item>
-    
-    <item>
-      <title>使用 Python 调用 DD 驱动玩剑三</title>
-      <link>https://hdwyz.com/2020/playing-jx3-with-python-script/</link>
-      <pubDate>Sat, 13 Jun 2020 07:47:19 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/playing-jx3-with-python-script/</guid>
-      <description>前言 在家咸鱼了半个月后下载了《剑侠情缘网络版叁》这个游戏，体验一下几百人大乱斗的乐趣。陆续尝试了几个角色，发现可以使用 Python 来控制自动释放技能减</description>
-    </item>
-    
-    <item>
-      <title>初级 PHP 笔试题</title>
-      <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
-      <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</guid>
-      <description>各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以</description>
-    </item>
-    
-    <item>
-      <title>初级 PHP 知识点</title>
-      <link>https://hdwyz.com/2020/primary-phper-knowledge/</link>
-      <pubDate>Sun, 19 Apr 2020 07:47:55 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/primary-phper-knowledge/</guid>
-      <description>洁癖清理电脑磁盘发现了刚学习 php 时做的笔记，直接删了吧，想想也舍不得。正好博客好久没有更新了，加上刚刚学习了小鹤双拼还在适应键盘，趁此机会练习</description>
-    </item>
-    
-    <item>
-      <title>Hugo 使用 Caddy 自动部署到阿里云</title>
-      <link>https://hdwyz.com/2020/hugo-caddy-centos/</link>
-      <pubDate>Sat, 21 Mar 2020 00:22:52 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/hugo-caddy-centos/</guid>
-      <description>引子 前几天在网上冲浪的时候恰好点进了一个博客 Wyane&amp;rsquo;s Blog ，被这个主题所吸引，立即萌生了使用这个主题的想法。阿里云选购了一台最便宜的七十多一年（新用户</description>
-    </item>
-    
-    <item>
-      <title>服务器上安装 TP6.0 和 Swoole 扩展</title>
-      <link>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</link>
-      <pubDate>Fri, 13 Mar 2020 22:41:11 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</guid>
-      <description>1 linux源码编译安装php wget下载php源码： wget https://www.php.net/distributions/php-7.2.27.tar.gz linux安装php依赖： sudo yum install -y gcc gcc-c++ make zlib zlib-devel pcre pcre-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl</description>
-    </item>
-    
-    <item>
-      <title>趁年轻，多越狱</title>
-      <link>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</link>
-      <pubDate>Wed, 19 Feb 2020 02:31:24 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/break-the-jail-before-you-get-old/</guid>
-      <description>设备要求 越狱方式：unc0ver、Chimera、checkra1n 工具：macOS、windows(实际 Linux) + u 盘 系统版本：iOS 12.3 以上的 A7(X)-A11</description>
-    </item>
-    
-    <item>
-      <title>VPS - 酸酸乳基本使用姿势</title>
-      <link>https://hdwyz.com/2020/build-ssr-with-your-vps/</link>
-      <pubDate>Thu, 13 Feb 2020 11:48:52 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/build-ssr-with-your-vps/</guid>
+      <guid>https://hdwyz.com/2022/%E9%85%B8%E9%85%B8%E4%B9%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</guid>
       <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
     </item>
     
     <item>
-      <title>MacOS 搭建 PHP 开发环境</title>
-      <link>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</link>
-      <pubDate>Tue, 04 Feb 2020 04:01:21 +0800</pubDate>
+      <title>佛跳墙账号</title>
+      <link>https://hdwyz.com/2022/%E4%BD%9B%E8%B7%B3%E5%A2%99%E8%B4%A6%E5%8F%B7/</link>
+      <pubDate>Tue, 27 Dec 2022 06:27:03 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</guid>
-      <description>macOS 搭建 PHP 开发环境： 安装 docker toolbox docker-machine -v 确认已经安装并查看当前版本 docker-machine ls 查看当前可用主机 docker-machine create &amp;ndash;driver virtualbox default 创建一个基本主机 若打开 VT-X/AMD-X 后仍提示，使用跳过检测的命令：</description>
-    </item>
-    
-    <item>
-      <title>使用Git进行版本控制</title>
-      <link>https://hdwyz.com/2020/basic-usage-of-git/</link>
-      <pubDate>Mon, 06 Jan 2020 01:28:07 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/basic-usage-of-git/</guid>
-      <description>入职了一家小公司，后端就仨菜鸡还裁了一个，比上不足比下有余的老陈就担负起了管理代码的重担。虽然说一直都在使用 git，但之前也仅仅局限在本地往</description>
-    </item>
-    
-    <item>
-      <title>在 MacOS 上连接 VPS 服务器</title>
-      <link>https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/</link>
-      <pubDate>Sun, 15 Dec 2019 05:31:46 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/</guid>
-      <description>自从装了黑苹果，发现连接服务器成了一个问题。之前使用 windows 10 只需要安装 xshell，现在发现 xshell 并没有 macOS 版本。在 bilibili 有位 up 主指出了使用 Royal TSX 可以完美代</description>
+      <guid>https://hdwyz.com/2022/%E4%BD%9B%E8%B7%B3%E5%A2%99%E8%B4%A6%E5%8F%B7/</guid>
+      <description>SSR 各版本客户端下载：VPS - 酸酸乳基本使用姿势 iOS 软件 shadowrocket 可以使用这个苹果账号下载：hdujoe@gmail.com Chen7410 SSR 节点（日本东京）： 服务器</description>
     </item>
     
     <item>
       <title>书 · 影</title>
-      <link>https://hdwyz.com/2019/just-read/</link>
+      <link>https://hdwyz.com/2019/%E4%B9%A6%E5%BD%B1/</link>
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2019/just-read/</guid>
+      <guid>https://hdwyz.com/2019/%E4%B9%A6%E5%BD%B1/</guid>
       <description>退以电影行天下 2021/09: 鱿鱼游戏 오징어 게임 (2021) 寂静岭 Silent Hill (2006) 招魂 The Conjuring (2013) 潜伏2 Insidious: Chapter 2 (2013) 潜伏 Insidious (2010) 2021/08: 人之怒 Wrath of Man (2021) 大理寺日志 (2020) 《消失的人》 《扫鼠岭》 2021/07: 控方证人</description>
-    </item>
-    
-    <item>
-      <title>B450 主板自检时间过长</title>
-      <link>https://hdwyz.com/2019/update-b450-motherboards-flash/</link>
-      <pubDate>Mon, 02 Dec 2019 13:09:40 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/update-b450-motherboards-flash/</guid>
-      <description>十月底十一月初，在狗东买了散件组装了一台主机，双十一又入了一台国产品牌显示器，接上以后发现开机启动特别慢，一直没有找到解决办法就默默忍受着长</description>
-    </item>
-    
-    <item>
-      <title>PHP 使用微信支付 JSAPI 进行 H5 支付（半成品）</title>
-      <link>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</link>
-      <pubDate>Mon, 25 Nov 2019 23:16:02 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</guid>
-      <description>上周做一个公众号商城，涉及到微信支付，来来回回地踩了一些坑。网上确实能搜到很多很多的文章，但是不一定和你当前的环境一致，甚至很多发布在 Git</description>
-    </item>
-    
-    <item>
-      <title>MacOS 使用 Github &#43; Hexo 搭建个人博客</title>
-      <link>https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/</link>
-      <pubDate>Sun, 24 Nov 2019 16:19:38 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/how-to-use-github-hexo-with-macos/</guid>
-      <description>关于自建博客的想法，已经有了一年多了。自从18年10月下旬被裁员开始海投简历，我就发现很多公司招聘要求都有一条“加分：有维护个人博客/Git</description>
     </item>
     
   </channel>
