@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Dec 2022 06:42:14 +0800</lastBuildDate><atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 07:07:34 +0800</lastBuildDate><atom:link href="https://hdwyz.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>知乎网页屏蔽视频</title>
+      <link>https://hdwyz.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Tue, 27 Dec 2022 07:07:34 +0800</pubDate>
+      
+      <guid>https://hdwyz.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</guid>
+      <description>先安装 Adblock Plus，添加以下规则： # 屏蔽首页-关注的视频回答 zhihu.com#?#div.Feed:-abp-has(&amp;gt; div &amp;gt; div.ContentItem.AnswerItem &amp;gt; div.RichContent.is-collapsed &amp;gt; div.RichContent-cover &amp;gt; svg.RichContent-cover-play) # 屏蔽首页-推荐的视频回答（看到了吧省事儿的知乎前端每次加一层</description>
+    </item>
+    
     <item>
       <title>酸酸乳客户端使用姿势</title>
       <link>https://hdwyz.com/2022/%E9%85%B8%E9%85%B8%E4%B9%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</link>
