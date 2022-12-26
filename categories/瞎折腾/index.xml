@@ -6,11 +6,7 @@
     <description>Recent content in 瞎折腾 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate>
-    
-	<atom:link href="https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 21 Mar 2020 00:22:52 +0800</lastBuildDate><atom:link href="https://hdwyz.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 使用 Caddy 自动部署到阿里云</title>
       <link>https://hdwyz.com/2020/hugo-caddy-centos/</link>
