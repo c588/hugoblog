@@ -5,15 +5,42 @@
     <link>https://ayegou.com/posts/</link>
     <description>Recent content in Posts on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Dec 2022 06:42:14 +0800</lastBuildDate><atom:link href="https://ayegou.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>UTF-8</language>
+    <lastBuildDate>Tue, 27 Dec 2022 07:07:34 +0800</lastBuildDate><atom:link href="https://ayegou.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>知乎网页屏蔽视频</title>
+      <link>https://ayegou.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Tue, 27 Dec 2022 07:07:34 +0800</pubDate>
+      
+      <guid>https://ayegou.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</guid>
+      <description>先安装 Adblock Plus，添加以下规则： # 屏蔽首页-关注的视频回答 zhihu.com#?#div.Feed:-abp-has(&amp;gt; div &amp;gt; div.ContentItem.AnswerItem &amp;gt; div.RichContent.is-collapsed &amp;gt; div.RichContent-cover &amp;gt; svg.RichContent-cover-play) # 屏蔽首页-推荐的视频回答（看到了吧省事儿的知乎前端每次加一层</description>
+    </item>
+    
     <item>
       <title>酸酸乳客户端使用姿势</title>
-      <link>https://ayegou.com/2022/%E9%85%B8%E9%85%B8%E4%B9%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</link>
+      <link>https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</link>
       <pubDate>Tue, 27 Dec 2022 06:42:14 +0800</pubDate>
       
-      <guid>https://ayegou.com/2022/%E9%85%B8%E9%85%B8%E4%B9%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</guid>
-      <description>Centos 安装 SSR 购买 VPS 使用 Xshell(Windows)/Terminal(MacOs) 连接 VPS 在 macOS 上连接 vps 服务器 查看系统版本 # 安装 lsb sudo yum install -y redhat-lsb lsb_release -a CentOS Linux release 7.6.1810 (Core) 安装 SSR # 下载脚本文件 wget --no-check-certificate -O [shadowsocks-all.sh](http://shadowsocks-all.sh/) [https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh) # 设置运行权限 chmod +x [shadowsocks-all.sh](http://shadowsocks-all.sh/) #</description>
+      <guid>https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</guid>
+      <description>CentOS 包管理工具是 yum，Debian 和 Ubuntu 是 apt Centos 安装 SSR 购买 VPS 使用 ssh 连接 VPS。Windows 推荐 Termius，macOS 推荐 iterm 查看系统版本 # 安</description>
+    </item>
+    
+    <item>
+      <title>解决 PHPWord 中的 ProofErr 问题</title>
+      <link>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
+      
+      <guid>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</guid>
+      <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
+    </item>
+    
+    <item>
+      <title>在 CentOS 上安装并使用 SSR</title>
+      <link>https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/</link>
+      <pubDate>Sat, 04 Apr 2020 04:06:29 +0800</pubDate>
+      
+      <guid>https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/</guid>
+      <description>在国内服务器上安装一些必要软件时无法避免 404 问题。大多数的教程是在服务器上安装 SSR 服务端，在本地安装客户端。这里记录一下在大陆服务器安装 SSR 客户端</description>
     </item>
     
     <item>
@@ -22,7 +49,7 @@
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
       
       <guid>https://ayegou.com/2019/%E4%B9%A6%E5%BD%B1/</guid>
-      <description>退以电影行天下 2021/09: 鱿鱼游戏 오징어 게임 (2021) 寂静岭 Silent Hill (2006) 招魂 The Conjuring (2013) 潜伏2 Insidious: Chapter 2 (2013) 潜伏 Insidious (2010) 2021/08: 人之怒 Wrath of Man (2021) 大理寺日志 (2020) 《消失的人》 《扫鼠岭》 2021/07: 控方证人</description>
+      <description>退以电影行天下 2023/01: 无间道 無間道 (2002) 无间道2 無間道II (2003) 无间道3：终极无间 無間道III 終極無間 (2003) 2022/12: 阿凡达：水之道 Avatar: The Way of Water (2022) 水浒传 (1998) 过把瘾 (1994) 天才枪</description>
     </item>
     
   </channel>

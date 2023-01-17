@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/" />
+  <link rel="next" href="https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" />
+  <link rel="canonical" href="https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           解决 PHPWord 中的 ProofErr 问题 | 可乐橙
+       
+  </title>
+  <meta name="title" content="解决 PHPWord 中的 ProofErr 问题 | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ayegou.com"
+    },
+    "articleSection" : "posts",
+    "name" : "解决 PHPWord 中的 ProofErr 问题",
+    "headline" : "解决 PHPWord 中的 ProofErr 问题",
+    "description" : "一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML\/OpenXML(Microsoft Office Open XML), OpenDocument\/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操",
+    "inLanguage" : "UTF-8",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-12-04 23:59:48 \u002b0800 CST",
+    "dateModified" : "2020-12-04 23:59:48 \u002b0800 CST",
+    "url" : "https:\/\/ayegou.com\/2020\/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98\/",
+    "wordCount" : "1716",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ayegou.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ayegou.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">解决 PHPWord 中的 ProofErr 问题</h1>
+        <div class="post-meta">
+                
+            <i class="far fa-folder-open"></i>
+            <span class="post-category">
+                <a href="https://ayegou.com/categories/%E5%85%A5%E9%97%A8/">
+                    入门
+                </a>
+                
+            </span>
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-12-04 itemprop="datePublished">
+                    2020-12-04
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                1716 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                4 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+
+          
+          
+          
+
+          
+          
+          
+
+          <h2 id="一phpword-简介">一、PHPWord 简介</h2>
+<p><a href="https://github.com/PHPOffice/PHPWord">PHPWord</a> 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对  OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML,  PDF 等格式的文件进行读写操作。
+<a href="https://github.com/PHPOffice">PHPOffice</a> 的所有项目已经在 GitHub 上开源。</p>
+<h2 id="二遇到的问题">二、遇到的问题</h2>
+<p>PHPWord 作为处理文档的第三方扩展，在 OA/ERP 项目中被广泛使用。最近，公司内部使用的后台系统就遇到了这么一个问题。
+起因是财务想要修改原有的发票模版，将落款单位由原先的固定值改为“我开户行”对应的公司名称（就是因为老板又注册了几家公司）。原有模版：</p>
+<p><img src="http://cdn.hdwyz.com/uPic/MISJF6.png" alt="原有模版"></p>
+<p>翻出模版以后，第一想法当然就是把模版里的 <code>{{companyName}}</code> 复制一份替换掉原先的 <code>苹果母公司</code>。替换、保存、上传后，手动生成了文档，打开一看，居然变成了：</p>
+<p><img src="http://cdn.hdwyz.com/uPic/k8typZ.png" alt="原有模版"></p>
+<p>在经过多次替换后发现，只有 <code>{{bank}}</code> 这个占位符可以被正确识别进行替换，其他占位符均替换失败。那么，会不会是变量长度导致的异常呢？于是我取 <code>{{candidateName}}</code> 的前几个字母 <code>{{can}}</code> 进行了尝试，果然成功了</p>
+<p>……吗？</p>
+<p>事实证明，在每个占位符只取前 3~4 个字母的情况下，仍然出现了大批量的翻车事故。除了 <code>{{bank}}</code> 这个占位符，一如既往的坚挺。无奈之下，只能使用最低级的方法——打印内容。</p>
+<h2 id="三查看输出">三、查看输出</h2>
+<p>首先，看一下 PHPWord 在项目中的用法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$templateProcessor <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TemplateProcessor</span>($file_path);
+</span></span><span style="display:flex;"><span>$templateProcessor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setValue</span>(<span style="color:#e6db74">&#39;{{invoiceTitle}}&#39;</span>, $invoiceTitle);
+</span></span><span style="display:flex;"><span>$templateProcessor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">saveAs</span>($save_path);
+</span></span></code></pre></div><p>其实很容易理解，读取一个模版，把对应的占位符用想输出的变量使用 setValue() 方法替换，然后保存，所以直接把 setValue() 后的 $templateProcessor 打印出来看看就可以了。通过比较替换成功/失败的两种情况：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>#  正常情况
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:r</span> <span style="color:#a6e22e">w:rsidR=</span><span style="color:#e6db74">&#34;00B06CB3&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:b/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:t&gt;</span>{{bank}}<span style="color:#f92672">&lt;/w:t&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/w:r&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#  错误情况
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:r&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:b/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:t&gt;</span>
+</span></span><span style="display:flex;"><span>    {{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:t&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/w:r&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:proofErr</span> <span style="color:#a6e22e">w:type=</span><span style="color:#e6db74">&#34;spellStart&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:r&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:b/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:t&gt;</span>
+</span></span><span style="display:flex;"><span>    invoiceTitle
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:t&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/w:r&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkStart</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">w:name=</span><span style="color:#e6db74">&#34;OLE_LINK3&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkStart</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">w:name=</span><span style="color:#e6db74">&#34;OLE_LINK4&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:proofErr</span> <span style="color:#a6e22e">w:type=</span><span style="color:#e6db74">&#34;spellEnd&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:r&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:rFonts</span> <span style="color:#a6e22e">w:ascii=</span><span style="color:#e6db74">&#34;宋体&#34;</span> <span style="color:#a6e22e">w:hAnsi=</span><span style="color:#e6db74">&#34;宋体&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:b/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:bCs/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:sz</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;w:szCs</span> <span style="color:#a6e22e">w:val=</span><span style="color:#e6db74">&#34;28&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:rPr&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;w:t&gt;</span>
+</span></span><span style="display:flex;"><span>    }}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/w:t&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/w:r&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkEnd</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkEnd</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>发现：正常情况下，<code>{{bank}}</code> 这个占位符作为一个整体，被一堆标签封闭起来，这些标签应该表示了字体、字号等信息。而 <code>{{invoiceTitle}}</code> 这个标签，<code>{{</code> <code>invoiceTitle</code> <code>}}</code> 则被分隔成三个部分，所以不能被正确识别进行替换。所以问题就变成了为什么这个占位符会被分隔开呢？</p>
+<h2 id="四面向谷歌-debug">四、面向谷歌 debug</h2>
+<p>既然已经找到大括号和英文之间被 <code>prroofErr</code> 这个标签给隔开了，那么就来看看这个到底是什么吧。在进行各个文本格式的简单科普之后，我了解了目前主流的几种文本格式，并且在一个 <a href="https://www.tinybutstrong.com/forum.php?thr=3072">博客</a> 中看到了相关解释：</p>
+<blockquote>
+<p>If you are using Word to make your template, you may have problems periodically with TBS tags not merging due to being broken up by extra blocks of code inserted by Word. This extra code is not noticeable in Word, but sometimes it seems to mangle the TBS tag too much to be recognized. When this happens, you can do two things that will clean up your document.</p>
+<ol>
+<li>
+<p>Select any tags ([onshow;data;noerr;], e.g.) in your document and go to the review tab (I am using Word 2010 here, but 2007 is very similar). Click &lsquo;Language&rsquo; &gt; &lsquo;Set Proofing Language&rsquo; (2010) or &lsquo;Set Language&rsquo; in the &lsquo;Proofing&rsquo; division (2007). Then check the box &lsquo;Do not check spelling or grammar&rsquo;. This will prevent Word from adding those extra proofErr tags (and breaking up your TBS tags). It will also remove any that already exist in your document. (Or you can run spell check and ignore everything)</p>
+</li>
+<li>
+<p>The w:rsID tags are a little trickier. There is a hidden option you can access through the macro editor (Alt + F11 will bring it up). Once you are in the macro editor, Ctrl + G will open the &lsquo;Immediate Window&rsquo;. If you paste the following code into the Immediate Window:</p>
+</li>
+</ol>
+<p><code>Application.Options.StoreRSIDOnSave = False</code></p>
+<p>And then save your document (you do not need to save the macro with the document, it just applies to your Word session), it will remove all of the extra w:rsid tags breaking up your TBS tags.</p>
+<p>Notes on editing:
+You will want to apply these changes at the end of editing, before you save. If you come back later and edit your document, it will forget that you don&rsquo;t want spell checking and grammar. You can remind it by setting the language again, or by running Spell Check and telling it to ignore all of the problems it encounters. I edited my document more after running the macro I mentioned (in a new Word session, when my Immediate Window was clear again) and my w:rsid tags did not come back, but I suspect they would return if I edited enough.</p>
+<p>There is one more potentially problematic tag:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkStart</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">w:name=</span><span style="color:#e6db74">&#34;_GoBack&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;w:bookmarkEnd</span> <span style="color:#a6e22e">w:id=</span><span style="color:#e6db74">&#34;0&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>which will insert itself wherever it pleases (from what I understand, it has something to do with moving your screen back to your previous edit if you hit undo, so it attaches itself to the edit before last?). I haven&rsquo;t done much experimenting with this yet, it may not interfere with TBS tags, and I&rsquo;m not totally sure where it shows up.</p>
+<p>Hope this helps.</p>
+</blockquote>
+<p>其中第一点指出问题可能出在拼写检查，第二点指出问题可能出在宏编辑器。当然如果我当时再细心一点，应该不难看出除了 <code>{{bank}}</code> 以外其他的占位符全都出现了红色波浪线，唯一能被正确替换的就是通过了拼写检查的占位符。</p>
+<h2 id="五修复-bug">五、修复 bug</h2>
+<p>找出问题后修改就变得非常简单。只需要把这些个小驼峰命名法的单词换成下划线分隔，甚至于更偷懒的方法，直接打开模版文件，关闭拼写检查后保存上传。</p>
+<h2 id="六个人感想">六、个人感想</h2>
+<ol>
+<li>一些离奇的问题往往排查起来十分困难，但是了解以后修改起来十分简单；</li>
+<li>搜索引擎收录的内容并不统一，谷歌 &gt; 必应 &raquo; 百度；</li>
+<li>即使现在的翻译功能十分好用，良好的英文阅读能力在提升编程水平的路上会有重要帮助。</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://ayegou.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/" class="prev" rel="prev" title="在 CentOS 上安装并使用 SSR"><i class="iconfont icon-left"></i>&nbsp;在 CentOS 上安装并使用 SSR</a>
+        
+        
+        <a href="https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/" class="next" rel="next" title="酸酸乳客户端使用姿势">酸酸乳客户端使用姿势&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2023</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://ayegou.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

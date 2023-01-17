@@ -2,72 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>入门 on 可乐橙</title>
-    <link>https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/</link>
+    <link>https://ayegou.com/categories/%E5%85%A5%E9%97%A8/</link>
     <description>Recent content in 入门 on 可乐橙</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate><atom:link href="https://hdwyz.com/categories/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    <language>UTF-8</language>
+    <lastBuildDate>Fri, 04 Dec 2020 23:59:48 +0800</lastBuildDate><atom:link href="https://ayegou.com/categories/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决 PHPWord 中的 ProofErr 问题</title>
-      <link>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</link>
+      <link>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
       
-      <guid>https://hdwyz.com/2020/how-to-solve-error-with-prooferr-when-using-phpword/</guid>
+      <guid>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</guid>
       <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
-    </item>
-    
-    <item>
-      <title>初级 PHP 笔试题</title>
-      <link>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</link>
-      <pubDate>Sun, 07 Jun 2020 07:01:39 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/elementary-interview-questions-for-phper/</guid>
-      <description>各类排序算法动画流程 [Github 55k star] 用动画的形式呈现解 LeetCode 题目的思路 [Github 33k star] Leetcode 题解，记录自己的 Leetcode 解题之路 冒泡排序 对于 n 个元素的数组，第一轮通过 n-1 次比较可以</description>
-    </item>
-    
-    <item>
-      <title>服务器上安装 TP6.0 和 Swoole 扩展</title>
-      <link>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</link>
-      <pubDate>Fri, 13 Mar 2020 22:41:11 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/install-swoole-for-thinkphp6.0/</guid>
-      <description>1 linux源码编译安装php wget下载php源码： wget https://www.php.net/distributions/php-7.2.27.tar.gz linux安装php依赖： sudo yum install -y gcc gcc-c++ make zlib zlib-devel pcre pcre-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl</description>
-    </item>
-    
-    <item>
-      <title>MacOS 搭建 PHP 开发环境</title>
-      <link>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</link>
-      <pubDate>Tue, 04 Feb 2020 04:01:21 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/build-php-develp-enviroment-with-docker-machine/</guid>
-      <description>macOS 搭建 PHP 开发环境： 安装 docker toolbox docker-machine -v 确认已经安装并查看当前版本 docker-machine ls 查看当前可用主机 docker-machine create &amp;ndash;driver virtualbox default 创建一个基本主机 若打开 VT-X/AMD-X 后仍提示，使用跳过检测的命令：</description>
-    </item>
-    
-    <item>
-      <title>使用Git进行版本控制</title>
-      <link>https://hdwyz.com/2020/basic-usage-of-git/</link>
-      <pubDate>Mon, 06 Jan 2020 01:28:07 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2020/basic-usage-of-git/</guid>
-      <description>入职了一家小公司，后端就仨菜鸡还裁了一个，比上不足比下有余的老陈就担负起了管理代码的重担。虽然说一直都在使用 git，但之前也仅仅局限在本地往</description>
-    </item>
-    
-    <item>
-      <title>在 MacOS 上连接 VPS 服务器</title>
-      <link>https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/</link>
-      <pubDate>Sun, 15 Dec 2019 05:31:46 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/how-to-connect-your-vps-with-macos/</guid>
-      <description>自从装了黑苹果，发现连接服务器成了一个问题。之前使用 windows 10 只需要安装 xshell，现在发现 xshell 并没有 macOS 版本。在 bilibili 有位 up 主指出了使用 Royal TSX 可以完美代</description>
-    </item>
-    
-    <item>
-      <title>PHP 使用微信支付 JSAPI 进行 H5 支付（半成品）</title>
-      <link>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</link>
-      <pubDate>Mon, 25 Nov 2019 23:16:02 +0800</pubDate>
-      
-      <guid>https://hdwyz.com/2019/how-to-use-wechat-jsapi-with-php/</guid>
-      <description>上周做一个公众号商城，涉及到微信支付，来来回回地踩了一些坑。网上确实能搜到很多很多的文章，但是不一定和你当前的环境一致，甚至很多发布在 Git</description>
     </item>
     
   </channel>

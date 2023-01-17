@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="ColaChen">
+  
+  
+  
+  <link rel="prev" href="https://ayegou.com/2019/%E4%B9%A6%E5%BD%B1/" />
+  <link rel="next" href="https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/" />
+  <link rel="canonical" href="https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link href="//use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           在 CentOS 上安装并使用 SSR | 可乐橙
+       
+  </title>
+  <meta name="title" content="在 CentOS 上安装并使用 SSR | 可乐橙">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/ayegou.com"
+    },
+    "articleSection" : "posts",
+    "name" : "在 CentOS 上安装并使用 SSR",
+    "headline" : "在 CentOS 上安装并使用 SSR",
+    "description" : "在国内服务器上安装一些必要软件时无法避免 404 问题。大多数的教程是在服务器上安装 SSR 服务端，在本地安装客户端。这里记录一下在大陆服务器安装 SSR 客户端",
+    "inLanguage" : "UTF-8",
+    "author" : "ColaChen",
+    "creator" : "ColaChen",
+    "publisher": "ColaChen",
+    "accountablePerson" : "ColaChen",
+    "copyrightHolder" : "ColaChen",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-04-04 04:06:29 \u002b0800 CST",
+    "dateModified" : "2020-04-04 04:06:29 \u002b0800 CST",
+    "url" : "https:\/\/ayegou.com\/2020\/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux\/",
+    "wordCount" : "619",
+    "keywords" : [  "可乐橙"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ayegou.com">可乐橙</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://ayegou.com">可乐橙</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">在 CentOS 上安装并使用 SSR</h1>
+        <div class="post-meta">
+                
+            
+            <span class="post-time">
+                <i class="far fa-calendar-alt"></i>
+                <time datetime=2020-04-04 itemprop="datePublished">
+                    2020-04-04
+                </time>
+            </span>
+            <i class="far fa-file-word"></i>
+            <span class="post-word-count">
+                619 字
+            </span>
+            <i class="far fa-clock"></i>
+            <span class="more-meta">
+                2 分钟
+            </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+
+          
+          
+          
+
+          
+          
+          
+
+          <p>　　在国内服务器上安装一些必要软件时无法避免 404 问题。大多数的教程是在服务器上安装 SSR 服务端，在本地安装客户端。这里记录一下在大陆服务器安装 SSR 客户端过程。</p>
+<blockquote>
+<p>原文：<a href="%5Bhttps://blog.mrwang.pw/2018/12/13/Linux%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8ssr/%5D(https://blog.mrwang.pw/2018/12/13/Linux%E5%AE%89%E8%A3%85%E5%B9%B6%E4%BD%BF%E7%94%A8ssr/)">Linux安装并使用ssr客户端</a></p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<p>安装 Git</p>
+<pre tabindex="0"><code># Ubuntu/Debian
+sudo apt-get install git
+# Centos
+sudo yum install git
+</code></pre><p>获取 SSR 脚本</p>
+<pre tabindex="0"><code>git clone http://git.mrwang.pw/Reed/Linux_ssr_script.git
+</code></pre><p>实际上使用的是 <a href="https://github.com/the0demiurge/CharlesScripts/blob/master/charles/bin/ssr">老徐制作的 SSR 脚本</a></p>
+<p>进入刚刚克隆的仓库目录并赋予<code>ssr</code>脚本执行权限</p>
+<pre tabindex="0"><code>cd Linux_ssr_script &amp;&amp; chmod +x ./ssr
+</code></pre><p>然后将脚本放入可执行脚本的目录</p>
+<pre tabindex="0"><code>sudo mv ./ssr /usr/local/sbin/
+</code></pre><p>这样就完成了脚本的安装</p>
+<h1 id="使用">使用</h1>
+<p>执行 ssr，便会有如下的提示：</p>
+<pre tabindex="0"><code>root@VM-0-2-ubuntu:~# ssr
+
+ShadowSocksR python client tool
+if you have not installed ssr, run `ssr install` first
+Usage:
+	 ssr help Install/Uninstall
+	 ssr install install shadowsocksr client
+	 ssr uninstall    uninstall shadowsocksr client
+
+ Config and Subscribe
+	 ssr update       update subscription from http://ss.pythonic.life
+	 ssr config       edit config.json
+	 ssr xclip        paste configs from clipboard to config.json
+
+ Start/Stop/Restart
+	 ssr start        start the shadowsocks service
+	 ssr stop         stop the shadowsocks service
+	 ssr restart      restart the shadowsocks service
+
+ Testing and Maintenance
+	 ssr test         get ip from cip.cc using socks5 proxy
+	 ssr log          cat the log of shadowsocks
+	 ssr shell        cd into ssr installation dir
+   ssr clean        clean ssr configuration backups
+</code></pre><p>我们是第一次使用，所以首先执行</p>
+<pre tabindex="0"><code>ssr install 
+</code></pre><p>脚本它会下载ssr客户端并移动到合适的位置，现在我们来编辑配置文件</p>
+<pre tabindex="0"><code>ssr config
+</code></pre><p>在里面输入你的节点连接信息，然后保存。保存后会自动重启 ssr 并进行网络测试</p>
+<pre tabindex="0"><code># 启动
+ssr start
+# 关闭
+ssr stop
+</code></pre><h4 id="使用-proxychains4-对终端进行代理">使用 proxychains4 对终端进行代理</h4>
+<p>proxychains-ng 提供了编译安装:</p>
+<pre tabindex="0"><code>*** Installation ***
+
+  # needs a working C compiler, preferably gcc
+  ./configure --prefix=/usr --sysconfdir=/etc
+  make
+  [optional] sudo make install
+  [optional] sudo make install-config (installs proxychains.conf)
+
+  if you dont install, you can use proxychains from the build directory
+  like this: ./proxychains4 -f src/proxychains.conf telnet google.com 80
+</code></pre><p>配置 proxychains</p>
+<pre tabindex="0"><code>vim /usr/local/etc/proxychains.conf
+</code></pre><p>设置监听本地端口为 1080，最后一行改为</p>
+<pre tabindex="0"><code>socks5 127.0.0.1 1080
+</code></pre><p>测试使用</p>
+<pre tabindex="0"><code>proxychains4 curl cip.cc
+</code></pre><p>每次需要使用代理执行命令时加 proxychains4 就可以走 ssr</p>
+<h2 id="扩展">扩展</h2>
+<p>macOS 终端如何使用 SSR 代理？</p>
+<p>打开 .zshrc</p>
+<pre tabindex="0"><code>vim ~/.zshrc
+</code></pre><p>写入</p>
+<pre tabindex="0"><code># where proxy
+proxy () {
+  export http_proxy=&#34;http://127.0.0.1:1087&#34;
+  export https_proxy=&#34;http://127.0.0.1:1087&#34;
+  echo &#34;HTTP Proxy on&#34;
+}
+
+# where noproxy
+noproxy () {
+  unset http_proxy
+  unset https_proxy
+  echo &#34;HTTP Proxy off&#34;
+}
+</code></pre><p>此处端口号为本地客户端 SSR 设置的端口号。保存后重新载入以生效：</p>
+<pre tabindex="0"><code>source .zshrc
+</code></pre><p>使用：</p>
+<pre tabindex="0"><code># 开启
+proxy
+# 关闭
+noproxy
+</code></pre>
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>ColaChen </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/>https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://ayegou.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://ayegou.com/2019/%E4%B9%A6%E5%BD%B1/" class="prev" rel="prev" title="书 · 影"><i class="iconfont icon-left"></i>&nbsp;书 · 影</a>
+        
+        
+        <a href="https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/" class="next" rel="next" title="解决 PHPWord 中的 ProofErr 问题">解决 PHPWord 中的 ProofErr 问题&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2023</span>
+        
+        <span class="with-love">
+    	   <i class="iconfont icon-love"></i> 
+        </span>
+        
+        <span class="author" itemprop="copyrightHolder"><a href="https://ayegou.com">ColaChen</a> | </span> 
+        
+
+        
+        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="external nofollow">浙ICP备20008126号-1 </a> |
+        
+		<span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
