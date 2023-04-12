@@ -168,9 +168,9 @@
 <h2 id="二遇到的问题">二、遇到的问题</h2>
 <p>PHPWord 作为处理文档的第三方扩展，在 OA/ERP 项目中被广泛使用。最近，公司内部使用的后台系统就遇到了这么一个问题。
 起因是财务想要修改原有的发票模版，将落款单位由原先的固定值改为“我开户行”对应的公司名称（就是因为老板又注册了几家公司）。原有模版：</p>
-<p><img src="http://ayegou.com/uPic/MISJF6.png" alt="原有模版"></p>
+<p><img src="https://jax-1258072740.cos.ap-shanghai.myqcloud.com/uPic/2023-04-12/140543_FTkdoj.jpg" alt="原有模版"></p>
 <p>翻出模版以后，第一想法当然就是把模版里的 <code>{{companyName}}</code> 复制一份替换掉原先的 <code>苹果母公司</code>。替换、保存、上传后，手动生成了文档，打开一看，居然变成了：</p>
-<p><img src="http://ayegou.com/uPic/k8typZ.png" alt="原有模版"></p>
+<p><img src="https://jax-1258072740.cos.ap-shanghai.myqcloud.com/uPic/2023-04-12/140605_5YxAzl.jpg" alt="原有模版"></p>
 <p>在经过多次替换后发现，只有 <code>{{bank}}</code> 这个占位符可以被正确识别进行替换，其他占位符均替换失败。那么，会不会是变量长度导致的异常呢？于是我取 <code>{{candidateName}}</code> 的前几个字母 <code>{{can}}</code> 进行了尝试，果然成功了</p>
 <p>……吗？</p>
 <p>事实证明，在每个占位符只取前 3~4 个字母的情况下，仍然出现了大批量的翻车事故。除了 <code>{{bank}}</code> 这个占位符，一如既往的坚挺。无奈之下，只能使用最低级的方法——打印内容。</p>
