@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 可乐橙</title>
+    <title>Posts on 阿耶go</title>
     <link>https://ayegou.com/posts/</link>
-    <description>Recent content in Posts on 可乐橙</description>
+    <description>Recent content in Posts on 阿耶go</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>UTF-8</language>
-    <lastBuildDate>Tue, 27 Dec 2022 07:07:34 +0800</lastBuildDate><atom:link href="https://ayegou.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 07:07:34 +0800</lastBuildDate>
+    <atom:link href="https://ayegou.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>知乎网页屏蔽视频</title>
       <link>https://ayegou.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</link>
       <pubDate>Tue, 27 Dec 2022 07:07:34 +0800</pubDate>
-      
       <guid>https://ayegou.com/2022/%E7%9F%A5%E4%B9%8E%E7%BD%91%E9%A1%B5%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91/</guid>
       <description>规则 先安装 Adblock Plus，添加以下规则： # 屏蔽首页-关注的视频回答 zhihu.com#?#div.Feed:-abp-has(&amp;gt; div &amp;gt; div.ContentItem.AnswerItem &amp;gt; div.RichContent.is-collapsed &amp;gt; div.RichContent-cover &amp;gt; svg.RichContent-cover-play) # 屏蔽首页-推荐的视频回答（看到了吧省事儿的知乎前端每次加</description>
     </item>
-    
     <item>
       <title>SSR服务端使用姿势</title>
       <link>https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</link>
       <pubDate>Tue, 27 Dec 2022 06:42:14 +0800</pubDate>
-      
       <guid>https://ayegou.com/2022/ssr%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BF/</guid>
       <description>CentOS 包管理工具是 yum，Debian 和 Ubuntu 是 apt Centos 安装 SSR 购买 VPS 使用 ssh 连接 VPS。Windows 推荐 Termius，macOS 推荐 iterm 查看系统版本 # 安</description>
     </item>
-    
     <item>
       <title>解决 PHPWord 中的 ProofErr 问题</title>
       <link>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 04 Dec 2020 23:59:48 +0800</pubDate>
-      
       <guid>https://ayegou.com/2020/%E8%A7%A3%E5%86%B3phpword%E4%B8%AD%E7%9A%84prooferr%E9%97%AE%E9%A2%98/</guid>
       <description>一、PHPWord 简介 PHPWord 是 PHPOffice 中的一部分（另有 PhpSpreadsheet 用于处理 Excel），主要用于 PHP 项目中对 OOXML/OpenXML(Microsoft Office Open XML), OpenDocument/ODF(OASIS Open Document Format for Office Applications), RTF(Rich Text Format), HTML, PDF 等格式的文件进行读写操</description>
     </item>
-    
     <item>
       <title>SSR客户端使用姿势（Linux）</title>
       <link>https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/</link>
       <pubDate>Sat, 04 Apr 2020 04:06:29 +0800</pubDate>
-      
       <guid>https://ayegou.com/2020/ssr%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8%E5%A7%BF%E5%8A%BFlinux/</guid>
       <description>在国内服务器上安装一些必要软件时无法避免 404 问题。大多数的教程是在服务器上安装 SSR 服务端，在本地安装客户端。这里记录一下在大陆服务器安装 SSR 客户端</description>
     </item>
-    
     <item>
       <title>书 · 影</title>
       <link>https://ayegou.com/2019/%E4%B9%A6%E5%BD%B1/</link>
       <pubDate>Thu, 12 Dec 2019 22:32:34 +0800</pubDate>
-      
       <guid>https://ayegou.com/2019/%E4%B9%A6%E5%BD%B1/</guid>
       <description>退以电影行天下 2023/01: 无间道 無間道 (2002) 无间道2 無間道II (2003) 无间道3：终极无间 無間道III 終極無間 (2003) 2022/12: 阿凡达：水之道 Avatar: The Way of Water (2022) 水浒传 (1998) 过把瘾 (1994) 天才枪</description>
     </item>
-    
   </channel>
 </rss>
